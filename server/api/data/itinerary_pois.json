@@ -1,17 +1,17 @@
 [
 	{
-		"ItineraryName": "Itinerary X",
-		"PointOfInterestName": "PoI X",
-		"PointOfInterestIndex": 1
+		"itineraryName": "Itinerary X",
+		"pointOfInterestName": "PoI X",
+		"pointOfInterestIndex": 1
 	},
 	{
-		"ItineraryName": "Itinerary X",
-		"PointOfInterestName": "PoI Y",
-		"PointOfInterestIndex": 2
+		"itineraryName": "Itinerary X",
+		"pointOfInterestName": "PoI Y",
+		"pointOfInterestIndex": 2
 	},
 	{
-		"ItineraryName": "Itinerary X",
-		"PointOfInterestName": "PoI Z",
-		"PointOfInterestIndex": 3
+		"itineraryName": "Itinerary X",
+		"pointOfInterestName": "PoI Z",
+		"pointOfInterestIndex": 3
 	}
 ]

@@ -1,6 +1,6 @@
 import Express from "express"
-import { InitDatabaseConnection } from "./database"
-import { InitDatabaseData } from "./initialize"
+import { db, InitDatabaseConnection, Models } from "./database"
+import { SeedDatabase } from "./seed"
 
 // PLEASE NOTE:
 // top level await is not supported in NodeJS
@@ -20,7 +20,7 @@ Init()
 
 async function Init() {
 	await InitDatabaseConnection()
-	await InitDatabaseData()
+	await SeedDatabase()
 
 	// Setup sample route
 	// consider that / means that will be matched to /api/
