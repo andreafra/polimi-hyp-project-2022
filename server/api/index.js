@@ -16,12 +16,13 @@ app.use(Express.json())
 // Export the Express instance so NuxtJS will use it
 export default app
 
-Init()
-
-async function Init() {
+// Use a... I forgot what it's called. Closure? I don't remember :D
+// Anyway, it's a oneliner to avoid a Init() function.
+;(async () => {
 	await InitDatabaseConnection()
 	await SeedDatabase()
 
+	console.warn("Initialize API endpoints...")
 	// Setup sample route
 	// consider that / means that will be matched to /api/
 	// just as /stuff -> /api/stuff
@@ -29,4 +30,4 @@ async function Init() {
 		console.log(req)
 		res.send("GET request to the homepage")
 	})
-}
+})()

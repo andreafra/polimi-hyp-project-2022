@@ -3,15 +3,19 @@ import { Sequelize, DataTypes as DT } from "sequelize"
 // Create instance of Sequelize ORM
 export const db = new Sequelize(process.env.DATABASE_URL, {
 	logging: false,
+	timestamps: false,
 })
 
 const Event = db.define(
 	"event",
 	{
+		id: {
+			type: DT.STRING,
+			primaryKey: true,
+		},
 		name: {
 			type: DT.STRING,
 			allowNull: false,
-			primaryKey: true,
 		},
 		images: {
 			type: DT.ARRAY(DT.STRING),
@@ -31,6 +35,7 @@ const Event = db.define(
 		},
 	},
 	{
+		underscored: true,
 		timestamps: false,
 	}
 )
@@ -38,10 +43,13 @@ const Event = db.define(
 const PointOfInterest = db.define(
 	"point_of_interest",
 	{
+		id: {
+			type: DT.STRING,
+			primaryKey: true,
+		},
 		name: {
 			type: DT.STRING,
 			allowNull: false,
-			primaryKey: true,
 		},
 		images: {
 			type: DT.ARRAY(DT.STRING),
@@ -66,16 +74,20 @@ const PointOfInterest = db.define(
 	},
 	{
 		timestamps: false,
+		underscored: true,
 	}
 )
 
 const Itinerary = db.define(
 	"itinerary",
 	{
+		id: {
+			type: DT.STRING,
+			primaryKey: true,
+		},
 		name: {
 			type: DT.STRING,
 			allowNull: false,
-			primaryKey: true,
 		},
 		images: {
 			type: DT.ARRAY(DT.STRING),
@@ -96,16 +108,20 @@ const Itinerary = db.define(
 	},
 	{
 		timestamps: false,
+		underscored: true,
 	}
 )
 
 const ServiceType = db.define(
 	"service_type",
 	{
+		id: {
+			type: DT.STRING,
+			primaryKey: true,
+		},
 		name: {
 			type: DT.STRING,
 			allowNull: false,
-			primaryKey: true,
 		},
 		listOfServices: {
 			type: DT.STRING(1024 * 8),
@@ -114,6 +130,7 @@ const ServiceType = db.define(
 	},
 	{
 		timestamps: false,
+		underscored: true,
 	}
 )
 
