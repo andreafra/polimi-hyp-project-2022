@@ -1,0 +1,14 @@
+[
+	{
+		"name": "Itinerary X",
+		"images": ["https://example.com"],
+		"description": "A tour of the museums of the town.",
+		"duration": 5400,
+		"distance": 1500,
+		"pointOfInterests": [
+			{ "name": "PoI X" },
+			{ "name": "PoI Y" },
+			{ "name": "PoI Z" }
+		]
+	}
+]
