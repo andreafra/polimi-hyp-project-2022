@@ -1,10 +1,10 @@
 import Express from "express"
 import { db, InitDatabaseConnection, Models } from "./database"
 import { SeedDatabase } from "./seed"
+import pg from "pg"
 
-// PLEASE NOTE:
-// top level await is not supported in NodeJS
-// so we must wrap it inside an async function
+// Postgres on Heroku requires SSL to be active
+pg.defaults.ssl = process.env.NODE_ENV === "production"
 
 // Init Express
 const app = Express()
@@ -16,8 +16,13 @@ app.use(Express.json())
 // Export the Express instance so NuxtJS will use it
 export default app
 
-// Use a... I forgot what it's called. Closure? I don't remember :D
-// Anyway, it's a oneliner to avoid a Init() function.
+/* PLEASE NOTE:
+ * top level await is not supported in NodeJS
+ * so we must wrap it inside an async function
+ *
+ * Use a... I forgot what it's called. Closure? I don't remember :D
+ * Anyway, it's a oneliner to avoid a Init() function.
+ */
 ;(async () => {
 	await InitDatabaseConnection()
 	await SeedDatabase()
