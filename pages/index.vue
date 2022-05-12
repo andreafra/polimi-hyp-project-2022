@@ -42,5 +42,6 @@ export default {
 <style>
 body {
 	background-color: var(--color-bg-light);
+	font-family: var(--font-body);
 }
 </style>

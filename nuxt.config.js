@@ -36,6 +36,8 @@ export default {
 	modules: [
 		// https://go.nuxtjs.dev/axios
 		"@nuxtjs/axios",
+		// https://google-fonts.nuxtjs.org
+		"@nuxtjs/google-fonts",
 	],
 
 	// Build Configuration: https://go.nuxtjs.dev/config-build
@@ -55,4 +57,21 @@ export default {
 			handler: "~/server/api/index.js",
 		},
 	],
+
+	// Google Fonts: https://google-fonts.nuxtjs.org/options
+	googleFonts: {
+		families: {
+			"Playfair+Display": {
+				wght: [400, 800],
+				ital: [400],
+			},
+			"Work+Sans": {
+				wght: [400],
+			},
+		},
+		display: "swap",
+		prefetch: true,
+		preconnect: true,
+		preload: true,
+	},
 }
