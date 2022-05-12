@@ -1,14 +1,17 @@
 <script>
 export default {
 	name: "IndexPage",
+
+	async asyncData({ $axios }) {
+		const res = await $axios.$get("/api")
+
+		return { pois: res }
+	},
+
 	data: () => ({
 		pois: [],
 	}),
-	async fetch() {
-		this.pois = await fetch("http://localhost:8000/api/").then((res) =>
-			res.json()
-		)
-	},
+
 	fetchOnServer: true,
 	fetchKey: "all-events",
 }
