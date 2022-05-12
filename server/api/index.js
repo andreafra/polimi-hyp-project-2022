@@ -34,4 +34,6 @@ export default app
 
 		res.json(events)
 	})
+
+	// ciaooo
 })()
