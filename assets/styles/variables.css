@@ -5,4 +5,7 @@
 	--color-bg-light: #d6d6b1;
 	--color-bg: #878472;
 	--color-bg-dark: #494331;
+
+	--font-heading: "Playfair Display", serif;
+	--font-body: "Work Sans", sans-serif;
 }

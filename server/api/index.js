@@ -1,10 +1,6 @@
 import Express from "express"
-import { db, InitDatabaseConnection, Models } from "./database"
+import { InitDatabaseConnection, Models } from "./database"
 import { SeedDatabase } from "./seed"
-import pg from "pg"
-
-// Postgres on Heroku requires SSL to be active
-pg.defaults.ssl = process.env.NODE_ENV === "production"
 
 // Init Express
 const app = Express()
@@ -31,8 +27,11 @@ export default app
 	// Setup sample route
 	// consider that / means that will be matched to /api/
 	// just as /stuff -> /api/stuff
-	app.get("/", (req, res) => {
-		console.log(req)
-		res.send("GET request to the homepage")
+	app.get("/", async (req, res) => {
+		const events = await Models.PointOfInterest.findAll({
+			include: ["events", "itineraries"],
+		})
+
+		res.json(events)
 	})
 })()
