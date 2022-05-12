@@ -1,9 +1,17 @@
-import { Sequelize, DataTypes as DT } from "sequelize"
+import pg from "pg"
+import { DataTypes as DT, Sequelize } from "sequelize"
+
+const isProd = process.env.NODE_ENV === "production"
+
+// Postgres on Heroku requires SSL to be active
+pg.defaults.ssl = isProd
 
 // Create instance of Sequelize ORM
 export const db = new Sequelize(process.env.DATABASE_URL, {
 	logging: false,
 	timestamps: false,
+	// ssl: isProd,
+	//dialectOptions: { ssl: { require: isProd, rejectUnauthorized: false } },
 })
 
 const Event = db.define(

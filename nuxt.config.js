@@ -44,8 +44,6 @@ export default {
 	// Server: https://nuxtjs.org/docs/configuration-glossary/configuration-server
 	// Binding server to all interfaces, so you can test the website on your smartphone, etc.
 	server: {
-		port: 8000, // default: 3000
-		host: "0.0.0.0", // default: localhost
 		timing: true,
 	},
 

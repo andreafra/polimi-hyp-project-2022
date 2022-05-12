@@ -1,10 +1,6 @@
 import Express from "express"
 import { db, InitDatabaseConnection, Models } from "./database"
 import { SeedDatabase } from "./seed"
-import pg from "pg"
-
-// Postgres on Heroku requires SSL to be active
-pg.defaults.ssl = process.env.NODE_ENV === "production"
 
 // Init Express
 const app = Express()
