@@ -1,6 +1,5 @@
 import Express from "express"
 import { InitDatabaseConnection, Models } from "./database"
-import { SeedDatabase } from "./seed"
 
 // Init Express
 const app = Express()
@@ -21,7 +20,6 @@ export default app
  */
 ;(async () => {
 	await InitDatabaseConnection()
-	await SeedDatabase()
 
 	console.warn("Initialize API endpoints...")
 	// Setup sample route
