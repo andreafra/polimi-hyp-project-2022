@@ -19,7 +19,6 @@ export default {
 
 <template>
 	<div>
-		<ExampleTitle />
 		<ul>
 			<li v-for="poi of pois" :key="poi.id">
 				{{ poi.name }}
@@ -41,10 +40,3 @@ export default {
 		</ul>
 	</div>
 </template>
-
-<style>
-body {
-	background-color: var(--color-bg-light);
-	font-family: var(--font-body);
-}
-</style>
