@@ -1,11 +1,30 @@
 :root {
-	/* https://coolors.co/494331-878472-d6d6b1-c54b1b-e46a3a */
+	/* https://coolors.co/494331-878472-d6d6b1-b44418-e46a3a */
 	--color-accent: #e46a3a;
-	--color-accent-dark: #c54b1b;
-	--color-bg-light: #d6d6b1;
-	--color-bg: #878472;
-	--color-bg-dark: #494331;
+	--color-accent-dark: #b44418;
+	--color-light: #d6d6b1;
+	--color-neutral: #878472;
+	--color-dark: #494331;
 
-	--font-heading: "Playfair Display", serif;
-	--font-body: "Work Sans", sans-serif;
+	--font-family-heading: "Playfair Display", serif;
+	--font-family-body: "Work Sans", sans-serif;
+
+	--font-size-body: 1rem;
+	--font-size-header-links: 1.1rem;
+	--font-size-header-title: 1.3rem;
+
+	--max-width: 920px;
+
+	/* Make 3 columns */
+	--grid-template-columns: 1fr;
+}
+
+@media screen and (width >= 840px) {
+	:root {
+		--grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+* {
+	box-sizing: border-box;
 }
