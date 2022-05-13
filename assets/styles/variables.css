@@ -10,8 +10,9 @@
 	--font-family-body: "Work Sans", sans-serif;
 
 	--font-size-body: 1rem;
-	--font-size-header-links: 1.1rem;
+	--font-size-header-links: 2rem;
 	--font-size-header-title: 1.3rem;
+	--font-size-header-menu: 1.2rem;
 
 	--max-width: 920px;
 
@@ -22,6 +23,8 @@
 @media screen and (width >= 840px) {
 	:root {
 		--grid-template-columns: 1fr 1fr 1fr;
+		--font-size-header-links: 1.1rem;
+		--font-size-header-title: 1.3rem;
 	}
 }
 
