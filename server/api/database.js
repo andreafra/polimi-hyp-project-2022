@@ -1,5 +1,6 @@
 import pg from "pg"
 import { DataTypes as DT, Sequelize } from "sequelize"
+import { SeedDatabase } from "./seed"
 
 // Postgres on Heroku requires SSL to be active
 pg.defaults.ssl = process.env.NODE_ENV === "production"
@@ -197,14 +198,12 @@ export async function InitDatabaseConnection() {
 		console.error("Unable to connect to the database: ", error)
 	}
 	try {
-		if (!process.env.DATABASE_WIPE) {
-			console.warn(
-				"DATABASE_WIPE is not set in Environment: will default to false."
-			)
-		} else {
-			console.warn("Wiping Database...")
+		const shouldWipe = process.env.DATABASE_WIPE === "true"
+		await db.sync({ force: shouldWipe })
+		if (shouldWipe) {
+			console.warn(`Wiping and Seeding Database...`)
+			await SeedDatabase()
 		}
-		await db.sync({ force: process.env.DATABASE_WIPE ?? false })
 	} catch (error) {
 		console.error("Failed to initialize models: ", error)
 	}
