@@ -13,8 +13,11 @@
 	--font-size-header-links: 2rem;
 	--font-size-header-title: 1.3rem;
 	--font-size-header-menu: 1.2rem;
+	--font-size-button: 1.1rem;
 
 	--max-width: 920px;
+
+	--border-radius: 16px;
 
 	/* Make 3 columns */
 	--grid-template-columns: 1fr;
