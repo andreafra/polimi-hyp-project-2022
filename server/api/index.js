@@ -1,6 +1,6 @@
 import Express from "express"
 import { InitDatabaseConnection, Models, db } from "./database"
-import { Model, Op } from "sequelize";
+import { Op } from "sequelize";
 
 // Init Express
 const app = Express()
