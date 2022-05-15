@@ -44,6 +44,10 @@ export default {
 			:cards-list='[{"name":"Slifer the Sky Dragon","id":10000020},{"name":"Obelisk the Tormentor","id":10000000},{"name":"The Winged Dragon of Ra","id":10000010},{"name":"Soul Crossing","id":5253985},{"name":"Sun God Unification","id":77432167},{"name":"The Winged Dragon of Ra - Immortal Phoenix","id":10000090},{"name":"The Winged Dragon of Ra - Sphere Mode","id":10000080},{"name":"Thunderforce Attack","id":42469671},{"name":"Ultimate Divine-Beast","id":32247099},{"name":"Holactie the Creator of Light","id":10000040},{"name":"Magical Trick Mirror","id":85758066},{"name":"Soul Energy MAX!!","id":79339613},{"name":"Blaze Cannon","id":4059313}]'
 		>
 		</card-view>
+		<card-view style="width: 40%"
+			:cardsList='[{"name":"Slifer the Sky Dragon","id":10000020},{"name":"Obelisk the Tormentor","id":10000000},{"name":"The Winged Dragon of Ra","id":10000010},{"name":"Soul Crossing","id":5253985},{"name":"Sun God Unification","id":77432167},{"name":"The Winged Dragon of Ra - Immortal Phoenix","id":10000090},{"name":"The Winged Dragon of Ra - Sphere Mode","id":10000080},{"name":"Thunderforce Attack","id":42469671},{"name":"Ultimate Divine-Beast","id":32247099},{"name":"Holactie the Creator of Light","id":10000040},{"name":"Magical Trick Mirror","id":85758066},{"name":"Soul Energy MAX!!","id":79339613},{"name":"Blaze Cannon","id":4059313}]'
+		>
+		</card-view>
 	</div>
 
 </template>
