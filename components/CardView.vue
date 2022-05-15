@@ -36,20 +36,23 @@
 			</div>
 		</div>
 		<div class="prev flex-container-center" @click="click2Scroll('prev')">
-			&larr;
+			<ArrowLeft />
 		</div>
 		<div
 			class="next flex-container-center fade-in"
 			@click="click2Scroll('next')"
 		>
-			&rarr;
+			<ArrowRight />
 		</div>
 	</div>
 </template>
 
 <script>
+import ArrowLeft from "./icons/ArrowLeft.vue"
+import ArrowRight from "./icons/ArrowRight.vue"
 export default {
 	name: "CardView",
+	components: { ArrowLeft, ArrowRight },
 	props: {
 		cardsList: {
 			type: Array,
@@ -129,13 +132,11 @@ export default {
 				this.$el.querySelector(".opacity-bar-left").style.visibility =
 					"hidden"
 			}
-
 			/*
       console.log(`${scrollSnapContainer.scrollLeft} >= ${scrollSnapContainer.scrollWidth} - ${scrollSnapContainer.offsetWidth}`);
       console.log(scrollSnapElementWidth);
       console.log(scrollSnapElementWidth*(scrollSnapElements.length-1));
       */
-
 			if (
 				scrollSnapContainer.scrollLeft >
 				scrollSnapContainer.scrollWidth -
@@ -190,7 +191,10 @@ export default {
 
 	background-color: var(--color-neutral);
 	border-radius: 50%;
+	border: 3px solid var(--color-light);
 	padding: 0.5em;
+
+	box-shadow: 0 6px 12px var(--color-neutral);
 }
 
 .prev:hover,
