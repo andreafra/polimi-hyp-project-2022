@@ -1,6 +1,6 @@
 <template>
-  <div class="card-view">
-    <div class="scroll-snap-container" @scroll="buttonsBarsFade()" @mousewheel="wheelScroll">
+  <div class="card-view flex-container-center" @resize="handleResize()">
+    <div class="scroll-snap-container flex-container-center" @scroll="buttonsBarsFade()" @mousewheel="wheelScroll">
       <div class="opacity-bar-right"></div>
       <div class="opacity-bar-left"></div>
 
@@ -12,22 +12,6 @@
         :img="..."
         :label="..."
         ...
-        class="scroll-snap-element"
-      />
-      -->
-
-      <!--
-      <archetype
-        v-for="(archetype, index) of cardsList"
-        :key="`archetype-index-${index}`"
-        :name="'archetypearchetype'"
-        :true_name="'archetypetrue_name'"
-        :members="[]"
-        :date="index"
-        :attributes="['EARTH']"
-        :types="['Fairy']"
-        :imgs='{"Poster":56588755,"Effect":22073844,"Ritual":40352445,"Fusion":41373230}'
-        :crest='"/crests/Labrynth.png"'
         class="scroll-snap-element"
       />
       -->
@@ -43,10 +27,10 @@
       </div>
       
     </div>
-    <div v-show="isLoad" class="prev" @click="click2Scroll('prev')">
+    <div class="prev flex-container-center" @click="click2Scroll('prev')">
       &larr;
     </div>
-    <div v-show="isLoad" class="next fade-in" @click="click2Scroll('next')">
+    <div class="next flex-container-center fade-in" @click="click2Scroll('next')">
       &rarr;
     </div>
   </div>
@@ -61,26 +45,17 @@ export default {
       required: true,
     },
   },
-  data: () => ({
-    isLoad: false
-  }),
   mounted() {
-    this.$el.querySelector(".prev").style.fontSize = window.matchMedia('(max-width: 920px)').matches ? "250%" : "180%";
-    this.$el.querySelector(".next").style.fontSize = window.matchMedia('(max-width: 920px)').matches ? "250%" : "180%";
     window.addEventListener('resize', this.handleResize);
-    /*
-    const prevArrow = this.$el.querySelector(".prev");
-    const nextArrow = this.$el.querySelector(".next");
-    const scrollSnapContainer = this.$el.querySelector(".scroll-snap-container");
-    prevArrow.style.fontSize = scrollSnapContainer.offsetHeight*0.48+"%";
-    nextArrow.style.fontSize = scrollSnapContainer.offsetHeight*0.48+"%";
-    */
-    this.isLoad = true;
+    this.handleResize();
   },
   methods: {
     handleResize() {
-      this.$el.querySelector(".prev").style.fontSize = window.matchMedia('(max-width: 920px)').matches ? "250%" : "180%";
-      this.$el.querySelector(".next").style.fontSize = window.matchMedia('(max-width: 920px)').matches ? "250%" : "180%";
+      const prevArrow = this.$el.querySelector(".prev");
+      const nextArrow = this.$el.querySelector(".next");
+      const scrollSnapContainer = this.$el.querySelector(".scroll-snap-container");
+      prevArrow.style.fontSize = scrollSnapContainer.offsetHeight*0.48+"%";
+      nextArrow.style.fontSize =scrollSnapContainer.offsetHeight*0.48+"%";
     },
     click2Scroll(to) {
       const scrollSnapContainer = this.$el.querySelector(".scroll-snap-container");
@@ -150,54 +125,30 @@ export default {
 </script>
 
 <style scoped>
+@import '@/assets/styles/animations.css';
+@import '@/assets/styles/containers.css';
+
 .card-view {
   position: relative;
-  display: flex;
-  align-items: center;
-
   margin-top: 1%;
   margin-bottom: 1%;
 }
 
 /*Arrow styles---------------------------------------------------------------------------------------------------------------*/
 .prev, .next {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   position: absolute;
   cursor: pointer;
 
-  background-color: rgba(230, 133, 133, 0.488);
+  color: var(--color-light);
+  font-size: 180%;
+
+  background-color: var(--color-neutral);
   border-radius: 50%;
   padding: 0.5em;
 }
 
-.fade-in {
-  animation: fade-in-animation 0.25s ease-in forwards;
-}
-
-@keyframes fade-in-animation {
-  0% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
-.fade-out {
-  animation: fade-in-animation 0.25s ease-in forwards;
-  animation-direction: reverse;
-}
-
 .prev:hover, .next:hover {
-  background-color: rgba(142, 79, 79, 0.488);
+  background-color: var(--color-dark);
 }
 
 .prev {
@@ -211,9 +162,8 @@ export default {
 
 /*Container and scrollbar styles---------------------------------------------------------------------------------------------------------------*/
 .scroll-snap-container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: flex-start !important;
+
   overflow-x: scroll;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
@@ -240,12 +190,12 @@ export default {
 }
  
 ::-webkit-scrollbar-thumb {
-  background: darkgray; 
+  background: var(--color-neutral); 
   border-radius: 1vh;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: black; 
+  background: var(--color-dark); 
 }
 
 /*Elements and opacity bars styles---------------------------------------------------------------------------------------------------------------*/
@@ -275,31 +225,18 @@ export default {
   background: linear-gradient(90deg, var(--color-light) 35.53%, rgba(214, 214, 177, 0) 100%);
 }
 
-@media only screen and (max-width: 920px) {
+/*Media query---------------------------------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 840px) {
+  .prev, .next {
+    font-size: 250%;
+  }
+
   .scroll-snap-element {
-    scroll-snap-align: start;
-
-    margin-right: 0.5%;
-    margin-left: 0.5%;
-
     min-width: 70% !important;
   }
 
-  .opacity-bar-right {
-    position: absolute;
-    right: -1%;
+  .opacity-bar-right , .opacity-bar-left {
     width: 9%;
-    height: 100%;
-    background: linear-gradient(270deg, var(--color-light) 35.53%, rgba(214, 214, 177, 0) 100%)
-  }
-
-  .opacity-bar-left {
-    position: absolute;
-    left: -1%;
-    width: 9%;
-    height: 100%;
-    visibility: hidden;
-    background: linear-gradient(90deg, var(--color-light) 35.53%, rgba(214, 214, 177, 0) 100%);
   }
 }
 </style>
