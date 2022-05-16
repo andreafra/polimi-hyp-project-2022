@@ -225,7 +225,7 @@ export default {
 	height: 100%;
 }
 .opacity-bar-right {
-	right: 0;
+	right: -0.15em;
 	background: linear-gradient(
 		270deg,
 		var(--color-light) 0%,
@@ -234,7 +234,7 @@ export default {
 }
 
 .opacity-bar-left {
-	left: 0;
+	left: -0.15em;
 	background: linear-gradient(
 		90deg,
 		var(--color-light) 35.53%,
