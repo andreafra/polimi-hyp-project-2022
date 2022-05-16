@@ -1,12 +1,25 @@
 <template>
-	<div class="card-view flex-container-center" @resize="handleResize()">
+	<div class="card-view flex-container-center">
 		<div
+			ref="container"
 			class="scroll-snap-container flex-container-center"
-			@scroll="buttonsBarsFade()"
+			@scroll="handleScroll()"
 			@mousewheel="wheelScroll"
 		>
-			<div class="opacity-bar-right"></div>
-			<div class="opacity-bar-left"></div>
+			<transition name="fade">
+				<div
+					v-show="isPrevVisible"
+					class="opacity-bar-left"
+					aria-hidden="true"
+				></div>
+			</transition>
+			<transition name="fade">
+				<div
+					v-show="isNextVisible"
+					class="opacity-bar-right"
+					aria-hidden="true"
+				></div>
+			</transition>
 
 			<!-- HOW TO INSERT THE CARD COMPONENTS
 			<card-component
@@ -23,27 +36,38 @@
 			<div
 				v-for="member of cardsList"
 				:key="`archetype-type-${member.name}`"
-				style="border: 3px solid black"
+				ref="elem"
 				class="scroll-snap-element"
 			>
 				<img
 					:src="`https://storage.googleapis.com/ygoprodeck.com/pics_artgame/${member.id}.jpg`"
 					style="width: 100%"
 				/>
-				<p style="text-align: center; margin-top: 0%">
+				<p style="text-align: center; margin-top: 0">
 					{{ member.name }}
 				</p>
 			</div>
 		</div>
-		<div class="prev flex-container-center" @click="click2Scroll('prev')">
-			<ArrowLeft />
-		</div>
-		<div
-			class="next flex-container-center fade-in"
-			@click="click2Scroll('next')"
-		>
-			<ArrowRight />
-		</div>
+		<transition name="fade">
+			<button
+				v-show="isPrevVisible"
+				class="prev flex-container-center"
+				aria-hidden="true"
+				@click="clickToScroll('prev')"
+			>
+				<ArrowLeft />
+			</button>
+		</transition>
+		<transition name="fade">
+			<button
+				v-show="isNextVisible"
+				class="next flex-container-center"
+				aria-hidden="true"
+				@click="clickToScroll('next')"
+			>
+				<ArrowRight />
+			</button>
+		</transition>
 	</div>
 </template>
 
@@ -59,112 +83,47 @@ export default {
 			required: true,
 		},
 	},
-	mounted() {
-		window.addEventListener("resize", this.handleResize)
-		this.handleResize()
-	},
+	data: () => ({
+		// Use local state to dynamically toggle element visibility
+		// instead of using selectors and CSS. Set defaults here.
+		isPrevVisible: false,
+		isNextVisible: true,
+	}),
 	methods: {
-		handleResize() {
-			const prevArrow = this.$el.querySelector(".prev")
-			const nextArrow = this.$el.querySelector(".next")
-			const scrollSnapContainer = this.$el.querySelector(
-				".scroll-snap-container"
-			)
-			prevArrow.style.fontSize =
-				scrollSnapContainer.offsetHeight * 0.48 + "%"
-			nextArrow.style.fontSize =
-				scrollSnapContainer.offsetHeight * 0.48 + "%"
-		},
-		click2Scroll(to) {
-			const scrollSnapContainer = this.$el.querySelector(
-				".scroll-snap-container"
-			)
-			const scrollSnapElement = this.$el.querySelector(
-				".scroll-snap-element"
-			)
+		clickToScroll(to) {
+			// Use refs instead of using querySelector.
+			// A ref gets binded to the HTML element after the
+			// component is mounted.
+			// https://vuejs.org/guide/essentials/template-refs.html
+			const container = this.$refs.container
+			// When used in a v-for, (multiple identical refs) it returns an array
+			const elem = this.$refs.elem[0]
+
 			if (to === "prev") {
-				scrollSnapContainer.scrollLeft -= scrollSnapElement.offsetWidth
+				container.scrollLeft -= elem.offsetWidth
 			} else {
-				scrollSnapContainer.scrollLeft += scrollSnapElement.offsetWidth
+				container.scrollLeft += elem.offsetWidth
 			}
 		},
 		wheelScroll(e) {
 			e.preventDefault()
-			const scrollSnapContainer = this.$el.querySelector(
-				".scroll-snap-container"
-			)
-			const scrollSnapElement = this.$el.querySelector(
-				".scroll-snap-element"
-			)
-			scrollSnapContainer.scrollLeft +=
-				scrollSnapElement.offsetWidth * Math.sign(e.deltaY)
+			const container = this.$refs.container
+			const elem = this.$refs.elem[0]
+
+			container.scrollLeft += elem.offsetWidth * Math.sign(e.deltaY)
 		},
-		buttonsBarsFade() {
-			const scrollSnapContainer = this.$el.querySelector(
-				".scroll-snap-container"
-			)
-			const scrollSnapElements = this.$el.querySelectorAll(
-				".scroll-snap-element"
-			)
-			const scrollSnapElementWidth = scrollSnapElements[0].offsetWidth
-			const prevArrow = this.$el.querySelector(".prev")
-			const nextArrow = this.$el.querySelector(".next")
-			if (scrollSnapContainer.scrollLeft > scrollSnapElementWidth / 10) {
-				if (
-					!prevArrow.style.visibility ||
-					prevArrow.style.visibility === "hidden"
-				) {
-					prevArrow.style.visibility = "visible"
-					prevArrow.classList.add("fade-in")
-					setTimeout(() => prevArrow.classList.remove("fade-in"), 125)
-				}
-				this.$el.querySelector(".opacity-bar-left").style.visibility =
-					"visible"
-			} else {
-				if (prevArrow.style.visibility === "visible") {
-					prevArrow.classList.add("fade-out")
-					setTimeout(
-						() => prevArrow.classList.remove("fade-out"),
-						125
-					)
-					prevArrow.style.visibility = "hidden"
-				}
-				this.$el.querySelector(".opacity-bar-left").style.visibility =
-					"hidden"
-			}
-			/*
-      console.log(`${scrollSnapContainer.scrollLeft} >= ${scrollSnapContainer.scrollWidth} - ${scrollSnapContainer.offsetWidth}`);
-      console.log(scrollSnapElementWidth);
-      console.log(scrollSnapElementWidth*(scrollSnapElements.length-1));
-      */
-			if (
-				scrollSnapContainer.scrollLeft >
-				scrollSnapContainer.scrollWidth -
-					scrollSnapContainer.offsetWidth * 1.05
-			) {
-				//  if(scrollSnapContainer.scrollLeft > scrollSnapElementWidth*scrollSnapElements.length)
-				if (nextArrow.style.visibility === "visible") {
-					nextArrow.classList.add("fade-out")
-					setTimeout(
-						() => nextArrow.classList.remove("fade-out"),
-						125
-					)
-					nextArrow.style.visibility = "hidden"
-				}
-				this.$el.querySelector(".opacity-bar-right").style.visibility =
-					"hidden"
-			} else {
-				if (
-					!nextArrow.style.visibility ||
-					nextArrow.style.visibility === "hidden"
-				) {
-					nextArrow.style.visibility = "visible"
-					nextArrow.classList.add("fade-in")
-					setTimeout(() => nextArrow.classList.remove("fade-in"), 125)
-				}
-				this.$el.querySelector(".opacity-bar-right").style.visibility =
-					"visible"
-			}
+		handleScroll() {
+			const container = this.$refs.container
+
+			this.isPrevVisible = container.scrollLeft > 0
+			// The sum amounts to zero when the container is scrolled to the right end
+			// scrollWidth = full scrollable length
+			// scrollLeft = how much you have scrolled from the left
+			// offsetWidth = basically the remaining width :)
+			this.isNextVisible =
+				container.scrollWidth -
+				container.scrollLeft -
+				container.offsetWidth
 		},
 	},
 }
@@ -176,107 +135,106 @@ export default {
 
 .card-view {
 	position: relative;
-	margin-top: 1%;
-	margin-bottom: 1%;
+
+	/* Local variables  */
+	--scroll-button-size: 3rem;
+	--scroll-button-offset-multiplier: 0;
 }
 
-/*Arrow styles---------------------------------------------------------------------------------------------------------------*/
+/* Prev/Next Buttons */
 .prev,
 .next {
 	position: absolute;
 	cursor: pointer;
+	justify-content: center;
 
 	color: var(--color-light);
-	font-size: 180%;
 
-	background-color: var(--color-neutral);
+	height: var(--scroll-button-size);
+	width: var(--scroll-button-size);
+
+	background-color: var(--color-light);
 	border-radius: 50%;
-	border: 3px solid var(--color-light);
+	border: 2px solid var(--color-accent);
 	padding: 0.5em;
 
-	box-shadow: 0 6px 12px var(--color-neutral);
-}
+	box-shadow: 0 6px 12px var(--color-accent-dark);
 
-.prev:hover,
-.next:hover {
-	background-color: var(--color-dark);
+	transition: all 0.1s ease;
+
+	/* Prevent double-tap to zoom on touchscreens */
+	touch-action: manipulation;
+}
+.prev svg,
+.next svg {
+	color: var(--color-accent);
+	height: calc(var(--scroll-button-size) * 0.5);
+	width: calc(var(--scroll-button-size) * 0.5);
 }
 
 .prev {
-	left: 0;
-	visibility: hidden;
+	left: calc(
+		var(--scroll-button-size) * var(--scroll-button-offset-multiplier)
+	);
 }
-
 .next {
-	right: 0;
+	right: calc(
+		var(--scroll-button-size) * var(--scroll-button-offset-multiplier)
+	);
 }
 
-/*Container and scrollbar styles---------------------------------------------------------------------------------------------------------------*/
-.scroll-snap-container {
-	justify-content: flex-start !important;
+.prev:active {
+	margin-left: -0.5em;
+}
+.next:active {
+	margin-right: -0.5em;
+}
 
-	overflow-x: scroll;
+/*Container and scrollbar styles */
+.scroll-snap-container {
+	overflow-x: auto;
 	scroll-behavior: smooth;
 	scroll-snap-type: x mandatory;
 
-	padding-top: 1%;
-	padding-bottom: 0.5%;
-}
-
-/* Hide scrollbar
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.scroll-snap-container::-webkit-scrollbar {
-  display: none;
-}
-*/
-
-::-webkit-scrollbar {
-	height: 1vh;
-}
-
-::-webkit-scrollbar-track {
-	border-radius: 1vh;
+	padding: 0;
 }
 
 ::-webkit-scrollbar-thumb {
 	background: var(--color-neutral);
-	border-radius: 1vh;
 }
 
 ::-webkit-scrollbar-thumb:hover {
 	background: var(--color-dark);
 }
 
-/*Elements and opacity bars styles---------------------------------------------------------------------------------------------------------------*/
+/* Elements and opacity bars styles */
 .scroll-snap-element {
-	scroll-snap-align: start;
-
-	margin-right: 0.5%;
-	margin-left: 0.5%;
-
-	min-width: 35% !important;
+	scroll-snap-align: center;
+	scroll-margin-left: 0;
+	min-width: 16em;
+	margin-right: 1em;
+}
+.scroll-snap-element:last-child {
+	margin-right: 0;
 }
 
-.opacity-bar-right {
+.opacity-bar-right,
+.opacity-bar-left {
 	position: absolute;
-	right: -1%;
-	width: 8.5%;
+	width: 2em;
 	height: 100%;
+}
+.opacity-bar-right {
+	right: 0;
 	background: linear-gradient(
 		270deg,
-		var(--color-light) 35.53%,
+		var(--color-light) 0%,
 		rgba(214, 214, 177, 0) 100%
 	);
 }
 
 .opacity-bar-left {
-	position: absolute;
-	left: -1%;
-	width: 8.5%;
-	height: 100%;
-	visibility: hidden;
+	left: 0;
 	background: linear-gradient(
 		90deg,
 		var(--color-light) 35.53%,
@@ -284,20 +242,17 @@ export default {
 	);
 }
 
-/*Media query---------------------------------------------------------------------------------------------------------------*/
-@media only screen and (max-width: 840px) {
-	.prev,
-	.next {
-		font-size: 250%;
+/*Media query */
+@media only screen and (min-width: 840px) {
+	.card-view {
+		/* Local variables override */
+		--scroll-button-offset-multiplier: -0.5;
 	}
 
 	.scroll-snap-element {
-		min-width: 70% !important;
-	}
-
-	.opacity-bar-right,
-	.opacity-bar-left {
-		width: 9%;
+		scroll-snap-align: start;
+		/* Offset from the align ('start' in this case) */
+		scroll-margin-left: var(--scroll-button-size);
 	}
 }
 </style>

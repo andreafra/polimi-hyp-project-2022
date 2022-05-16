@@ -20,3 +20,15 @@
 	animation: fade-in-animation 0.25s ease-in forwards;
 	animation-direction: reverse;
 }
+
+/* For Vue's Transition element */
+/* BUG: Doens't play the reverse animation (from not-visible to visible) */
+.fade-enter-active,
+.fade-leave-active {
+	transition: opacity 0.25s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+	opacity: 0;
+}
