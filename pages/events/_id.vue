@@ -7,7 +7,7 @@
 		<p>
 			{{ seasons.find((_) => _.label === activeButton).desc }}
 		</p>
-		<div id="desktop-container">
+		<div class="desktop-container">
 			<button-primary
 				v-for="(season, index) of seasons"
 				:key="`season-index-${index}`"
@@ -16,7 +16,7 @@
 				class="season-button"
 			/>
 		</div>
-		<h-scroll-view id="mobile-container">
+		<h-scroll-view class="mobile-container">
 			<button-primary
 				v-for="(season, index) of seasons"
 				:key="`season-index-${index}`"
@@ -98,13 +98,13 @@ h1 span {
 	color: var(--color-accent-dark);
 }
 
-#mobile-container {
-	display: flex;
+.mobile-container {
+	display: flex !important;
 	height: 10%; /* To solve a bug with opacity bars */
 }
 
-#desktop-container {
-	display: none;
+.desktop-container {
+	display: none !important;
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
@@ -132,12 +132,12 @@ a.nuxt-link-exact-active {
 
 /*Media query */
 @media only screen and (min-width: 840px) {
-	#mobile-container {
-		display: none;
+	.mobile-container {
+		display: none !important;
 	}
 
-	#desktop-container {
-		display: flex;
+	.desktop-container {
+		display: flex !important;
 	}
 
 	.season-button {
