@@ -1,7 +1,7 @@
 [
 	{
 		"name": "PoI X",
-		"images": ["https://example.com"],
+		"images": [{ "url": "https://example.com", "alt": "something" }],
 		"locationX": 45.0,
 		"locationY": 23.0,
 		"description": "Lorem ipsum dolor sit amen",
@@ -9,7 +9,9 @@
 		"events": [
 			{
 				"name": "Event X",
-				"images": ["https://example.com"],
+				"images": [
+					{ "url": "https://example.com", "alt": "something" }
+				],
 				"description": "Lorem ipsum dolor sit amen",
 				"date": "2022-07-23",
 				"admission": "Lorem ipsum dolor sit amen"
@@ -18,7 +20,7 @@
 	},
 	{
 		"name": "PoI Y",
-		"images": ["https://example.com"],
+		"images": [{ "url": "https://example.com", "alt": "something" }],
 		"locationX": 45.0,
 		"locationY": 23.0,
 		"description": "Lorem ipsum dolor sit amen",
@@ -26,7 +28,9 @@
 		"events": [
 			{
 				"name": "Event Y",
-				"images": ["https://example.com"],
+				"images": [
+					{ "url": "https://example.com", "alt": "something" }
+				],
 				"description": "Lorem ipsum dolor sit amen",
 				"date": "2022-07-23",
 				"admission": "Lorem ipsum dolor sit amen"
@@ -35,7 +39,7 @@
 	},
 	{
 		"name": "PoI Z",
-		"images": ["https://example.com"],
+		"images": [{ "url": "https://example.com", "alt": "something" }],
 		"locationX": 45.0,
 		"locationY": 23.0,
 		"description": "Lorem ipsum dolor sit amen",
@@ -43,7 +47,9 @@
 		"events": [
 			{
 				"name": "Event Z",
-				"images": ["https://example.com"],
+				"images": [
+					{ "url": "https://example.com", "alt": "something" }
+				],
 				"description": "Lorem ipsum dolor sit amen",
 				"date": "2022-07-23",
 				"admission": "Lorem ipsum dolor sit amen"

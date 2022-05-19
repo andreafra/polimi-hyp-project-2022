@@ -24,7 +24,7 @@ const Event = db.define(
 			allowNull: false,
 		},
 		images: {
-			type: DT.ARRAY(DT.STRING),
+			type: DT.JSONB,
 			allowNull: false,
 		},
 		description: {
@@ -58,7 +58,7 @@ const PointOfInterest = db.define(
 			allowNull: false,
 		},
 		images: {
-			type: DT.ARRAY(DT.STRING),
+			type: DT.JSONB,
 			allowNull: false,
 		},
 		description: {
@@ -96,7 +96,7 @@ const Itinerary = db.define(
 			allowNull: false,
 		},
 		images: {
-			type: DT.ARRAY(DT.STRING),
+			type: DT.JSONB,
 			allowNull: false,
 		},
 		description: {
@@ -129,9 +129,35 @@ const ServiceType = db.define(
 			type: DT.STRING,
 			allowNull: false,
 		},
-		listOfServices: {
-			type: DT.STRING(1024 * 8),
-			allowNull: false,
+	},
+	{
+		timestamps: false,
+		underscored: true,
+	}
+)
+
+const Service = db.define(
+	"service",
+	{
+		name: {
+			type: DT.STRING,
+			primaryKey: true,
+		},
+		address: {
+			type: DT.STRING,
+			primaryKey: true,
+		},
+		openingHours: {
+			type: DT.STRING,
+			primaryKey: true,
+		},
+		image: {
+			type: DT.STRING,
+			primaryKey: true,
+		},
+		imageAlt: {
+			type: DT.STRING,
+			primaryKey: true,
 		},
 	},
 	{
@@ -164,6 +190,10 @@ Event.belongsTo(PointOfInterest, {
 	as: "pointOfInterest",
 })
 
+ServiceType.hasMany(Service, {
+	as: "services",
+})
+
 // Many-To-Many
 // Will create a juction table called 'PointOfInterestItinerary'
 Itinerary.belongsToMany(PointOfInterest, {
@@ -184,6 +214,7 @@ export const Models = {
 	ItineraryPoIs,
 	PointOfInterest,
 	ServiceType,
+	Service,
 }
 
 /**

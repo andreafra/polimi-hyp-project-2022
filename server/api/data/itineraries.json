@@ -1,7 +1,7 @@
 [
 	{
 		"name": "Itinerary X",
-		"images": ["https://example.com"],
+		"images": [{ "url": "https://example.com", "alt": "something" }],
 		"description": "A tour of the museums of the town.",
 		"duration": 5400,
 		"distance": 1500,
