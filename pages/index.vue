@@ -1,10 +1,12 @@
 <script>
 import HScrollView from "~/components/HScrollView.vue"
+
 export default {
 	name: "IndexPage",
 	components: { HScrollView },
 	async asyncData({ $axios }) {
 		const res = await $axios.$get("/api")
+		res.forEach((_) => (_.url = "/"))
 		return { pois: res }
 	},
 	data: () => ({
