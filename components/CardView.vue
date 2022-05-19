@@ -21,31 +21,13 @@
 				></div>
 			</transition>
 
-			<!-- HOW TO INSERT THE CARD COMPONENTS
-			<card-component
-				v-for="(card, index) of cardsList"
-				:key="`card-index-${index}`"
-				:name="..."
-				:img="..."
-				:label="..."
-				...
-				class="scroll-snap-element"
-			/>
-			-->
-
 			<div
-				v-for="member of cardsList"
-				:key="`archetype-type-${member.name}`"
+				v-for="(obj, index) of objects"
+				:key="index"
 				ref="elem"
 				class="scroll-snap-element"
 			>
-				<img
-					:src="`https://storage.googleapis.com/ygoprodeck.com/pics_artgame/${member.id}.jpg`"
-					style="width: 100%"
-				/>
-				<p style="text-align: center; margin-top: 0">
-					{{ member.name }}
-				</p>
+				<Card :object="obj" />
 			</div>
 		</div>
 		<transition name="fade">
@@ -74,11 +56,12 @@
 <script>
 import ArrowLeft from "./icons/ArrowLeft.vue"
 import ArrowRight from "./icons/ArrowRight.vue"
+import Card from "./Card.vue"
 export default {
 	name: "CardView",
-	components: { ArrowLeft, ArrowRight },
+	components: { ArrowLeft, ArrowRight, Card },
 	props: {
-		cardsList: {
+		objects: {
 			type: Array,
 			required: true,
 		},
