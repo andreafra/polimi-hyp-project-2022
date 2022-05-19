@@ -1,67 +1,42 @@
 <template>
-	<div class="card" style="width: 18rem">
+	<div class="card">
 		<div class="card-body">
 			<h4 class="card-title">{{ object.title }}</h4>
 			<h6 v-if="object.subtitle" class="card-subtitle">
 				{{ object.subtitle }}
 			</h6>
-			<img :src="img" alt="" class="card-image" />
-			<p class="card-description">{{ description }}</p>
-			<div @click="readMore()">Read More</div>
+			<img :src="object.img" :alt="object.alt" class="card-image" />
+			<p class="card-description">{{ object.description }}</p>
+			<ButtonPrimary title="Read More" :link="object.url"/>
 		</div>
 	</div>
 </template>
 
 <script>
+import ButtonPrimary from './ButtonPrimary.vue'
 export default {
-	name: "CardComponent",
-	props: {
-		// TODO: Remove
-		// title: {
-		//   type: String,
-		//   required: true,
-		// },
-		// subtitle: {
-		//   type: String,
-		//   required: false,
-		//   default: ""
-		// },
-		// img: {
-		//   type: String,
-		//   required: true,
-		// },
-		// id: {
-		//   type: Number,
-		//   required: true,
-		// },
-		// description: {
-		//   type: String,
-		//   required: true,
-		// },
-		object: {
-			type: Object,
-			required: true,
-		},
-	},
-	methods: {
-		readMore() {
-			this.$router.push(`/details/${this.id}`)
-		},
-	},
+    name: "CardComponent",
+    components: { ButtonPrimary },
+    props: {
+        object: {
+            type: Object,
+            required: true,
+        },
+    }
 }
 </script>
 
 <style scoped>
 .card {
-	border: 2px solid lightgray;
+	border: 2px solid var(--color-neutral);
 }
 .card:hover {
-	border: 2px solid orange;
+	border: 2px solid var(--color-dark);
 }
 .card-image {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 160px;
+	min-width: 100%;
 }
 </style>
