@@ -1,25 +1,28 @@
 <template>
 	<div class="grid-container">
-		<div v-for="(obj, index) of objects" :key="index" ref="elem">
-			<Card :object="obj" />
-		</div>
+		<slot />
 	</div>
 </template>
 
 <script>
-import Card from "./Card.vue"
 export default {
 	name: "GridView",
-	components: { Card },
-	props: {
-		objects: {
-			type: Array,
-			required: true,
-		},
-	},
 }
 </script>
 
 <style scoped>
-@import "@/assets/styles/containers.css";
+.grid-container {
+	display: grid;
+	grid-row-gap: var(--space-y-1);
+	grid-column-gap: var(--space-y-1);
+	grid-template-areas: "a";
+
+	margin: var(--space-y-1) 0;
+}
+
+@media only screen and (min-width: 840px) {
+	.grid-container {
+		grid-template-areas: "a a a";
+	}
+}
 </style>
