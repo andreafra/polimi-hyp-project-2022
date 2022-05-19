@@ -1,13 +1,12 @@
 <script>
+import HScrollView from "~/components/HScrollView.vue"
 export default {
 	name: "IndexPage",
-
+	components: { HScrollView },
 	async asyncData({ $axios }) {
 		const res = await $axios.$get("/api")
-
 		return { pois: res }
 	},
-
 	data: () => ({
 		pois: [],
 	}),
@@ -16,24 +15,14 @@ export default {
 
 <template>
 	<div>
-		<ul>
-			<li v-for="poi of pois" :key="poi.id">
-				{{ poi.name }}
-				<p><i>Events:</i>
-				<ul>
-					<li v-for="event of poi.events" :key="event.id">
-						{{ event.name }}
-					</li>
-				</ul>
-				</p>
-				<p><i>Itineraries through here:</i>
-				<ul>
-					<li v-for="itinerary of poi.itineraries" :key="itinerary.id">
-						{{ itinerary.name }}
-					</li>
-				</ul>
-				</p>
-			</li>
-		</ul>
+		<h-scroll-view>
+			<div
+				v-for="x of [1, 2, 3, 4]"
+				:key="x"
+				style="height: 300px; background: red"
+			>
+				{{ x }}
+			</div>
+		</h-scroll-view>
 	</div>
 </template>
