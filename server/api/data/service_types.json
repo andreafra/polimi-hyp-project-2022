@@ -1,4 +1,14 @@
 [
-	{ "name": "Pharmacies", "listOfServices": "Lorem ipsum dolor sit amen" },
-	{ "name": "Gas Stations", "listOfServices": "Lorem ipsum dolor sit amen" }
+	{
+		"name": "Pharmacies",
+		"services": [
+			{
+				"name": "Pharma X",
+				"address": "Via Zzz",
+				"openingHours": "10-16",
+				"image": "http://example.com/image.png",
+				"imageAlt": "Something"
+			}
+		]
+	}
 ]

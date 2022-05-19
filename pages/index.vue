@@ -13,9 +13,6 @@ export default {
 	data: () => ({
 		pois: [],
 	}),
-
-	fetchOnServer: true,
-	fetchKey: "all-events",
 }
 </script>
 

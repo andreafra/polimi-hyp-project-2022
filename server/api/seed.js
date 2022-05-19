@@ -23,11 +23,22 @@ function convertToId(string) {
 export async function SeedDatabase() {
 	// Seed ServiceTypes
 	try {
-		await Models.ServiceType.bulkCreate(
-			services.map((a) => {
-				return { ...a, id: convertToId(a.name) }
-			})
-		)
+		for (const serviceType of services) {
+			await Models.ServiceType.create(
+				{
+					...serviceType,
+					id: convertToId(serviceType.name),
+				},
+				{
+					include: [
+						{
+							model: Models.Service,
+							as: "services",
+						},
+					],
+				}
+			)
+		}
 	} catch (error) {
 		console.error("Couldn't initialize Service Types: ", error)
 	}
