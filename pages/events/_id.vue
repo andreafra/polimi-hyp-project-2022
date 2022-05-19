@@ -29,7 +29,6 @@
 import HScrollView from "~/components/HScrollView.vue"
 import Card from "~/components/Card.vue"
 export default {
-<<<<<<< HEAD
 	name: "EventPage",
 	components: {
 		HScrollView,
@@ -55,57 +54,6 @@ export default {
 			}
 		},
 	},
-=======
-	name: "EventsPage",
-	components: { Card, ButtonPrimary, HScrollView },
-	async asyncData({ $axios, params }) {
-		const invalidSeason = ![
-			"winter",
-			"spring",
-			"summer",
-			"autumn",
-		].includes(params.id)
-		const res = await $axios.$get(
-			`/api/events${invalidSeason ? "" : "?season=" + params.id}`
-		)
-		res.forEach((_) => (_.url = `/event/${_.id}`))
-		const activeButton = invalidSeason
-			? "All"
-			: params.id.replace(/^./, params.id[0].toUpperCase())
-		return { events: res, activeButton }
-	},
-	data: () => ({
-		events: [],
-		activeButton: "",
-		seasons: [
-			{
-				label: "All",
-				link: "/events",
-				desc: "All events that will be held at Minturno!",
-			},
-			{
-				label: "Winter",
-				link: "/events/winter",
-				desc: "Winter events at Minturno, brr...",
-			},
-			{
-				label: "Spring",
-				link: "/events/spring",
-				desc: "Spring events at Minturno, 🌼",
-			},
-			{
-				label: "Summer",
-				link: "/events/summer",
-				desc: "Summer events at Minturno, ⛱️",
-			},
-			{
-				label: "Autumn",
-				link: "/events/autumn",
-				desc: "Autumn events at minturno, 🍂",
-			},
-		],
-	}),
->>>>>>> Use nuxt-link-exact-active
 }
 </script>
 
@@ -115,21 +63,6 @@ export default {
 	grid-template-columns: 1fr;
 }
 
-<<<<<<< HEAD
-=======
-.season-button:hover {
-	color: var(--color-dark) !important;
-	background-color: var(--color-accent) !important;
-}
-
-a.nuxt-link-exact-active {
-	color: var(--color-dark) !important;
-	background-color: var(--color-accent) !important;
-	cursor: auto;
-}
-
-/*Media query */
->>>>>>> Use nuxt-link-exact-active
 @media only screen and (min-width: 840px) {
 	.row {
 		grid-template-columns: 1fr 1fr;
