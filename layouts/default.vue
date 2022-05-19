@@ -4,9 +4,9 @@
 	<div class="wrapper">
 		<page-header />
 		<div class="content">
-			<div class="container">
+			<main class="container">
 				<nuxt />
-			</div>
+			</main>
 		</div>
 		<page-footer />
 	</div>
