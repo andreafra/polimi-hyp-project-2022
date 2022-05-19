@@ -38,7 +38,7 @@ export default {
 				img: el.images[0].url,
 				alt: el.images[0].alt,
 				description: el.description,
-				url: `/pois/${el.id}`,
+				url: `/pois/${el.id}?itinerary=${this.itinerary.id}`,
 			}))
 		},
 	},
