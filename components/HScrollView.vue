@@ -1,49 +1,42 @@
 <template>
-	<div class="card-view flex-container-center">
-		<div
-			ref="container"
-			class="scroll-snap-container flex-container-center"
-			@scroll="handleScroll()"
-			@mousewheel="wheelScroll"
-		>
-			<transition name="fade">
-				<div
-					v-show="isPrevVisible"
-					class="opacity-bar-left"
-					aria-hidden="true"
-				></div>
-			</transition>
-			<transition name="fade">
-				<div
-					v-show="isNextVisible"
-					class="opacity-bar-right"
-					aria-hidden="true"
-				></div>
-			</transition>
-
+	<div class="scroll-view">
+		<transition name="fade">
 			<div
-				v-for="(obj, index) of objects"
-				:key="index"
-				ref="elem"
-				class="scroll-snap-element"
-			>
-				<Card :object="obj" />
-			</div>
-		</div>
+				v-show="isPrevVisible"
+				class="opacity-bar-left"
+				aria-hidden="true"
+			></div>
+		</transition>
 		<transition name="fade">
 			<button
 				v-show="isPrevVisible"
-				class="prev flex-container-center"
+				class="prev"
 				aria-hidden="true"
 				@click="clickToScroll('prev')"
 			>
 				<ArrowLeft />
 			</button>
 		</transition>
+		<div
+			ref="container"
+			class="scroll-snap-container"
+			@scroll="handleScroll()"
+			@mousewheel="wheelScroll"
+		>
+			<slot />
+		</div>
+
+		<transition name="fade">
+			<div
+				v-show="isNextVisible"
+				class="opacity-bar-right"
+				aria-hidden="true"
+			></div>
+		</transition>
 		<transition name="fade">
 			<button
 				v-show="isNextVisible"
-				class="next flex-container-center"
+				class="next"
 				aria-hidden="true"
 				@click="clickToScroll('next')"
 			>
@@ -56,16 +49,10 @@
 <script>
 import ArrowLeft from "./icons/ArrowLeft.vue"
 import ArrowRight from "./icons/ArrowRight.vue"
-import Card from "./Card.vue"
+
 export default {
-	name: "CardView",
-	components: { ArrowLeft, ArrowRight, Card },
-	props: {
-		objects: {
-			type: Array,
-			required: true,
-		},
-	},
+	name: "HScrollView",
+	components: { ArrowLeft, ArrowRight },
 	data: () => ({
 		// Use local state to dynamically toggle element visibility
 		// instead of using selectors and CSS. Set defaults here.
@@ -80,7 +67,7 @@ export default {
 			// https://vuejs.org/guide/essentials/template-refs.html
 			const container = this.$refs.container
 			// When used in a v-for, (multiple identical refs) it returns an array
-			const elem = this.$refs.elem[0]
+			const elem = this.$el.querySelector(".scroll-snap-container > *")
 
 			if (to === "prev") {
 				container.scrollLeft -= elem.offsetWidth
@@ -91,7 +78,7 @@ export default {
 		wheelScroll(e) {
 			e.preventDefault()
 			const container = this.$refs.container
-			const elem = this.$refs.elem[0]
+			const elem = this.$el.querySelector(".scroll-snap-container > *")
 
 			container.scrollLeft += elem.offsetWidth * Math.sign(e.deltaY)
 		},
@@ -116,8 +103,10 @@ export default {
 @import "@/assets/styles/animations.css";
 @import "@/assets/styles/containers.css";
 
-.card-view {
+.scroll-view {
+	display: flex;
 	position: relative;
+	margin: var(--space-y-1) 0;
 
 	/* Local variables  */
 	--scroll-button-size: 3rem;
@@ -127,8 +116,10 @@ export default {
 /* Prev/Next Buttons */
 .prev,
 .next {
+	display: flex;
 	position: absolute;
 	cursor: pointer;
+	align-self: center;
 	justify-content: center;
 
 	color: var(--color-light);
@@ -175,6 +166,7 @@ export default {
 
 /*Container and scrollbar styles */
 .scroll-snap-container {
+	display: flex;
 	overflow-x: auto;
 	scroll-behavior: smooth;
 	scroll-snap-type: x mandatory;
@@ -191,13 +183,13 @@ export default {
 }
 
 /* Elements and opacity bars styles */
-.scroll-snap-element {
+.scroll-snap-container > * {
 	scroll-snap-align: center;
 	scroll-margin-left: 0;
 	min-width: 16em;
 	margin-right: 1em;
 }
-.scroll-snap-element:last-child {
+.scroll-snap-container > *:last-child {
 	margin-right: 0;
 }
 
@@ -220,19 +212,19 @@ export default {
 	left: -0.15em;
 	background: linear-gradient(
 		90deg,
-		var(--color-light) 35.53%,
+		var(--color-light) 0%,
 		rgba(214, 214, 177, 0) 100%
 	);
 }
 
 /*Media query */
 @media only screen and (min-width: 840px) {
-	.card-view {
+	.scroll-view {
 		/* Local variables override */
 		--scroll-button-offset-multiplier: -0.5;
 	}
 
-	.scroll-snap-element {
+	.scroll-snap-container > * {
 		scroll-snap-align: start;
 		/* Offset from the align ('start' in this case) */
 		scroll-margin-left: var(--scroll-button-size);
