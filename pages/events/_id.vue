@@ -43,13 +43,13 @@ import HScrollView from "~/components/HScrollView.vue"
 export default {
 	name: "EventsPage",
 	components: { Card, ButtonPrimary, HScrollView },
-	async asyncData({ $axios, params, redirect }) {
-		const invalidSeason =
-			!["winter", "spring", "summer", "autumn"].includes(params.id) &&
-			params.id !== "all"
-		// Exploit for nuxt-link-active as /events is considered active in all group of topics pages
-		// e.g. in /events/winter the nuxt-link /events will be considered active too
-		if (invalidSeason) redirect("/events/all")
+	async asyncData({ $axios, params }) {
+		const invalidSeason = ![
+			"winter",
+			"spring",
+			"summer",
+			"autumn",
+		].includes(params.id)
 		const res = await $axios.$get(
 			`/api/events${invalidSeason ? "" : "?season=" + params.id}`
 		)
@@ -65,7 +65,7 @@ export default {
 		seasons: [
 			{
 				label: "All",
-				link: "/events/all",
+				link: "/events",
 				desc: "All events that will be held at Minturno!",
 			},
 			{
@@ -124,7 +124,7 @@ h1 span {
 	background-color: var(--color-accent) !important;
 }
 
-a.nuxt-link-active {
+a.nuxt-link-exact-active {
 	color: var(--color-dark) !important;
 	background-color: var(--color-accent) !important;
 	cursor: auto;
