@@ -53,12 +53,22 @@ import ArrowRight from "./icons/ArrowRight.vue"
 export default {
 	name: "HScrollView",
 	components: { ArrowLeft, ArrowRight },
+
 	data: () => ({
 		// Use local state to dynamically toggle element visibility
 		// instead of using selectors and CSS. Set defaults here.
 		isPrevVisible: false,
-		isNextVisible: true,
+		isNextVisible: false,
 	}),
+
+	mounted() {
+		//	If the objects do not overflow horizontally
+		//	The next button must not be shown
+		const container = this.$refs.container
+		this.isNextVisible =
+			container.scrollWidth - container.scrollLeft - container.offsetWidth
+	},
+
 	methods: {
 		clickToScroll(to) {
 			// Use refs instead of using querySelector.
@@ -203,7 +213,7 @@ export default {
 	right: -0.15em;
 	background: linear-gradient(
 		270deg,
-		var(--color-light) 0%,
+		var(--color-light) 35.53%,
 		rgba(214, 214, 177, 0) 100%
 	);
 }
