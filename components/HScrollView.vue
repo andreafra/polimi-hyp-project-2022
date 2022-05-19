@@ -111,7 +111,6 @@ export default {
 
 <style scoped>
 @import "@/assets/styles/animations.css";
-@import "@/assets/styles/containers.css";
 
 .scroll-view {
 	display: flex;
