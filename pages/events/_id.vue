@@ -4,8 +4,8 @@
 		<h1>{{ event.name }}</h1>
 		<h-scroll-view>
 			<div
-				v-for="x of event.images"
-				:key="x"
+				v-for="(x, index) of event.images"
+				:key="index"
 				style="height: 300px; background: red"
 			>
 				{{ x }}
@@ -19,7 +19,7 @@
 			</div>
 			<div class="column">
 				<h2>Hosted at</h2>
-				<card :object="{ event, url: '/' }" />
+				<card :object="getPoI()" />
 			</div>
 		</div>
 	</article>
@@ -44,7 +44,14 @@ export default {
 
 	methods: {
 		getPoI() {
-			// how do I get the poi related to this event
+			const poi = this.event.pointOfInterest
+			return {
+				title: poi.name,
+				description: poi.description,
+				img: poi.images[0].img,
+				alt: poi.images[0].alt,
+				url: "/pois/" + poi.id,
+			}
 		},
 	},
 }
@@ -52,10 +59,13 @@ export default {
 
 <style scoped>
 .row {
-	display: flex;
+	display: grid;
+	grid-template-columns: 1fr;
 }
 
-.column {
-	flex: 50%;
+@media only screen and (min-width: 840px) {
+	.row {
+		grid-template-columns: 1fr 1fr;
+	}
 }
 </style>
