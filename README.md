@@ -1,4 +1,4 @@
-# polimi-hyp-project-2022
+# polimi-hyp-project-2022 [![CircleCI](https://circleci.com/gh/QUB3X/polimi-hyp-project-2022/tree/main.svg?style=svg&circle-token=6685188cd9c7a918d4b27068f208345ec1546cbb)](https://circleci.com/gh/QUB3X/polimi-hyp-project-2022/tree/main)
 
 **Team AACF**:
 
