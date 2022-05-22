@@ -1,53 +1,58 @@
 <template>
 	<div class="steps-container">
-		<div v-if="prevStep" class="prev-step">
-			<p>{{ prevStep.label }}</p>
-			<button-primary
-				v-if="prevStep"
-				:link="prevStep.link"
-				:title="prevStep.title"
-				class="button-step"
-			>
-			</button-primary>
-			<arrow-left class="arrow"> </arrow-left>
-		</div>
-		<div v-if="nextStep" class="next-step">
-			<p>{{ nextStep.label }}</p>
-			<button-primary
-				:link="nextStep.link"
-				:title="nextStep.title"
-				class="button-step"
-			>
-			</button-primary>
-			<arrow-right class="arrow"> </arrow-right>
-		</div>
+		<nuxt-link v-if="prevStep" :to="prevStep.url" class="step prev-step">
+			<p class="step-label">{{ prevStep.label }}</p>
+			<div class="step-box">
+				<h3 class="step-title">{{ prevStep.title }}</h3>
+				<arrow-left class="arrow" />
+			</div>
+		</nuxt-link>
+		<nuxt-link v-if="nextStep" :to="nextStep.url" class="step next-step">
+			<p class="step-label">{{ nextStep.label }}</p>
+			<div class="step-box">
+				<h3 class="step-title">{{ nextStep.title }}</h3>
+				<arrow-right class="arrow" />
+			</div>
+		</nuxt-link>
 	</div>
 </template>
 
+<!-- FIXME: It would appear that (at least in development)
+asyncData is called and $axios.$get returns `null` whenever the two buttons in steps-navigator are
+re-rendered. The issue lies with steps-navigator. THIS IS BECAUSE NUXT-LINK TRIES TO PREFETCH
+-->
 <script>
-import ButtonPrimary from "./ButtonPrimary.vue"
 import ArrowLeft from "./icons/ArrowLeft.vue"
 import ArrowRight from "./icons/ArrowRight.vue"
 export default {
 	name: "StepsNavigator",
-	components: { ButtonPrimary, ArrowLeft, ArrowRight },
+	components: { ArrowLeft, ArrowRight },
 	props: {
 		// eslint-disable-next-line vue/require-default-prop
 		prevStep: { type: Object },
 		// eslint-disable-next-line vue/require-default-prop
 		nextStep: { type: Object },
 	},
-	mounted() {
-		//  document.querySelector(".prev-step").style.backgroundImage
-		if (this.prevStep)
-			this.$el.querySelector(
-				".prev-step .button-step"
-			).style.backgroundImage = `linear-gradient(0deg, var(--color-light), rgba(214, 214, 177, 0)), url("${this.prevStep.url}")`
-		if (this.nextStep)
-			this.$el.querySelector(
-				".next-step .button-step"
-			).style.backgroundImage = `linear-gradient(0deg, var(--color-light), rgba(214, 214, 177, 0)), url("${this.nextStep.url}")`
+	methods: {
+		getBackground(step) {
+			if (step)
+				return {
+					backgroundImage: `linear-gradient(0deg, var(--color-light), rgba(214, 214, 177, 0)), url("${step.url}")`,
+				}
+			else return {}
+		},
 	},
+	// mounted() {
+	//  document.querySelector(".prev-step").style.backgroundImage
+	// if (this.prevStep)
+	// 	this.$el.querySelector(
+	// 		".prev-step .button-step"
+	// 	).style.backgroundImage = `linear-gradient(0deg, var(--color-light), rgba(214, 214, 177, 0)), url("${this.prevStep.url}")`
+	// if (this.nextStep)
+	// 	this.$el.querySelector(
+	// 		".next-step .button-step"
+	// 	).style.backgroundImage = `linear-gradient(0deg, var(--color-light), rgba(214, 214, 177, 0)), url("${this.nextStep.url}")`
+	// },
 }
 </script>
 
@@ -55,88 +60,82 @@ export default {
 .steps-container {
 	position: relative;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	justify-content: space-evenly;
+	align-items: flex-end;
 	background-color: var(--color-neutral);
 	flex-wrap: wrap;
+	border-top-left-radius: var(--border-radius);
+	border-top-right-radius: var(--border-radius);
 }
 
-.prev-step p,
-.next-step p {
-	font-weight: bolder;
-	word-wrap: break-word;
-}
-
-.prev-step,
-.next-step {
-	display: flex;
+.step {
+	flex-basis: calc(50% - var(--space-y-1));
+	display: inline-flex;
 	flex-direction: column;
-	width: 95%;
-	margin-bottom: var(--space-y-1);
+	text-decoration: none;
+	padding: 0 0 var(--space-y-1);
 }
 
-.button-step {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	padding: var(--space-y-1);
-	height: 7em;
-
-	color: var(--color-accent-dark);
-	opacity: 0.8;
-	border: 0;
-
+.step .step-label {
+	font-weight: bold;
 	word-wrap: break-word;
-	overflow: hidden;
+	color: var(--color-light);
+}
+
+.step-box {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+
+	border-radius: var(--border-radius);
+	background-color: white;
+	padding: 0 var(--space-y-1) var(--space-y-1);
+
+	height: var(--step-height);
 
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
 }
 
-.button-step:hover {
-	opacity: 1;
-}
-
-.prev-step .button-step {
-	text-align: right;
-}
-
-.next-step .button-step {
-	text-align: left;
+.step-title {
+	margin: 0;
+	font-family: var(--font-family-heading);
+	color: var(--color-accent-dark);
 }
 
 .arrow {
+	position: relative;
+	flex-basis: 2em;
 	color: var(--color-accent-dark);
-	position: absolute;
-	margin-top: 6.2em;
 	font-size: 1.4rem;
+	flex-shrink: 0;
 }
 
-.next-step .arrow {
-	right: 1.5em;
+.prev-step .step-box {
+	flex-direction: row-reverse;
+}
+
+.next-step .step-box {
+	flex-direction: row;
+}
+
+.prev-step .step-title {
+	text-align: right;
+}
+
+.next-step .step-title {
+	text-align: left;
 }
 
 .prev-step .arrow {
-	left: 1.5em;
+	margin-right: 1em;
+}
+
+.next-step .arrow {
+	margin-left: 1em;
 }
 
 @media only screen and (min-width: 840px) {
-	.prev-step,
-	.next-step {
-		display: flex;
-		flex-direction: column;
-		width: 47%;
-	}
-
-	.prev-step {
-		margin-right: auto;
-		margin-left: var(--space-y-1);
-	}
-
-	.next-step {
-		margin-left: auto;
-		margin-right: var(--space-y-1);
-	}
 }
 </style>

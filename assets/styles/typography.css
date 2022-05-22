@@ -1,0 +1,16 @@
+/* The Orientation Marker above the title in PoI/Event/Itinerary/Service Pages */
+.category {
+	margin: 0;
+}
+
+h1 {
+	margin: 0 0 var(--space-y-1);
+}
+
+h2 {
+	margin: var(--space-y-2) 0 var(--space-y-1);
+}
+
+p {
+	margin: var(--space-y-1) 0;
+}

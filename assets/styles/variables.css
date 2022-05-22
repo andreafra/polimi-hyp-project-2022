@@ -19,6 +19,8 @@
 	--space-y-2: 2rem;
 	--space-y-3: 3rem;
 
+	--step-height: 9em;
+
 	--max-width: 920px;
 
 	--border-radius: 16px;
@@ -27,7 +29,7 @@
 	--grid-template-columns: 1fr;
 }
 
-@media screen and (width >= 840px) {
+@media screen and (min-width: 840px) {
 	:root {
 		--grid-template-columns: 1fr 1fr 1fr;
 		--font-size-header-links: 1.1rem;
