@@ -8,9 +8,7 @@ orbs:
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
-    example-workflow:
+    deploy-workflow:
       jobs:
-        - heroku/deploy-via-git:
-            api-key: '84e12456-126d-4c2d-b6fe-8280cb037b9c' 
-            app-name: polimi-hyp-team-aacf 
-
+        - heroku/deploy-via-git
+    
