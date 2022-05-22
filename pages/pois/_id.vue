@@ -1,12 +1,12 @@
 <template>
 	<div>
-		<div v-if="comingItineary" class="back-link-container">
+		<div v-if="fromItinerary" class="back-link-container">
 			<nuxt-link
-				:to="`/itineraries/${comingItineary.id}`"
+				:to="`/itineraries/${fromItinerary.id}`"
 				class="back-link"
 			>
-				<arrow-left></arrow-left> &nbsp; Back to
-				{{ comingItineary.name }}
+				<arrow-left /> &nbsp; Back to
+				{{ fromItinerary.name }}
 			</nuxt-link>
 		</div>
 		<span class="category">Point of Interest</span>
@@ -25,30 +25,25 @@
 		<h2>Visit Information</h2>
 		<p>{{ poi.visitInfo }}</p>
 		<h2>Events hosted here</h2>
-		<div class="flex-container">
-			<h-scroll-view>
-				<card
-					v-for="(event, index) of getEvents()"
-					:key="`poi-event-index-${index}`"
-					:object="event"
-				/>
-			</h-scroll-view>
-		</div>
+		<h-scroll-view>
+			<card
+				v-for="(event, index) of getEvents()"
+				:key="`poi-event-index-${index}`"
+				:object="event"
+			/>
+		</h-scroll-view>
 		<h2>Itineraries passing through here</h2>
-		<div class="flex-container">
-			<h-scroll-view>
-				<card
-					v-for="(itinerary, index) of getItineraries()"
-					:key="`poi-event-index-${index}`"
-					:object="itinerary"
-				/>
-			</h-scroll-view>
-		</div>
+		<h-scroll-view>
+			<card
+				v-for="(itinerary, index) of getItineraries()"
+				:key="`poi-event-index-${index}`"
+				:object="itinerary"
+			/>
+		</h-scroll-view>
 		<steps-navigator
 			:next-step="getNavigatorStep(nextStep)"
 			:prev-step="getNavigatorStep(prevStep)"
-		>
-		</steps-navigator>
+		/>
 	</div>
 </template>
 
@@ -62,29 +57,29 @@ export default {
 	components: { Card, HScrollView, ArrowLeft, StepsNavigator },
 	async asyncData({ $axios, params, query }) {
 		const poi = await $axios.$get(`/api/pois/${params.id}`)
-		const comingItineary = poi.itineraries.find(
-			(_) => _.id === query.itinerary
+		const fromItinerary = poi.itineraries.find(
+			(itinerary) => itinerary.id === query.itinerary
 		)
-		if (comingItineary) {
-			// In the DB the index in itinerary_poi starts from 1 and not 0
-			const curPoiIndex =
-				comingItineary.itinerary_poi.pointOfInterestIndex - 1
-			const res = await $axios.$get(
-				`/api/itineraries/${comingItineary.id}`
-			)
-			const itinearyPois = res.pointsOfInterest
-			const prevStep =
-				curPoiIndex > 0 ? itinearyPois[curPoiIndex - 1] : undefined
-			const nextStep =
-				curPoiIndex < itinearyPois.length - 1
-					? itinearyPois[curPoiIndex + 1]
-					: undefined
-			return { poi, comingItineary, prevStep, nextStep }
-		} else return { poi, comingItineary }
+		if (!fromItinerary) return { poi, fromItinerary }
+
+		// In the DB the index in itinerary_poi starts from 1 and not 0
+		const currPoiIndex =
+			fromItinerary.itinerary_poi.pointOfInterestIndex - 1
+		const itinerary = await $axios.$get(
+			`/api/itineraries/${fromItinerary.id}`
+		)
+		const itineraryPoIs = itinerary.pointsOfInterest
+		const prevStep =
+			currPoiIndex > 0 ? itineraryPoIs[currPoiIndex - 1] : undefined
+		const nextStep =
+			currPoiIndex < itineraryPoIs.length - 1
+				? itineraryPoIs[currPoiIndex + 1]
+				: undefined
+		return { poi, fromItinerary, prevStep, nextStep }
 	},
 	data: () => ({
 		poi: {},
-		comingItineary: undefined,
+		fromItinerary: undefined,
 		prevStep: undefined,
 		nextStep: undefined,
 	}),
@@ -110,32 +105,25 @@ export default {
 			}))
 		},
 		getNavigatorStep(step) {
-			if (step) {
-				return {
-					link: `/pois/${step.id}?itinerary=${this.comingItineary.id}`,
-					title: step.name,
-					url: step.images[0].url,
-					label:
-						step === this.nextStep
-							? "Next step in Itinerary"
-							: "Previous step in Itinerary",
-				}
-			} else return undefined
+			if (!step) return undefined
+
+			return {
+				url: `/pois/${step.id}?itinerary=${this.fromItinerary.id}`,
+				title: step.name,
+				img: step.images[0].url,
+				label:
+					step === this.nextStep
+						? "Next step in Itinerary"
+						: "Previous step in Itinerary",
+			}
 		},
 	},
 }
 </script>
 
 <style scoped>
-.flex-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
 .back-link-container {
-	margin-top: var(--space-y-1);
-	margin-bottom: var(--space-y-1);
+	margin: var(--space-y-1) 0;
 }
 
 .back-link {
