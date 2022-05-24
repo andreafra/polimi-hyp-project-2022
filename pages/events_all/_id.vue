@@ -5,9 +5,9 @@
 			<span v-if="activeButton !== 'All'">{{ activeButton }}</span> Events
 		</h1>
 		<p>
-			{{ seasons.find((_) => _.label === activeButton).desc }}
+			{{ seasons.find((season) => season.label === activeButton).desc }}
 		</p>
-		<div class="desktop-container">
+		<div class="seasons">
 			<button-primary
 				v-for="(season, index) of seasons"
 				:key="`season-index-${index}`"
@@ -16,15 +16,6 @@
 				class="season-button"
 			/>
 		</div>
-		<h-scroll-view class="mobile-container">
-			<button-primary
-				v-for="(season, index) of seasons"
-				:key="`season-index-${index}`"
-				:link="`${season.link}`"
-				:title="season.label"
-				class="season-button"
-			/>
-		</h-scroll-view>
 		<grid-view>
 			<card
 				v-for="(event, index) of getEvents()"
@@ -39,10 +30,9 @@
 <script>
 import ButtonPrimary from "~/components/ButtonPrimary.vue"
 import Card from "~/components/Card.vue"
-import HScrollView from "~/components/HScrollView.vue"
 export default {
 	name: "EventsPage",
-	components: { Card, ButtonPrimary, HScrollView },
+	components: { Card, ButtonPrimary },
 	async asyncData({ $axios, params }) {
 		const invalidSeason = ![
 			"winter",
@@ -110,50 +100,34 @@ h1 span {
 	color: var(--color-accent-dark);
 }
 
-.mobile-container {
-	display: flex !important;
-	height: 10%; /* To solve a bug with opacity bars */
-}
-
-.desktop-container {
-	display: none !important;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
+.seasons {
+	display: flex;
+	overflow-x: scroll;
+	scroll-behavior: smooth;
+	padding-bottom: var(--space-y-1);
 }
 
 .season-button {
-	color: var(--color-light) !important;
-	background-color: var(--color-neutral) !important;
-	border: 0px !important;
-	margin: 0.1em 0.2em 0.2em 0.2em;
-	width: 5.8em;
+	color: var(--color-light);
+	background-color: var(--color-neutral);
+	border: 0px;
+	margin-right: var(--space-y-0);
+	flex-grow: 1;
 	text-align: center;
 }
 
+.season-button:last-child {
+	margin-right: 0;
+}
+
 .season-button:hover {
-	color: var(--color-dark) !important;
-	background-color: var(--color-accent) !important;
+	color: var(--color-dark);
+	background-color: var(--color-accent);
 }
 
-a.nuxt-link-exact-active {
-	color: var(--color-dark) !important;
-	background-color: var(--color-accent) !important;
+.season-button.nuxt-link-exact-active {
+	color: var(--color-dark);
+	background-color: var(--color-accent);
 	cursor: auto;
-}
-
-/*Media query */
-@media only screen and (min-width: 840px) {
-	.mobile-container {
-		display: none !important;
-	}
-
-	.desktop-container {
-		display: flex !important;
-	}
-
-	.season-button {
-		width: 8.8em;
-	}
 }
 </style>
