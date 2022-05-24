@@ -34,7 +34,8 @@ export default {
 		HScrollView,
 		Card,
 	},
-	async asyncData({ $axios, params }) {
+	async asyncData({ $axios, params, redirect }) {
+		if (!params.id) redirect("/events_all")
 		const res = await $axios.$get(`/api/events/${params.id}`)
 		return { event: res }
 	},
