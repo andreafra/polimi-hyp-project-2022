@@ -8,6 +8,13 @@
 				"openingHours": "10-16",
 				"image": "http://example.com/image.png",
 				"imageAlt": "Something"
+			},
+			{
+				"name": "Farmacia Durante della Dott.ssa Franco Marcella",
+				"address": "Via Appia, 1092 - 04026 Minturno (LT)",
+				"openingHours": "8:30-20",
+				"image": "/assets/images/st1-farmaciaDurante.json",
+				"imageAlt": "Facciata della farmacia Durante."
 			}
 		]
 	}
