@@ -2,14 +2,14 @@
 	<div class="scroll-view">
 		<transition name="fade">
 			<div
-				v-show="isPrevVisible"
+				v-if="isPrevVisible"
 				class="opacity-bar-left"
 				aria-hidden="true"
 			></div>
 		</transition>
 		<transition name="fade">
 			<button
-				v-show="isPrevVisible"
+				v-if="isPrevVisible"
 				class="prev"
 				aria-hidden="true"
 				@click="clickToScroll('prev')"
@@ -28,14 +28,14 @@
 
 		<transition name="fade">
 			<div
-				v-show="isNextVisible"
+				v-if="isNextVisible"
 				class="opacity-bar-right"
 				aria-hidden="true"
 			></div>
 		</transition>
 		<transition name="fade">
 			<button
-				v-show="isNextVisible"
+				v-if="isNextVisible"
 				class="next"
 				aria-hidden="true"
 				@click="clickToScroll('next')"

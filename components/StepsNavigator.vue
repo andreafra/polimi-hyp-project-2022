@@ -2,14 +2,15 @@
 	<div class="steps-container">
 		<nuxt-link v-if="prevStep" :to="prevStep.url" class="step prev-step">
 			<p class="step-label">{{ prevStep.label }}</p>
-			<div class="step-box">
+			<div class="step-box" :style="getBackground(prevStep)">
 				<h3 class="step-title">{{ prevStep.title }}</h3>
 				<arrow-left class="arrow" />
 			</div>
 		</nuxt-link>
+		<div v-else class="empty"></div>
 		<nuxt-link v-if="nextStep" :to="nextStep.url" class="step next-step">
 			<p class="step-label">{{ nextStep.label }}</p>
-			<div class="step-box">
+			<div class="step-box" :style="getBackground(nextStep)">
 				<h3 class="step-title">{{ nextStep.title }}</h3>
 				<arrow-right class="arrow" />
 			</div>
@@ -42,29 +43,16 @@ export default {
 			else return {}
 		},
 	},
-	// mounted() {
-	//  document.querySelector(".prev-step").style.backgroundImage
-	// if (this.prevStep)
-	// 	this.$el.querySelector(
-	// 		".prev-step .button-step"
-	// 	).style.backgroundImage = `linear-gradient(0deg, var(--color-light), rgba(214, 214, 177, 0)), url("${this.prevStep.url}")`
-	// if (this.nextStep)
-	// 	this.$el.querySelector(
-	// 		".next-step .button-step"
-	// 	).style.backgroundImage = `linear-gradient(0deg, var(--color-light), rgba(214, 214, 177, 0)), url("${this.nextStep.url}")`
-	// },
 }
 </script>
 
 <style scoped>
 .steps-container {
 	position: relative;
-	display: flex;
-	justify-content: space-evenly;
-	align-items: flex-end;
-	padding: 0 var(--space-0);
+	display: grid;
+	grid-template-columns: var(--navigator-template-columns);
+
 	background-color: var(--color-neutral);
-	flex-wrap: wrap;
 	border-top-left-radius: var(--border-radius);
 	border-top-right-radius: var(--border-radius);
 }
@@ -94,7 +82,7 @@ export default {
 	background-color: white;
 	padding: 0 var(--space-1) var(--space-1);
 
-	height: var(--step-height);
+	height: var(--navigator-step-height);
 
 	overflow: hidden;
 
@@ -111,10 +99,17 @@ export default {
 
 .arrow {
 	position: relative;
-	flex-basis: 2em;
 	color: var(--color-accent-dark);
-	font-size: 1.4rem;
+	font-size: 1.4em;
 	flex-shrink: 0;
+}
+
+.prev-step {
+	margin-left: var(--space-1);
+}
+
+.next-step {
+	margin-right: var(--space-1);
 }
 
 .prev-step .step-box {

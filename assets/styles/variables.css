@@ -2,6 +2,7 @@
 	/* https://coolors.co/494331-878472-d6d6b1-b44418-e46a3a */
 	--color-accent: #e46a3a;
 	--color-accent-dark: #b44418;
+	--color-lighter: #eeeeda;
 	--color-light: #d6d6b1;
 	--color-neutral: #878472;
 	--color-dark: #494331;
@@ -23,19 +24,21 @@
 	--image-height: 7em;
 	--image-highlight-height: 24em;
 
-	--step-height: 9em;
-
 	--max-width: 920px;
 
 	--border-radius: 16px;
 
 	/* Make 3 columns */
 	--grid-template-columns: 1fr;
+
+	--navigator-step-height: 9em;
+	--navigator-template-columns: 1fr 1fr;
 }
 
 @media screen and (min-width: 580px) {
 	:root {
 		--grid-template-columns: 1fr 1fr;
+		--navigator-template-columns: 1fr 1fr;
 	}
 }
 
