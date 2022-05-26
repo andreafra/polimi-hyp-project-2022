@@ -3,18 +3,63 @@
 		"name": "Pharmacies",
 		"services": [
 			{
-				"name": "Pharma X",
-				"address": "Via Zzz",
-				"openingHours": "10-16",
-				"image": "http://example.com/image.png",
-				"imageAlt": "Something"
+				"name": "Farmacia Durante della Dott.ssa Franco Marcella",
+				"address": "Via Appia, 1092, 04026 Minturno LT",
+				"openingHours": "8:30-20",
+				"image": "/assets/images/st1-farmaciaDurante.jpg",
+				"imageAlt": "Ingresso della farmacia Durante."
 			},
 			{
-				"name": "Farmacia Durante della Dott.ssa Franco Marcella",
-				"address": "Via Appia, 1092 - 04026 Minturno (LT)",
+				"name": "Farmacia Schiavone",
+				"address": "Via Cadorna, 52, 04026 Minturno LT",
 				"openingHours": "8:30-20",
-				"image": "/assets/images/st1-farmaciaDurante.json",
-				"imageAlt": "Facciata della farmacia Durante."
+				"image": "/assets/images/st2-farmaciaSchiavone.jpg",
+				"imageAlt": "Ingresso della farmacia Schiavone."
+			},
+			{
+				"name": "Farmacia del Golfo",
+				"address": "Via Appia, 6, 04028 Minturno LT",
+				"openingHours": "08:30-13,16:30-20",
+				"image": "/assets/images/st3-farmaciaDelGolfo.jpg",
+				"imageAlt": "Ingresso della farmacia del Golfo."
+			}
+		]
+	},
+	{
+		"name": "Banks",
+		"services": [
+			{
+				"name": "Unicredit",
+				"address": "Via Appia, 344, 04028 Minturno LT",
+				"openingHours": "08:20-12:45,14:35-16:35",
+				"image": "/assets/images/st4-bancaUnicredit.jpg",
+				"imageAlt": "Ingresso della banca Unicredit."
+			},
+			{
+				"name": "Banca dei Monti dei Paschi di Siena",
+				"address": "Via Appia, 1074/1076, 04028 Minturno LT",
+				"openingHours": "08:20-12:45,14:35-16:35",
+				"image": "/assets/images/st5-bancaMonteDeiPaschi.jpg",
+				"imageAlt": "Ingresso della banca Monte dei Paschi."
+			},
+			{
+				"name": "Banca Intesa San Paolo",
+				"address": "Via Appia, 1687 C/O Centro Commerciale, 04020 Minturno LT",
+				"openingHours": "08:30-13:30,14:45-16:55",
+				"image": "/assets/images/st6-bancaIntesaSanPaolo.jpg",
+				"imageAlt": "Ingresso della banca IntesaSanPaolo."
+			}
+		]
+	},
+	{
+		"name": "Gas stations",
+		"services": [
+			{
+				"name": "Benzinaio TotalErg",
+				"address": "Via Cavallerizza, 5, 04026 Minturno LT",
+				"openingHours": "Orario continuato",
+				"image": "/assets/images/st7-benzinaioTotalErg.jpg",
+				"imageAlt": "pompe di benzina Total Erg."
 			}
 		]
 	}
