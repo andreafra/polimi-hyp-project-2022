@@ -1,4 +1,6 @@
 export default {
+	ssr: true,
+	target: "server",
 	// Global page headers: https://go.nuxtjs.dev/config-head
 	head: {
 		title: "polimi-hyp-project-2022",
@@ -57,6 +59,17 @@ export default {
 			handler: "~/server/api/index.js",
 		},
 	],
+
+	axios: {
+		proxy: true,
+	},
+
+	proxy: {
+		"/api/": {
+			target: `${process.env.HEROKU_HOSTNAME ?? "localhost:8000"}/api/`,
+			pathRewrite: { "^/api/": "" },
+		},
+	},
 
 	// Google Fonts: https://google-fonts.nuxtjs.org/options
 	googleFonts: {
