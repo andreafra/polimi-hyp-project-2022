@@ -14,7 +14,7 @@ export default {
 
 <style scoped>
 .button {
-	color: var(--color-bg-dark);
+	color: var(--color-darker);
 	display: inline-block;
 	padding: var(--space-0) var(--space-1);
 	border-radius: var(--border-radius);
