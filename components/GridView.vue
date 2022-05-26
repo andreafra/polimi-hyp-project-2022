@@ -13,16 +13,10 @@ export default {
 <style scoped>
 .grid-container {
 	display: grid;
-	grid-row-gap: var(--space-y-1);
-	grid-column-gap: var(--space-y-1);
-	grid-template-areas: "a";
+	grid-row-gap: var(--space-1);
+	grid-column-gap: var(--space-1);
+	grid-template-columns: var(--grid-template-columns);
 
-	margin: var(--space-y-1) 0;
-}
-
-@media only screen and (min-width: 840px) {
-	.grid-container {
-		grid-template-areas: "a a a";
-	}
+	margin: var(--space-1) 0;
 }
 </style>

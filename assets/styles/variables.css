@@ -15,10 +15,13 @@
 	--font-size-header-menu: 1.2rem;
 	--font-size-button: 1.1rem;
 
-	--space-y-0: 0.5rem;
-	--space-y-1: 1rem;
-	--space-y-2: 2rem;
-	--space-y-3: 3rem;
+	--space-0: 0.5rem;
+	--space-1: 1rem;
+	--space-2: 2rem;
+	--space-3: 3rem;
+
+	--image-height: 7em;
+	--image-highlight-height: 24em;
 
 	--step-height: 9em;
 
@@ -28,6 +31,12 @@
 
 	/* Make 3 columns */
 	--grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 580px) {
+	:root {
+		--grid-template-columns: 1fr 1fr;
+	}
 }
 
 @media screen and (min-width: 840px) {

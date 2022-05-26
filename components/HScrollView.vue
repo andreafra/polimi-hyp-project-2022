@@ -115,7 +115,7 @@ export default {
 .scroll-view {
 	display: flex;
 	position: relative;
-	margin: var(--space-y-1) 0;
+	margin: var(--space-1) 0;
 
 	/* Local variables  */
 	--scroll-button-size: 3rem;
@@ -200,6 +200,13 @@ export default {
 }
 .scroll-snap-container > *:last-child {
 	margin-right: 0;
+}
+
+/* Styles for images */
+.scroll-snap-container > img {
+	height: var(--image-highlight-height);
+	border-radius: var(--border-radius);
+	background-color: var(--color-neutral);
 }
 
 .opacity-bar-right,

@@ -59,6 +59,7 @@
 .page-footer {
 	background-color: var(--color-dark);
 	color: var(--color-light);
+	padding-bottom: var(--space-2);
 }
 
 .footer-grid {

@@ -62,6 +62,7 @@ export default {
 	display: flex;
 	justify-content: space-evenly;
 	align-items: flex-end;
+	padding: 0 var(--space-0);
 	background-color: var(--color-neutral);
 	flex-wrap: wrap;
 	border-top-left-radius: var(--border-radius);
@@ -69,11 +70,13 @@ export default {
 }
 
 .step {
-	flex-basis: calc(50% - var(--space-y-1));
+	flex-grow: 1;
+	flex-basis: 0;
+	margin: 0 var(--space-0);
 	display: inline-flex;
 	flex-direction: column;
 	text-decoration: none;
-	padding: 0 0 var(--space-y-1);
+	padding: 0 0 var(--space-1);
 }
 
 .step .step-label {
@@ -89,9 +92,11 @@ export default {
 
 	border-radius: var(--border-radius);
 	background-color: white;
-	padding: 0 var(--space-y-1) var(--space-y-1);
+	padding: 0 var(--space-1) var(--space-1);
 
 	height: var(--step-height);
+
+	overflow: hidden;
 
 	background-size: cover;
 	background-position: center center;

@@ -63,10 +63,10 @@ export default {
 		families: {
 			"Playfair+Display": {
 				wght: [400, 800],
-				ital: [400],
 			},
 			"Work+Sans": {
 				wght: [400],
+				ital: [400],
 			},
 		},
 		display: "swap",

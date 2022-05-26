@@ -3,15 +3,20 @@
 	margin: 0;
 }
 
-h1 {
+h1,
+h2,
+h3 {
 	font-family: var(--font-family-heading);
-	margin: var(--space-y-1) 0;
+}
+
+h1 {
+	margin: var(--space-1) 0;
 }
 
 h2 {
-	margin: var(--space-y-2) 0 var(--space-y-1);
+	margin: var(--space-2) 0 var(--space-1);
 }
 
 p {
-	margin: var(--space-y-1) 0;
+	margin: var(--space-1) 0;
 }

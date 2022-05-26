@@ -20,7 +20,7 @@
 import Card from "~/components/Card.vue"
 
 export default {
-	name: "AllPoIsPage",
+	name: "AllPoisPage",
 	components: { Card },
 	async asyncData({ $axios }) {
 		const res = await $axios.$get(`/api/pois`)
@@ -33,18 +33,8 @@ export default {
 	methods: {
 		getPoIs() {
 			return this.pois.map((poi) => {
-				const duration = new Date(poi.duration)
-				const hours = duration.getHours()
-				const minutes = duration.getMinutes()
-				const durationLabel = hours
-					? hours + "h"
-					: "" + minutes
-					? minutes + "m"
-					: ""
-				const distance = poi.distance / 1000
 				return {
 					title: poi.name,
-					subtitle: `Duration: ${durationLabel} | Distance: ${distance} Km`,
 					img: poi.images[0].url,
 					alt: poi.images[0].alt,
 					description: poi.description,

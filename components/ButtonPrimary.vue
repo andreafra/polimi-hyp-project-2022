@@ -16,8 +16,7 @@ export default {
 .button {
 	color: var(--color-bg-dark);
 	display: inline-block;
-	padding: 1em;
-	border: 2px solid var(--color-accent-dark);
+	padding: var(--space-0) var(--space-1);
 	border-radius: var(--border-radius);
 	background-color: var(--color-accent);
 	font-family: var(--font-family-heading);
