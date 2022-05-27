@@ -139,9 +139,18 @@ export default {
 
 .nav-link a {
 	display: block;
-	padding: 0 0.5em;
+	padding: 0;
 	text-decoration: none;
 	color: var(--color-dark);
+}
+
+.nav-link .nuxt-link-exact-active {
+	color: var(--color-accent-dark);
+}
+
+.nav-link .nuxt-link-active::after {
+	content: "←";
+	margin-left: var(--space-0);
 }
 
 .nav-collapse {
@@ -192,6 +201,20 @@ export default {
 	.nav-link {
 		margin: 0;
 		display: inline-block;
+	}
+
+	.nav-link a {
+		padding: var(--space-0);
+	}
+
+	.nav-link a:hover,
+	.nav-link a:focus {
+		color: var(--color-accent-dark);
+	}
+
+	.nav-link .nuxt-link-active::after {
+		content: "";
+		display: none;
 	}
 }
 </style>

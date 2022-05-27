@@ -3,13 +3,12 @@
 		<span class="category">Event</span>
 		<h1>{{ event.name }}</h1>
 		<h-scroll-view>
-			<div
-				v-for="(x, index) of event.images"
+			<img
+				v-for="(img, index) of event.images"
 				:key="index"
-				style="height: 300px; background: red"
-			>
-				{{ x }}
-			</div>
+				:src="img.img"
+				:alt="img.alt"
+			/>
 		</h-scroll-view>
 		<p>{{ event.description }}</p>
 		<div class="row">
@@ -62,6 +61,7 @@ export default {
 .row {
 	display: grid;
 	grid-template-columns: 1fr;
+	padding-bottom: var(--space-1);
 }
 
 @media only screen and (min-width: 840px) {

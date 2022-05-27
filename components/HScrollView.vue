@@ -2,14 +2,14 @@
 	<div class="scroll-view">
 		<transition name="fade">
 			<div
-				v-show="isPrevVisible"
+				v-if="isPrevVisible"
 				class="opacity-bar-left"
 				aria-hidden="true"
 			></div>
 		</transition>
 		<transition name="fade">
 			<button
-				v-show="isPrevVisible"
+				v-if="isPrevVisible"
 				class="prev"
 				aria-hidden="true"
 				@click="clickToScroll('prev')"
@@ -28,14 +28,14 @@
 
 		<transition name="fade">
 			<div
-				v-show="isNextVisible"
+				v-if="isNextVisible"
 				class="opacity-bar-right"
 				aria-hidden="true"
 			></div>
 		</transition>
 		<transition name="fade">
 			<button
-				v-show="isNextVisible"
+				v-if="isNextVisible"
 				class="next"
 				aria-hidden="true"
 				@click="clickToScroll('next')"
@@ -115,7 +115,7 @@ export default {
 .scroll-view {
 	display: flex;
 	position: relative;
-	margin: var(--space-y-1) 0;
+	margin: var(--space-1) 0;
 
 	/* Local variables  */
 	--scroll-button-size: 3rem;
@@ -200,6 +200,13 @@ export default {
 }
 .scroll-snap-container > *:last-child {
 	margin-right: 0;
+}
+
+/* Styles for images */
+.scroll-snap-container > img {
+	height: var(--image-highlight-height);
+	border-radius: var(--border-radius);
+	background-color: var(--color-neutral);
 }
 
 .opacity-bar-right,

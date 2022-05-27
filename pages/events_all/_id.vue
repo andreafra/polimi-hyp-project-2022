@@ -104,14 +104,14 @@ h1 span {
 	display: flex;
 	overflow-x: scroll;
 	scroll-behavior: smooth;
-	padding-bottom: var(--space-y-1);
+	padding-bottom: var(--space-1);
 }
 
 .season-button {
 	color: var(--color-light);
 	background-color: var(--color-neutral);
 	border: 0px;
-	margin-right: var(--space-y-0);
+	margin-right: var(--space-0);
 	flex-grow: 1;
 	text-align: center;
 }

@@ -87,7 +87,7 @@ export default {
 		getEvents() {
 			return this.poi.events.map((event) => ({
 				title: event.name,
-				subtitle: `${event.date}`,
+				subtitle: `${new Date(event.date).toLocaleDateString()}`,
 				img: event.images[0].url,
 				alt: event.images[0].alt,
 				description: event.description,
@@ -123,7 +123,7 @@ export default {
 
 <style scoped>
 .back-link-container {
-	margin: var(--space-y-1) 0;
+	margin: var(--space-1) 0;
 }
 
 .back-link {
