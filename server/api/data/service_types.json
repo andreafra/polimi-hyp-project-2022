@@ -102,5 +102,31 @@
 				"imageAlt": "insegna del negozio Despar."
 			}
 		]
+	},
+	{
+		"name": "Shores",
+		"services": [
+			{
+				"name": "Lido La Siesta Sas",
+				"address": "Via Lungomare, 53, 04026 Marina di Minturno LT",
+				"openingHours": "08-21",
+				"image": "/assets/images/st13-lidoLaSiestaSas.jpg",
+				"imageAlt": "spiaggia del Lido La Siesta Sas."
+			},
+			{
+				"name": "Lido Il vascello",
+				"address": "Lungomare Nazario Sauro, 44, 04028 Minturno LT",
+				"openingHours": "08:30-01",
+				"image": "/assets/images/st14-lidoIlVascello.jpg",
+				"imageAlt": "ombrelloni del lido Il Vascello."
+			},
+			{
+				"name": "Marina Beach",
+				"address": "Via Bettino Craxi, 13, 04026 Minturno LT",
+				"openingHours": "08-21",
+				"image": "/assets/images/st15-lidoMarinaBeach.jpg",
+				"imageAlt": "ombrelloni del lido Marina Beach."
+			}
+		]
 	}
 ]
