@@ -5,6 +5,7 @@
 		"description": "A tour of the museums of the town.",
 		"duration": 5400,
 		"distance": 1500,
+		"map": "https://www.google.com/maps/d/u/0/edit?mid=1xhCLcjrdJaxFJT8Z8SbBfeM0h9zQCXI&usp=sharing",
 		"pointOfInterests": [
 			{ "name": "PoI X" },
 			{ "name": "PoI Y" },

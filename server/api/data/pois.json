@@ -2,8 +2,6 @@
 	{
 		"name": "PoI X",
 		"images": [{ "url": "https://example.com", "alt": "something" }],
-		"locationX": 45.0,
-		"locationY": 23.0,
 		"description": "Lorem ipsum dolor sit amen",
 		"visitInfo": "Lorem ipsum dolor sit amen",
 		"events": [
@@ -21,8 +19,6 @@
 	{
 		"name": "PoI Y",
 		"images": [{ "url": "https://example.com", "alt": "something" }],
-		"locationX": 45.0,
-		"locationY": 23.0,
 		"description": "Lorem ipsum dolor sit amen",
 		"visitInfo": "Lorem ipsum dolor sit amen",
 		"events": [
@@ -40,8 +36,6 @@
 	{
 		"name": "PoI Z",
 		"images": [{ "url": "https://example.com", "alt": "something" }],
-		"locationX": 45.0,
-		"locationY": 23.0,
 		"description": "Lorem ipsum dolor sit amen",
 		"visitInfo": "Lorem ipsum dolor sit amen",
 		"events": [
