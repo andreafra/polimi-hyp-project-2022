@@ -55,11 +55,51 @@
 		"name": "Gas stations",
 		"services": [
 			{
-				"name": "Benzinaio TotalErg",
+				"name": "TotalErg",
 				"address": "Via Cavallerizza, 5, 04026 Minturno LT",
 				"openingHours": "Orario continuato",
 				"image": "/assets/images/st7-benzinaioTotalErg.jpg",
 				"imageAlt": "pompe di benzina Total Erg."
+			},
+			{
+				"name": "Redi Service",
+				"address": "Km. 152.800 Via Appia, Minturno, LT 04026, 04026 Minturno LT",
+				"openingHours": "Orario continuato",
+				"image": "/assets/images/st8-benzinaioRediService.jpg",
+				"imageAlt": "pompe di benzina Redi Service."
+			},
+			{
+				"name": "Eni Station",
+				"address": "Via Appia Nuova N. 320 - Loc.scauri, 04028 Minturno LT",
+				"openingHours": "Orario continuato",
+				"image": "/assets/images/st9-benzinaioEniStation.jpg",
+				"imageAlt": "pompe di benzina Eni Station."
+			}
+		]
+	},
+	{
+		"name": "Grocery stores",
+		"services": [
+			{
+				"name": "Il pizzicagnolo",
+				"address": "Via Appia, 04026 Minturno LT",
+				"openingHours": "07:15-20:30",
+				"image": "/assets/images/st10-alimentariIlPizzicagnolo.jpg",
+				"imageAlt": "scaffali del negozio Il pizzicagnolo."
+			},
+			{
+				"name": "Alimentari Alicandro",
+				"address": "Via Miano, 04026 Minturno LT",
+				"openingHours": "07:15-20:30",
+				"image": "/assets/images/st11-alimentariAlimentariAlicandro.jpg",
+				"imageAlt": "esterno del negozio Alimentari Alicandro."
+			},
+			{
+				"name": "Despar",
+				"address": "Via Filippo Signore, 7, 04026 Minturno LT",
+				"openingHours": "08:30-13:30,16-20",
+				"image": "/assets/images/st12-alimentariDespar.jpg",
+				"imageAlt": "insegna del negozio Despar."
 			}
 		]
 	}
