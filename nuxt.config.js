@@ -3,7 +3,8 @@ export default {
 	target: "server",
 	// Global page headers: https://go.nuxtjs.dev/config-head
 	head: {
-		title: "polimi-hyp-project-2022",
+		titleTemplate: (titleChunk) =>
+			titleChunk ? `${titleChunk} | Minturno` : "Minturno",
 		htmlAttrs: {
 			lang: "en",
 		},
@@ -87,4 +88,6 @@ export default {
 		preconnect: true,
 		preload: true,
 	},
+	// Disable loading bar between pages
+	loading: false,
 }

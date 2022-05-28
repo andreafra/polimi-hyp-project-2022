@@ -31,6 +31,9 @@ export default {
 	data() {
 		return { itinerary: {}, pois: [] }
 	},
+	head() {
+		return { title: this.itinerary.name }
+	},
 	methods: {
 		getPoIs() {
 			return this.itinerary.pointsOfInterest.map((el) => ({
