@@ -104,28 +104,28 @@
 		]
 	},
 	{
-		"name": "Shores",
+		"name": "Veterinary clinics",
 		"services": [
 			{
-				"name": "Lido La Siesta Sas",
-				"address": "Via Lungomare, 53, 04026 Marina di Minturno LT",
-				"openingHours": "08-21",
-				"image": "/assets/images/st13-lidoLaSiestaSas.jpg",
-				"imageAlt": "spiaggia del Lido La Siesta Sas."
+				"name": "Ambulatorio Eva Fonti",
+				"address": "Lungomare Nazario Sauro, 04028 Minturno LT",
+				"openingHours": "10-12:30,16-19",
+				"image": "/assets/images/st13-veterinarioAmbulatorioEvaFonti.jpg",
+				"imageAlt": "insegna del laboratorio Eva Fonti."
 			},
 			{
-				"name": "Lido Il vascello",
-				"address": "Lungomare Nazario Sauro, 44, 04028 Minturno LT",
-				"openingHours": "08:30-01",
-				"image": "/assets/images/st14-lidoIlVascello.jpg",
-				"imageAlt": "ombrelloni del lido Il Vascello."
+				"name": "Clinica veterinaria San Sebastiano",
+				"address": "Via Boari, 22, 04026 Minturno LT",
+				"openingHours": "09:30-13,17-20",
+				"image": "/assets/images/st14-veterinarioClinicaSanSebastiano.jpg",
+				"imageAlt": "ingresso della clinica San Sebastiano."
 			},
 			{
-				"name": "Marina Beach",
-				"address": "Via Bettino Craxi, 13, 04026 Minturno LT",
-				"openingHours": "08-21",
-				"image": "/assets/images/st15-lidoMarinaBeach.jpg",
-				"imageAlt": "ombrelloni del lido Marina Beach."
+				"name": "Centro Medico Capolino",
+				"address": "Via Appia, 374, 04028 Minturno LT",
+				"openingHours": "09-19:30",
+				"image": "/assets/images/st15-veterinarioCentroMedicoCapolino.jpg",
+				"imageAlt": "sala d'attesa del Centro Medico Capolino."
 			}
 		]
 	}
