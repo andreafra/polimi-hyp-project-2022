@@ -6,7 +6,7 @@
 		<nav class="container header-grid">
 			<div class="header-title">
 				<nuxt-link to="/">
-					<h1>LONG TITLE</h1>
+					<h1>Minturno</h1>
 				</nuxt-link>
 			</div>
 			<div id="header-nav" class="header-nav">
@@ -20,7 +20,11 @@
 						:key="index"
 						class="nav-link"
 					>
-						<nuxt-link :to="item.uri">{{ item.name }}</nuxt-link>
+						<nuxt-link
+							:to="item.uri"
+							@click.native="isMenuActive = false"
+							>{{ item.name }}</nuxt-link
+						>
 					</li>
 				</ul>
 			</div>

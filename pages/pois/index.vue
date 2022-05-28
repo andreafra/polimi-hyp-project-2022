@@ -30,6 +30,11 @@ export default {
 	data: () => ({
 		pois: [],
 	}),
+	head() {
+		return {
+			title: "Points of Interest",
+		}
+	},
 	methods: {
 		getPoIs() {
 			return this.pois.map((poi) => {

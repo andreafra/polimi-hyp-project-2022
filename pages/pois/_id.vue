@@ -83,6 +83,11 @@ export default {
 		prevStep: undefined,
 		nextStep: undefined,
 	}),
+	head() {
+		return {
+			title: this.poi.name,
+		}
+	},
 	methods: {
 		getEvents() {
 			return this.poi.events.map((event) => ({

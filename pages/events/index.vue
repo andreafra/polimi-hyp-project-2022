@@ -2,19 +2,28 @@
 	<div>
 		<h1>
 			All
-			<span v-if="activeButton !== 'All'">{{ activeButton }}</span> Events
+			<span v-if="currentSeason !== 'All'">{{ currentSeason }}</span>
+			Events
 		</h1>
 		<p>
-			{{ seasons.find((season) => season.label === activeButton).desc }}
+			{{
+				seasonsLinks.find((season) => season.label === currentSeason)
+					.desc
+			}}
 		</p>
 		<div class="seasons">
-			<button-primary
-				v-for="(season, index) of seasons"
+			<nuxt-link
+				v-for="(season, index) of seasonsLinks"
 				:key="`season-index-${index}`"
-				:link="`${season.link}`"
-				:title="season.label"
+				:to="{
+					path: '/events',
+					query: season.query ? { season: season.query } : undefined,
+				}"
 				class="season-button"
-			/>
+				@click.native="$fetch"
+			>
+				{{ season.label }}
+			</nuxt-link>
 		</div>
 		<grid-view>
 			<card
@@ -23,63 +32,72 @@
 				:object="event"
 			/>
 		</grid-view>
-		<h3 v-if="events.length === 0">No events found</h3>
+		<p v-if="events.length === 0">No events found</p>
 	</div>
 </template>
 
 <script>
-import ButtonPrimary from "~/components/ButtonPrimary.vue"
 import Card from "~/components/Card.vue"
 export default {
 	name: "EventsPage",
-	components: { Card, ButtonPrimary },
-	async asyncData({ $axios, params }) {
-		const invalidSeason = ![
-			"winter",
-			"spring",
-			"summer",
-			"autumn",
-		].includes(params.id)
-		const res = await $axios.$get(
-			`/api/events${invalidSeason ? "" : "?season=" + params.id}`
-		)
-		res.forEach((_) => (_.url = `/events/${_.id}`))
-		const activeButton = invalidSeason
-			? "All"
-			: params.id.replace(/^./, params.id[0].toUpperCase())
-		return { events: res, activeButton }
-	},
+	components: { Card },
+
 	data: () => ({
 		events: [],
-		activeButton: "",
-		seasons: [
+		title: "",
+		currentSeason: "All",
+		seasonsLinks: [
 			{
 				label: "All",
-				link: "/events_all",
 				desc: "All events that will be held at Minturno!",
 			},
 			{
 				label: "Winter",
-				link: "/events_all/winter",
+				query: "winter",
 				desc: "Winter events at Minturno, brr...",
 			},
 			{
 				label: "Spring",
-				link: "/events_all/spring",
+				query: "spring",
 				desc: "Spring events at Minturno, 🌼",
 			},
 			{
 				label: "Summer",
-				link: "/events_all/summer",
+				query: "summer",
 				desc: "Summer events at Minturno, ⛱️",
 			},
 			{
 				label: "Autumn",
-				link: "/events_all/autumn",
+				query: "autumn",
 				desc: "Autumn events at minturno, 🍂",
 			},
 		],
 	}),
+	async fetch() {
+		const season = this.$route.query.season
+
+		const SEASONS = ["winter", "spring", "summer", "autumn"]
+		const isSeasonInvalid = !SEASONS.includes(season)
+		const res = await this.$axios.$get(
+			`/api/events${isSeasonInvalid ? "" : "?season=" + season}`
+		)
+
+		res.forEach((event) => (event.url = `/events/${event.id}`))
+		const currentSeason = isSeasonInvalid
+			? "All"
+			: season.replace(/^./, season.charAt(0).toUpperCase())
+		const title =
+			currentSeason !== "All" ? `${currentSeason} Events` : "All Events"
+
+		this.events = res
+		this.currentSeason = currentSeason
+		this.title = title
+	},
+	fetchOnServer: true,
+	fetchKey: "events",
+	head() {
+		return { title: this.title }
+	},
 	methods: {
 		getEvents() {
 			return this.events.map((event) => ({
@@ -110,10 +128,15 @@ h1 span {
 .season-button {
 	color: var(--color-light);
 	background-color: var(--color-neutral);
+	padding: var(--space-1) 0;
 	border: 0px;
+	border-radius: var(--border-radius);
 	margin-right: var(--space-0);
 	flex-grow: 1;
 	text-align: center;
+	font-family: var(--font-family-heading);
+	font-weight: bold;
+	font-size: var(--font-size-season-button);
 }
 
 .season-button:last-child {

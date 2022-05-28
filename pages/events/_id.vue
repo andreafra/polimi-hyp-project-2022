@@ -16,9 +16,9 @@
 				<h2>Admission</h2>
 				<p>{{ event.admission }}</p>
 			</div>
-			<div class="column">
+			<div v-if="poi" class="column">
 				<h2>Hosted at</h2>
-				<card :object="getPoI()" />
+				<card :object="poi" />
 			</div>
 		</div>
 	</article>
@@ -33,26 +33,26 @@ export default {
 		HScrollView,
 		Card,
 	},
-	async asyncData({ $axios, params, redirect }) {
-		if (!params.id) redirect("/events_all")
-		const res = await $axios.$get(`/api/events/${params.id}`)
-		return { event: res }
-	},
 	data() {
-		return { event: {} }
+		return { event: {}, poi: null }
 	},
-
-	methods: {
-		getPoI() {
-			const poi = this.event.pointOfInterest
-			return {
-				title: poi.name,
-				description: poi.description,
-				img: poi.images[0].img,
-				alt: poi.images[0].alt,
-				url: "/pois/" + poi.id,
-			}
-		},
+	async fetch() {
+		const event = await this.$axios.$get(
+			`/api/events/${this.$route.params.id}`
+		)
+		this.event = event
+		// Save PoI where the event is hosted
+		const poi = event.pointOfInterest
+		this.poi = {
+			title: poi.name,
+			description: poi.description,
+			img: poi.images[0].img,
+			alt: poi.images[0].alt,
+			url: "/pois/" + poi.id,
+		}
+	},
+	head() {
+		return { title: this.event.name }
 	},
 }
 </script>

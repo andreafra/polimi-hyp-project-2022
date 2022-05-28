@@ -29,6 +29,9 @@ export default {
 	data: () => ({
 		itineraries: [],
 	}),
+	head: () => ({
+		title: "Itineraries",
+	}),
 	methods: {
 		getItineraries() {
 			return this.itineraries.map((itinerary) => {
