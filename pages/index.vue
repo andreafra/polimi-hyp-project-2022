@@ -1,33 +1,57 @@
 <script>
 import HScrollView from "~/components/HScrollView.vue"
+import Card from "~/components/Card.vue"
 
 export default {
 	name: "IndexPage",
-	components: { HScrollView },
+	components: { HScrollView, Card },
 	async asyncData({ $axios }) {
-		const res = await $axios.$get("/api")
-		res.forEach((_) => (_.url = "/"))
-		return { pois: res }
+		const res = await $axios.$get("/api/events")
+		console.log(res)
+		return { events: res }
 	},
 	data: () => ({
-		pois: [],
+		events: [],
 	}),
+	methods: {
+		getEvents() {
+			return this.events
+				.map((event) => ({
+					title: event.name,
+					subtitle: `${event.date}`,
+					img: event.images[0].url,
+					alt: event.images[0].alt,
+					description: event.description,
+					url: `/events/${event.id}`,
+				}))
+				.slice(0, 3)
+				.sort((a, b) => new Date(a.date) - new Date(b.date))
+		},
+	},
 }
 </script>
 
 <template>
 	<div>
-		<img src="../assets/images/home2.jpg" />
+		<img
+			class="welcome-image"
+			src="../assets/images/home2.jpg"
+			alt="sito archeoleogico"
+		/>
 		<h1>Welcome to Minturno!</h1>
 		<h3>Take a look at our latest events:</h3>
 		<h-scroll-view>
-			<div
-				v-for="x of [1, 2, 3, 4]"
-				:key="x"
-				style="height: 300px; background: red"
-			>
-				{{ x }}
-			</div>
+			<card
+				v-for="(event, index) of getEvents()"
+				:key="'event-index-' + index"
+				:object="event"
+			/>
 		</h-scroll-view>
 	</div>
 </template>
+
+<style scoped>
+.welcome-image {
+	width: 100%;
+}
+</style>
