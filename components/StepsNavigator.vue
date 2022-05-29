@@ -12,17 +12,8 @@
 				<arrow-left class="arrow" />
 			</div>
 		</nuxt-link>
-<<<<<<< HEAD
 		<div v-else class="empty"></div>
 		<nuxt-link v-if="nextStep" :to="nextStep.url" class="step next-step">
-=======
-		<nuxt-link
-			v-if="nextStep"
-			:to="nextStep.url"
-			class="step next-step"
-			@load="getBackground(nextStep)"
-		>
->>>>>>> Add pois
 			<p class="step-label">{{ nextStep.label }}</p>
 			<div class="step-box" :style="getBackground(nextStep)">
 				<h3 class="step-title">{{ nextStep.title }}</h3>
