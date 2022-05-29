@@ -74,19 +74,9 @@
 				"alt": "Spiaggia dei Sassolini 5"
 			}
 		],
-		"description": "dsa",
+		"description": "dsadsasd",
 		"visitInfo": "08:30-01",
-		"events": [
-			{
-				"name": "Event Z",
-				"images": [
-					{ "url": "https://example.com", "alt": "something" }
-				],
-				"description": "Lorem ipsum dolor sit amen",
-				"date": "2022-07-23",
-				"admission": "Lorem ipsum dolor sit amen"
-			}
-		]
+		"events": []
 	},
 	{
 		"name": "Lido La Siesta Sas",
@@ -114,17 +104,7 @@
 		],
 		"description": "dsa",
 		"visitInfo": "08:30-01",
-		"events": [
-			{
-				"name": "Event Z",
-				"images": [
-					{ "url": "https://example.com", "alt": "something" }
-				],
-				"description": "Lorem ipsum dolor sit amen",
-				"date": "2022-07-23",
-				"admission": "Lorem ipsum dolor sit amen"
-			}
-		]
+		"events": []
 	},
 	{
 		"name": "Grotta Azzurra",
@@ -152,17 +132,7 @@
 		],
 		"description": "dsa",
 		"visitInfo": "08:30-01",
-		"events": [
-			{
-				"name": "Event Z",
-				"images": [
-					{ "url": "https://example.com", "alt": "something" }
-				],
-				"description": "Lorem ipsum dolor sit amen",
-				"date": "2022-07-23",
-				"admission": "Lorem ipsum dolor sit amen"
-			}
-		]
+		"events": []
 	},
 	{
 		"name": "Parco Regionale Riviera di Ulisse",
@@ -190,17 +160,7 @@
 		],
 		"description": "dsa",
 		"visitInfo": "08:30-01",
-		"events": [
-			{
-				"name": "Event Z",
-				"images": [
-					{ "url": "https://example.com", "alt": "something" }
-				],
-				"description": "Lorem ipsum dolor sit amen",
-				"date": "2022-07-23",
-				"admission": "Lorem ipsum dolor sit amen"
-			}
-		]
+		"events": []
 	},
 	{
 		"name": "Parco regionale di Gianola e Monte di Scauri",
@@ -228,16 +188,6 @@
 		],
 		"description": "dsa",
 		"visitInfo": "08:30-01",
-		"events": [
-			{
-				"name": "Event Z",
-				"images": [
-					{ "url": "https://example.com", "alt": "something" }
-				],
-				"description": "Lorem ipsum dolor sit amen",
-				"date": "2022-07-23",
-				"admission": "Lorem ipsum dolor sit amen"
-			}
-		]
+		"events": []
 	}
 ]

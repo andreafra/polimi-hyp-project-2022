@@ -62,18 +62,29 @@ export default {
 		)
 		if (!fromItinerary) return { poi, fromItinerary }
 
-		// In the DB the index in itinerary_poi starts from 1 and not 0
-		const currPoiIndex =
-			fromItinerary.itinerary_poi.pointOfInterestIndex - 1
+		// Directly find the object from the list with list methods
+		// fetched itinerary may have unordered list of pois
+		// Alternatively could sort the list first, then use indexes to access the elements
+		const currPoiIndex = fromItinerary.itinerary_poi.pointOfInterestIndex
 		const itinerary = await $axios.$get(
 			`/api/itineraries/${fromItinerary.id}`
 		)
 		const itineraryPoIs = itinerary.pointsOfInterest
 		const prevStep =
-			currPoiIndex > 0 ? itineraryPoIs[currPoiIndex - 1] : undefined
+			currPoiIndex > 1
+				? itineraryPoIs.find(
+						(poi) =>
+							poi.itinerary_poi.pointOfInterestIndex ===
+							currPoiIndex - 1
+				  )
+				: undefined
 		const nextStep =
-			currPoiIndex < itineraryPoIs.length - 1
-				? itineraryPoIs[currPoiIndex + 1]
+			currPoiIndex < itineraryPoIs.length
+				? itineraryPoIs.find(
+						(poi) =>
+							poi.itinerary_poi.pointOfInterestIndex ===
+							currPoiIndex + 1
+				  )
 				: undefined
 		return { poi, fromItinerary, prevStep, nextStep }
 	},

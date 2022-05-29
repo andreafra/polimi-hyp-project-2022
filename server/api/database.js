@@ -65,14 +65,6 @@ const PointOfInterest = db.define(
 			type: DT.STRING(2048),
 			allowNull: false,
 		},
-		locationX: {
-			type: DT.FLOAT,
-			allowNull: false,
-		},
-		locationY: {
-			type: DT.FLOAT,
-			allowNull: false,
-		},
 		visitInfo: {
 			type: DT.STRING(1024),
 			allowNull: false,
