@@ -31,7 +31,6 @@ export default {
 				a.itinerary_poi.pointOfInterestIndex -
 				b.itinerary_poi.pointOfInterestIndex
 		)
-		console.log(res.pointsOfInterest)
 		return { itinerary: res }
 	},
 	data() {
@@ -42,7 +41,6 @@ export default {
 	},
 	methods: {
 		getPoIs() {
-			console.log(this.itinerary.pointsOfInterest)
 			return this.itinerary.pointsOfInterest.map((el) => ({
 				title: el.name,
 				img: el.images[0].url,
