@@ -1,6 +1,11 @@
 <template>
 	<div class="steps-container">
-		<nuxt-link v-if="prevStep" :to="prevStep.url" class="step prev-step">
+		<nuxt-link
+			v-if="prevStep"
+			:to="prevStep.url"
+			class="step prev-step"
+			@load="getBackground(prevStep)"
+		>
 			<p class="step-label">{{ prevStep.label }}</p>
 			<div class="step-box" :style="getBackground(prevStep)">
 				<h3 class="step-title">{{ prevStep.title }}</h3>
@@ -34,11 +39,21 @@ export default {
 		// eslint-disable-next-line vue/require-default-prop
 		nextStep: { type: Object },
 	},
+	mounted() {
+		if (this.prevStep)
+			this.$el.querySelector(
+				".prev-step .step-box"
+			).style.backgroundImage = `linear-gradient(0deg, var(--color-light), rgba(214, 214, 177, 0)), url("${this.prevStep.img}")`
+		if (this.nextStep)
+			this.$el.querySelector(
+				".next-step .step-box"
+			).style.backgroundImage = `linear-gradient(0deg, var(--color-light), rgba(214, 214, 177, 0)), url("${this.nextStep.img}")`
+	},
 	methods: {
 		getBackground(step) {
 			if (step)
 				return {
-					backgroundImage: `linear-gradient(0deg, var(--color-light), rgba(214, 214, 177, 0)), url("${step.url}")`,
+					backgroundImage: `linear-gradient(0deg, var(--color-light), rgba(214, 214, 177, 0)), url("${step.img}")`,
 				}
 			else return {}
 		},

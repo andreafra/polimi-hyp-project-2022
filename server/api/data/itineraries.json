@@ -11,5 +11,20 @@
 			{ "name": "PoI Y" },
 			{ "name": "PoI Z" }
 		]
+	},
+	{
+		"name": "Blue and green in Minturno",
+		"images": [{ "url": "https://example.com", "alt": "something" }],
+		"description": "A vacation through Minturno's beautiful shores and parks!",
+		"duration": 172800,
+		"distance": 1500,
+		"map": "https://www.google.com/maps/d/u/0/embed?mid=1xhCLcjrdJaxFJT8Z8SbBfeM0h9zQCXI&ehbc=2E312F",
+		"pointOfInterests": [
+			{ "name": "Spiaggia dei Sassolini" },
+			{ "name": "Grotta Azzurra" },
+			{ "name": "Parco regionale di Gianola e Monte di Scauri" },
+			{ "name": "Parco Regionale Riviera di Ulisse" },
+			{ "name": "Lido La Siesta Sas" }
+		]
 	}
 ]
