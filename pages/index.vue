@@ -1,10 +1,9 @@
 <script>
 import HScrollView from "~/components/HScrollView.vue"
-import GridView from "~/components/GridView.vue"
 
 export default {
 	name: "IndexPage",
-	components: { HScrollView, GridView },
+	components: { HScrollView },
 	async asyncData({ $axios }) {
 		const res = await $axios.$get("/api")
 		res.forEach((_) => (_.url = "/"))
@@ -18,6 +17,9 @@ export default {
 
 <template>
 	<div>
+		<img src="../assets/images/home2.jpg" />
+		<h1>Welcome to Minturno!</h1>
+		<h3>Take a look at our latest events:</h3>
 		<h-scroll-view>
 			<div
 				v-for="x of [1, 2, 3, 4]"
@@ -27,40 +29,5 @@ export default {
 				{{ x }}
 			</div>
 		</h-scroll-view>
-		<grid-view>
-			<div
-				v-for="x of [1, 2, 3, 4, 5, 6, 7]"
-				:key="x"
-				style="height: 300px; background: green"
-			>
-				{{ x }}
-			</div>
-		</grid-view>
-		<steps-navigator
-			:prev-step="{
-				url: `/pois/poi_x?itinerary=itinerary_x`,
-				title: 'Very very very very very very very very very very very very very very very very very very very very very very very very long title',
-				img: 'https://media-cdn.tripadvisor.com/media/photo-s/04/9c/b9/b0/ponte-real-ferdinando.jpg',
-				label: 'Previous step in itinerary',
-			}"
-			:next-step="{
-				url: `/pois/poi_y?itinerary=itinerary_x`,
-				title: 'PoI Y',
-				img: 'https://t3.ftcdn.net/jpg/04/22/54/96/360_F_422549672_YBblFRWVwazeHgI8MYtgFlFNKfAHFiTe.jpg',
-				label: 'Next step in itinerary',
-			}"
-		>
-		</steps-navigator>
-		<br />
-		<steps-navigator
-			:next-step="undefined"
-			:prev-step="{
-				url: `/pois/poi_y?itinerary=itinerary_x`,
-				title: 'PoI Y',
-				img: 'https://t3.ftcdn.net/jpg/04/22/54/96/360_F_422549672_YBblFRWVwazeHgI8MYtgFlFNKfAHFiTe.jpg',
-				label: 'Previous step in itinerary',
-			}"
-		>
-		</steps-navigator>
 	</div>
 </template>
