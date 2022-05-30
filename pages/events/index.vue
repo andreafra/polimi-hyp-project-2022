@@ -13,8 +13,8 @@
 		</p>
 		<div class="seasons">
 			<nuxt-link
-				v-for="(season, index) of seasonsLinks"
-				:key="`season-index-${index}`"
+				v-for="season of seasonsLinks"
+				:key="season.label"
 				:to="{
 					path: '/events',
 					query: season.query ? { season: season.query } : undefined,
@@ -27,8 +27,8 @@
 		</div>
 		<grid-view>
 			<card
-				v-for="(event, index) of getEvents()"
-				:key="'event-index-' + index"
+				v-for="event of getEvents()"
+				:key="event.id"
 				:object="event"
 			/>
 		</grid-view>
@@ -38,9 +38,11 @@
 
 <script>
 import Card from "~/components/Card.vue"
+import GridView from "~/components/GridView.vue"
+
 export default {
 	name: "EventsPage",
-	components: { Card },
+	components: { Card, GridView },
 
 	data: () => ({
 		events: [],
@@ -101,6 +103,7 @@ export default {
 	methods: {
 		getEvents() {
 			return this.events.map((event) => ({
+				id: event.id,
 				title: event.name,
 				subtitle: `${event.date}`,
 				img: event.images[0].url,

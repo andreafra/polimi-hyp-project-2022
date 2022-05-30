@@ -6,8 +6,8 @@
 		</p>
 		<grid-view>
 			<card
-				v-for="(itinerary, index) of getItineraries()"
-				:key="index"
+				v-for="itinerary of getItineraries()"
+				:key="itinerary.id"
 				:object="itinerary"
 			/>
 		</grid-view>
@@ -17,10 +17,11 @@
 
 <script>
 import Card from "~/components/Card.vue"
+import GridView from "~/components/GridView.vue"
 
 export default {
 	name: "AllItinerariesPage",
-	components: { Card },
+	components: { Card, GridView },
 	async asyncData({ $axios }) {
 		const res = await $axios.$get(`/api/itineraries`)
 
@@ -45,6 +46,7 @@ export default {
 					: ""
 				const distance = itinerary.distance / 1000
 				return {
+					id: itinerary.id,
 					title: itinerary.name,
 					subtitle: `Duration: ${durationLabel} | Distance: ${distance} Km`,
 					img: itinerary.images[0].url,
