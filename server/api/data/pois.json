@@ -1,14 +1,19 @@
 [
 	{
 		"name": "PoI X",
-		"images": [{ "url": "https://example.com", "alt": "something" }],
+		"images": [
+			{ "url": "poi_spiaggia_dei_sassolini_01.jpg", "alt": "something" }
+		],
 		"description": "Lorem ipsum dolor sit amen",
 		"visitInfo": "Lorem ipsum dolor sit amen",
 		"events": [
 			{
 				"name": "Event X",
 				"images": [
-					{ "url": "https://example.com", "alt": "something" }
+					{
+						"url": "poi_spiaggia_dei_sassolini_01.jpg",
+						"alt": "something"
+					}
 				],
 				"description": "Lorem ipsum dolor sit amen",
 				"date": "2022-07-23",
@@ -18,14 +23,19 @@
 	},
 	{
 		"name": "PoI Y",
-		"images": [{ "url": "https://example.com", "alt": "something" }],
+		"images": [
+			{ "url": "poi_spiaggia_dei_sassolini_01.jpg", "alt": "something" }
+		],
 		"description": "Lorem ipsum dolor sit amen",
 		"visitInfo": "Lorem ipsum dolor sit amen",
 		"events": [
 			{
 				"name": "Event Y",
 				"images": [
-					{ "url": "https://example.com", "alt": "something" }
+					{
+						"url": "poi_spiaggia_dei_sassolini_01.jpg",
+						"alt": "something"
+					}
 				],
 				"description": "Lorem ipsum dolor sit amen",
 				"date": "2022-07-23",
@@ -35,14 +45,19 @@
 	},
 	{
 		"name": "PoI Z",
-		"images": [{ "url": "https://example.com", "alt": "something" }],
+		"images": [
+			{ "url": "poi_spiaggia_dei_sassolini_01.jpg", "alt": "something" }
+		],
 		"description": "Lorem ipsum dolor sit amen",
 		"visitInfo": "Lorem ipsum dolor sit amen",
 		"events": [
 			{
 				"name": "Event Z",
 				"images": [
-					{ "url": "https://example.com", "alt": "something" }
+					{
+						"url": "poi_spiaggia_dei_sassolini_01.jpg",
+						"alt": "something"
+					}
 				],
 				"description": "Lorem ipsum dolor sit amen",
 				"date": "2022-07-23",
@@ -54,23 +69,23 @@
 		"name": "Spiaggia dei Sassolini",
 		"images": [
 			{
-				"url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/44/aa/a5/fondali-della-spiaggia.jpg?w=1200&h=-1&s=1",
+				"url": "poi_spiaggia_dei_sassolini_01.jpg",
 				"alt": "Spiaggia dei Sassolini 1"
 			},
 			{
-				"url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/dc/5b/a0/img-20180702-102924-largejpg.jpg?w=1200&h=-1&s=1",
+				"url": "poi_spiaggia_dei_sassolini_02.jpg",
 				"alt": "Spiaggia dei Sassolini 2"
 			},
 			{
-				"url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/94/db/a0/20180408-160829-largejpg.jpg?w=1100&h=-1&s=1",
+				"url": "poi_spiaggia_dei_sassolini_03.jpg",
 				"alt": "Spiaggia dei Sassolini 3"
 			},
 			{
-				"url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/44/aa/ce/fondali-della-spiaggia.jpg?w=1200&h=-1&s=1",
+				"url": "poi_spiaggia_dei_sassolini_04.jpg",
 				"alt": "Spiaggia dei Sassolini 4"
 			},
 			{
-				"url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/fe/36/a2/il-chiosco.jpg?w=800&h=-1&s=1",
+				"url": "poi_spiaggia_dei_sassolini_05.jpg",
 				"alt": "Spiaggia dei Sassolini 5"
 			}
 		],
@@ -82,23 +97,23 @@
 		"name": "Lido La Siesta Sas",
 		"images": [
 			{
-				"url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/44/aa/a5/fondali-della-spiaggia.jpg?w=1200&h=-1&s=1",
+				"url": "poi_spiaggia_dei_sassolini_01.jpg",
 				"alt": "Spiaggia dei Sassolini 1"
 			},
 			{
-				"url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/dc/5b/a0/img-20180702-102924-largejpg.jpg?w=1200&h=-1&s=1",
+				"url": "poi_spiaggia_dei_sassolini_01.jpg",
 				"alt": "Spiaggia dei Sassolini 2"
 			},
 			{
-				"url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/94/db/a0/20180408-160829-largejpg.jpg?w=1100&h=-1&s=1",
+				"url": "poi_spiaggia_dei_sassolini_01.jpg",
 				"alt": "Spiaggia dei Sassolini 3"
 			},
 			{
-				"url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/44/aa/ce/fondali-della-spiaggia.jpg?w=1200&h=-1&s=1",
+				"url": "poi_spiaggia_dei_sassolini_01.jpg",
 				"alt": "Spiaggia dei Sassolini 4"
 			},
 			{
-				"url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/fe/36/a2/il-chiosco.jpg?w=800&h=-1&s=1",
+				"url": "poi_spiaggia_dei_sassolini_01.jpg",
 				"alt": "Spiaggia dei Sassolini 5"
 			}
 		],
@@ -110,23 +125,23 @@
 		"name": "Grotta Azzurra",
 		"images": [
 			{
-				"url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/44/aa/a5/fondali-della-spiaggia.jpg?w=1200&h=-1&s=1",
+				"url": "poi_spiaggia_dei_sassolini_01.jpg",
 				"alt": "Spiaggia dei Sassolini 1"
 			},
 			{
-				"url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/dc/5b/a0/img-20180702-102924-largejpg.jpg?w=1200&h=-1&s=1",
+				"url": "poi_spiaggia_dei_sassolini_01.jpg",
 				"alt": "Spiaggia dei Sassolini 2"
 			},
 			{
-				"url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/94/db/a0/20180408-160829-largejpg.jpg?w=1100&h=-1&s=1",
+				"url": "poi_spiaggia_dei_sassolini_01.jpg",
 				"alt": "Spiaggia dei Sassolini 3"
 			},
 			{
-				"url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/44/aa/ce/fondali-della-spiaggia.jpg?w=1200&h=-1&s=1",
+				"url": "poi_spiaggia_dei_sassolini_01.jpg",
 				"alt": "Spiaggia dei Sassolini 4"
 			},
 			{
-				"url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/fe/36/a2/il-chiosco.jpg?w=800&h=-1&s=1",
+				"url": "poi_spiaggia_dei_sassolini_01.jpg",
 				"alt": "Spiaggia dei Sassolini 5"
 			}
 		],
@@ -138,23 +153,23 @@
 		"name": "Parco Regionale Riviera di Ulisse",
 		"images": [
 			{
-				"url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/44/aa/a5/fondali-della-spiaggia.jpg?w=1200&h=-1&s=1",
+				"url": "poi_spiaggia_dei_sassolini_01.jpg",
 				"alt": "Spiaggia dei Sassolini 1"
 			},
 			{
-				"url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/dc/5b/a0/img-20180702-102924-largejpg.jpg?w=1200&h=-1&s=1",
+				"url": "poi_spiaggia_dei_sassolini_01.jpg",
 				"alt": "Spiaggia dei Sassolini 2"
 			},
 			{
-				"url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/94/db/a0/20180408-160829-largejpg.jpg?w=1100&h=-1&s=1",
+				"url": "poi_spiaggia_dei_sassolini_01.jpg",
 				"alt": "Spiaggia dei Sassolini 3"
 			},
 			{
-				"url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/44/aa/ce/fondali-della-spiaggia.jpg?w=1200&h=-1&s=1",
+				"url": "poi_spiaggia_dei_sassolini_01.jpg",
 				"alt": "Spiaggia dei Sassolini 4"
 			},
 			{
-				"url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/fe/36/a2/il-chiosco.jpg?w=800&h=-1&s=1",
+				"url": "poi_spiaggia_dei_sassolini_01.jpg",
 				"alt": "Spiaggia dei Sassolini 5"
 			}
 		],
@@ -166,23 +181,23 @@
 		"name": "Parco regionale di Gianola e Monte di Scauri",
 		"images": [
 			{
-				"url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/44/aa/a5/fondali-della-spiaggia.jpg?w=1200&h=-1&s=1",
+				"url": "poi_spiaggia_dei_sassolini_01.jpg",
 				"alt": "Spiaggia dei Sassolini 1"
 			},
 			{
-				"url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/dc/5b/a0/img-20180702-102924-largejpg.jpg?w=1200&h=-1&s=1",
+				"url": "poi_spiaggia_dei_sassolini_01.jpg",
 				"alt": "Spiaggia dei Sassolini 2"
 			},
 			{
-				"url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/94/db/a0/20180408-160829-largejpg.jpg?w=1100&h=-1&s=1",
+				"url": "poi_spiaggia_dei_sassolini_01.jpg",
 				"alt": "Spiaggia dei Sassolini 3"
 			},
 			{
-				"url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/44/aa/ce/fondali-della-spiaggia.jpg?w=1200&h=-1&s=1",
+				"url": "poi_spiaggia_dei_sassolini_01.jpg",
 				"alt": "Spiaggia dei Sassolini 4"
 			},
 			{
-				"url": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/fe/36/a2/il-chiosco.jpg?w=800&h=-1&s=1",
+				"url": "poi_spiaggia_dei_sassolini_01.jpg",
 				"alt": "Spiaggia dei Sassolini 5"
 			}
 		],

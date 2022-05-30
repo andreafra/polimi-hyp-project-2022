@@ -1,7 +1,9 @@
 [
 	{
 		"name": "Itinerary X",
-		"images": [{ "url": "https://example.com", "alt": "something" }],
+		"images": [
+			{ "url": "poi_spiaggia_dei_sassolini_01.jpg", "alt": "something" }
+		],
 		"description": "A tour of the museums of the town.",
 		"duration": 5400,
 		"distance": 1500,
@@ -14,7 +16,9 @@
 	},
 	{
 		"name": "Blue and Green in Minturno",
-		"images": [{ "url": "https://example.com", "alt": "something" }],
+		"images": [
+			{ "url": "poi_spiaggia_dei_sassolini_01.jpg", "alt": "something" }
+		],
 		"description": "A vacation through Minturno's beautiful shores and parks!",
 		"duration": 172800,
 		"distance": 1500,
