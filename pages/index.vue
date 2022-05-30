@@ -62,19 +62,5 @@ export default {
 			}"
 		>
 		</steps-navigator>
-<<<<<<< HEAD
-=======
-		<br />
-		<steps-navigator
-			:next-step="{
-				url: `/pois/poi_x?itinerary=itinerary_x`,
-				title: 'aaaaaaaaaaaaaaaa',
-				img: 'https://media-cdn.tripadvisor.com/media/photo-s/04/9c/b9/b0/ponte-real-ferdinando.jpg',
-				label: 'Next step in itinerary',
-			}"
-			:prev-step="undefined"
-		>
-		</steps-navigator>
->>>>>>> Add pois
 	</div>
 </template>
