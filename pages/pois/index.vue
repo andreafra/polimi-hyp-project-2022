@@ -6,11 +6,7 @@
 			the town!
 		</p>
 		<grid-view>
-			<card
-				v-for="(poi, index) of getPoIs()"
-				:key="index"
-				:object="poi"
-			/>
+			<card v-for="poi of getPoIs()" :key="poi.id" :object="poi" />
 		</grid-view>
 		<h3 v-if="pois.length === 0">No pois found!</h3>
 	</div>
@@ -18,10 +14,11 @@
 
 <script>
 import Card from "~/components/Card.vue"
+import GridView from "~/components/GridView.vue"
 
 export default {
 	name: "AllPoisPage",
-	components: { Card },
+	components: { Card, GridView },
 	async asyncData({ $axios }) {
 		const res = await $axios.$get(`/api/pois`)
 
@@ -39,6 +36,7 @@ export default {
 		getPoIs() {
 			return this.pois.map((poi) => {
 				return {
+					id: poi.id,
 					title: poi.name,
 					img: poi.images[0].url,
 					alt: poi.images[0].alt,
