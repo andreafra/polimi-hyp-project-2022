@@ -38,7 +38,7 @@ export default {
 		getBackground(step) {
 			if (step)
 				return {
-					backgroundImage: `linear-gradient(0deg, var(--color-light), rgba(214, 214, 177, 0)), url("${step.url}")`,
+					backgroundImage: `linear-gradient(0deg, var(--color-light), rgba(214, 214, 177, 0)), url("${step.img}")`,
 				}
 			else return {}
 		},
