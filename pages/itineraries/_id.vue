@@ -7,6 +7,9 @@
 		<p><b>Distance: </b>{{ itinerary.distance }}</p>
 		<p>{{ itinerary.description }}</p>
 		<!-- TODO: ADD IFRAME MAP-->
+		<div class="map-container">
+			<iframe class="map" :src="`${itinerary.map}`"></iframe>
+		</div>
 		<h2>Points of Interest in this Itinerary</h2>
 		<h-scroll-view>
 			<card v-for="obj of getPoIs()" :key="obj.id" :object="obj" />
@@ -52,3 +55,21 @@ export default {
 	},
 }
 </script>
+
+<style scoped>
+.map-container {
+	--top-margin-offset: -4em;
+	margin-bottom: var(--top-margin-offset);
+	width: 100%;
+	height: 28em;
+	overflow: hidden;
+}
+
+.map {
+	position: relative;
+	top: var(--top-margin-offset);
+	border: none;
+	width: 100%;
+	height: 100%;
+}
+</style>
