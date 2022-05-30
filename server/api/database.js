@@ -103,6 +103,10 @@ const Itinerary = db.define(
 			type: DT.FLOAT,
 			allowNull: false,
 		},
+		map: {
+			type: DT.STRING,
+			allowNull: false,
+		},
 	},
 	{
 		timestamps: false,
