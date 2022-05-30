@@ -12,7 +12,10 @@
 			{{ object.subtitle }}
 		</p>
 		<div
-			:style="{ backgroundImage: `url(${object.img})` }"
+			:style="{
+				backgroundImage: `url(${require('~/assets/images/' +
+					object.img)})`,
+			}"
 			:aria-label="object.alt"
 			role="img"
 			class="card-image"
