@@ -21,7 +21,6 @@
 			ref="container"
 			class="scroll-snap-container"
 			@scroll="handleScroll()"
-			@mousewheel="wheelScroll"
 		>
 			<slot />
 		</div>
@@ -85,6 +84,8 @@ export default {
 				container.scrollLeft += elem.offsetWidth
 			}
 		},
+		// BUG: This conflicts with the way the browser handles the horizontal scrolling natively.
+		// TODO: Remove dead code?
 		wheelScroll(e) {
 			e.preventDefault()
 			const container = this.$refs.container
