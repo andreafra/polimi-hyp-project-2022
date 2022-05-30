@@ -16,7 +16,7 @@
 				<img
 					v-for="(image, index) of poi.images"
 					:key="`poi-image-index-${index}`"
-					:src="image.url"
+					:src="require(`~/assets/images/${image.url}`)"
 					:alt="image.alt"
 				/>
 			</h-scroll-view>

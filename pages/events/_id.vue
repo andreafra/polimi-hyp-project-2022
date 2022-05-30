@@ -6,7 +6,7 @@
 			<img
 				v-for="(img, index) of event.images"
 				:key="index"
-				:src="img.img"
+				:src="require(`~/assets/images/${img.url}`)"
 				:alt="img.alt"
 			/>
 		</h-scroll-view>
@@ -33,23 +33,19 @@ export default {
 		HScrollView,
 		Card,
 	},
+	async asyncData({ $axios, params }) {
+		const event = await $axios.$get(`/api/events/${params.id}`)
+		const poi = {
+			title: event.pointOfInterest.name,
+			description: event.pointOfInterest.description,
+			img: event.pointOfInterest.images[0].url,
+			alt: event.pointOfInterest.images[0].alt,
+			url: "/pois/" + event.pointOfInterest.id,
+		}
+		return { event, poi }
+	},
 	data() {
 		return { event: {}, poi: null }
-	},
-	async fetch() {
-		const event = await this.$axios.$get(
-			`/api/events/${this.$route.params.id}`
-		)
-		this.event = event
-		// Save PoI where the event is hosted
-		const poi = event.pointOfInterest
-		this.poi = {
-			title: poi.name,
-			description: poi.description,
-			img: poi.images[0].img,
-			alt: poi.images[0].alt,
-			url: "/pois/" + poi.id,
-		}
 	},
 	head() {
 		return { title: this.event.name }
