@@ -38,6 +38,6 @@ body {
 .container {
 	max-width: var(--max-width);
 	margin: auto;
-	padding: 0 0.5em;
+	padding: 0 var(--space-1);
 }
 </style>

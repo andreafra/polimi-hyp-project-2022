@@ -22,7 +22,11 @@
 		/>
 		<p class="card-description">{{ object.description }}</p>
 		<!-- SEO: The link is contained inside the button -->
-		<button-primary title="Read More" :link="object.url" />
+		<button-primary
+			class="card-button"
+			title="Read More"
+			:link="object.url"
+		/>
 	</div>
 </template>
 
@@ -42,7 +46,8 @@ export default {
 
 <style scoped>
 .card {
-	display: block;
+	display: flex;
+	flex-direction: column;
 	padding: var(--space-1);
 	border: 2px solid var(--color-neutral);
 	border-radius: var(--border-radius);
@@ -74,5 +79,15 @@ export default {
 	aspect-ratio: 16 / 9;
 	width: 100%;
 	height: var(--image-height);
+}
+
+/* In flex items, margin-X auto basically pushes the element
+ * as far as it can from the rest.
+ * In this case it makes the button be at the very end of the
+ * card (margin-top) as well as not taking full width (margin-right)
+ */
+.card-button {
+	margin-top: auto;
+	margin-right: auto;
 }
 </style>

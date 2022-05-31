@@ -7,7 +7,6 @@ export default {
 	components: { HScrollView, Card },
 	async asyncData({ $axios }) {
 		const res = await $axios.$get("/api/events")
-		console.log(res)
 		return { events: res }
 	},
 	data: () => ({
@@ -35,7 +34,7 @@ export default {
 	<div>
 		<img
 			class="welcome-image"
-			src="../assets/images/home2.jpg"
+			src="~/assets/images/home2.jpg"
 			alt="sito archeoleogico"
 		/>
 		<h1>Welcome to Minturno!</h1>
@@ -52,6 +51,8 @@ export default {
 
 <style scoped>
 .welcome-image {
+	margin-top: var(--space-1);
 	width: 100%;
+	border-radius: var(--border-radius);
 }
 </style>
