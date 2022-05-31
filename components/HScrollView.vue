@@ -61,11 +61,13 @@ export default {
 	}),
 
 	mounted() {
-		//	If the objects do not overflow horizontally
-		//	The next button must not be shown
-		const container = this.$refs.container
-		this.isNextVisible =
-			container.scrollWidth - container.scrollLeft - container.offsetWidth
+		this.handleScroll()
+		window.addEventListener("resize", this.handleScroll)
+	},
+
+	// See Vue Issue: https://github.com/vuejs/vue/issues/1915
+	beforeUnmount() {
+		window.addEventListener("resize", this.handleScroll)
 	},
 
 	methods: {
@@ -86,13 +88,15 @@ export default {
 		},
 		// BUG: This conflicts with the way the browser handles the horizontal scrolling natively.
 		// TODO: Remove dead code?
-		wheelScroll(e) {
-			e.preventDefault()
-			const container = this.$refs.container
-			const elem = this.$el.querySelector(".scroll-snap-container > *")
+		// wheelScroll(e) {
+		// 	e.preventDefault()
+		// 	const container = this.$refs.container
+		// 	const elem = this.$el.querySelector(".scroll-snap-container > *")
 
-			container.scrollLeft += elem.offsetWidth * Math.sign(e.deltaY)
-		},
+		// 	container.scrollLeft += elem.offsetWidth * Math.sign(e.deltaY)
+		// },
+
+		// Determines visibility of button arrows <- / ->
 		handleScroll() {
 			const container = this.$refs.container
 
