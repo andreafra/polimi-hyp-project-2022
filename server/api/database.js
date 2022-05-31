@@ -121,6 +121,18 @@ const ServiceType = db.define(
 			type: DT.STRING,
 			allowNull: false,
 		},
+		description: {
+			type: DT.STRING,
+			allowNull: false,
+		},
+		generic_image: {
+			type: DT.STRING,
+			allowNull: false,
+		},
+		generic_alt: {
+			type: DT.STRING,
+			allowNull: false,
+		},
 	},
 	{
 		timestamps: false,
