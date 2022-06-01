@@ -155,4 +155,8 @@ export default {
 .back-link:hover {
 	color: var(--color-accent-dark);
 }
+
+p {
+	white-space: pre-wrap;
+}
 </style>

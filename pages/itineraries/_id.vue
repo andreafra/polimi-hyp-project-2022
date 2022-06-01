@@ -2,7 +2,15 @@
 	<article>
 		<span class="category">Itinerary</span>
 		<h1>{{ itinerary.name }}</h1>
-		<img :src="itinerary.images[0].url" :alt="itinerary.images[0].alt" />
+		<div
+			:style="{
+				backgroundImage: `url(${require('~/assets/images/' +
+					itinerary.images[0].url)})`,
+			}"
+			:aria-label="itinerary.images[0].alt"
+			role="img"
+			class="banner-image"
+		/>
 		<p><b>Duration: </b>{{ itinerary.duration }}</p>
 		<p><b>Distance: </b>{{ itinerary.distance }}</p>
 		<p>{{ itinerary.description }}</p>
@@ -57,12 +65,25 @@ export default {
 </script>
 
 <style scoped>
+.banner-image {
+	display: block;
+	margin: var(--space-1) 0;
+	border-radius: var(--border-radius);
+	background-color: var(--color-neutral);
+	background-position: center;
+	background-size: cover;
+	aspect-ratio: 16 / 9;
+	width: 100%;
+	height: var(--image-highlight-height);
+}
+
 .map-container {
 	--top-margin-offset: -4em;
 	margin-bottom: var(--top-margin-offset);
+	aspect-ratio: 16 / 9;
 	width: 100%;
-	height: 28em;
 	overflow: hidden;
+	border-radius: var(--border-radius);
 }
 
 .map {
@@ -71,5 +92,6 @@ export default {
 	border: none;
 	width: 100%;
 	height: 100%;
+	border-radius: var(--border-radius);
 }
 </style>

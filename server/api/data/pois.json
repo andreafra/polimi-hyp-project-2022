@@ -66,6 +66,55 @@
 		]
 	},
 	{
+		"name": "Lido Aurora",
+		"images": [
+			{
+				"url": "poi_lido_aurora_01.jpg",
+				"alt": "Lido Aurora 1"
+			},
+			{
+				"url": "poi_lido_aurora_02.jpg",
+				"alt": "Lido Aurora 2"
+			},
+			{
+				"url": "poi_lido_aurora_03.jpg",
+				"alt": "Lido Aurora 3"
+			},
+			{
+				"url": "poi_lido_aurora_04.jpg",
+				"alt": "Lido Aurora 4"
+			},
+			{
+				"url": "poi_lido_aurora_05.jpg",
+				"alt": "Lido Aurora 5"
+			}
+		],
+		"description": "Situato nel cuore della baia di Scauri, centro nevralgico della vita diurna e serale circondato dal verde della villa comunale.\nSorto intorno gli anni ’20 è stato il primo stabilimento del paese.\nGestito dalla famiglia Di Russo, che oltre ad operare con professionalità ed esperienza quasi centenaria nel settore turistico, garantisce un ambiente famigliare ed una particolare disponibilità nel cercare di soddisfare al meglio le esigenze dei suoi Clienti, soprattutto quelle dei bambini, che possono trovare un ambiente divertente e sicuro allo stesso tempo, grazie all’accorto servizio di sorveglianza.Il lido aurora con la sua spiaggia di sabbia finissima, e curata 12 mesi all’anno, mette a disposizione della propria Clientela tutti i servizi per una vacanza da ricordare.\nE’ tutto un susseguirsi di colori e sorrisi che sanno d’estate.\nAcque cristalline, grotte marine, resti archeologici, riserve naturali, miti e leggende fanno della Riviera di Ulisse un luogo incantevole assolutamente da non perdere.\nScauri, parte integrante della riviera, è un angolo allegro accoccolato tra il mare e la macchia, un punto in comune tra natura e divertimento. Un luogo dove rilassarsi e, allo stesso tempo, base di partenza ideale per i numerosi itinerari turistici suggestivi che da esso dipartono.\nLa spiaggia, prospicente ad un fondale che degrada in maniera dolce e graduale, è l’ideale per lunghe passeggiate in riva al mare e si presta perfettamente al gioco dei bambini.\nLo stabilimento balneare Lido Aurora fa parte di tutto questo…",
+		"visitInfo": "Lungomare Nazario Sauro, 04028 Minturno LT.\nLido: Lun – Dom 7:00 – 02:00 Ristorante: Lun–Dom 12:30 – 15:00 / 20:00–23:00 \nChiuso dal 1 ottobre al 24 aprile",
+		"events": [
+			{
+				"name": "Broncorotto Live Reggae",
+				"images": [
+					{
+						"url": "event_broncotto_live_reggae_01.jpg",
+						"alt": "Broncotto Live Reggae 1"
+					},
+					{
+						"url": "event_broncotto_live_reggae_02.jpg",
+						"alt": "Broncotto Live Reggae 2"
+					},
+					{
+						"url": "event_broncotto_live_reggae_03.jpg",
+						"alt": "Broncotto Live Reggae 3"
+					}
+				],
+				"description": "A beach concert featuring the group of raggae musicians Broncotto and the DJ Mario Tomao.\nFoods and drinks will be available throughout the vent, let's party all night!",
+				"date": "2022-08-26",
+				"admission": "The event will start the 26th of August at 21:00 (9 pm).\nFree entry for everyone."
+			}
+		]
+	},
+	{
 		"name": "Spiaggia dei Sassolini",
 		"images": [
 			{
@@ -89,64 +138,28 @@
 				"alt": "Spiaggia dei Sassolini 5"
 			}
 		],
-		"description": "dsadsasd",
-		"visitInfo": "08:30-01",
+		"description": "Un piccolo angolo di paradiso. Così molti turisti che sono in visita a Minturno Scauri definiscono la Spiaggia dei Sassolini. Resa famosa dai suggestivi sassolini che la compongono, la Spiaggia dei Sassolini di Minturno Scauri è visitata da numerosi turisti e cittadini del luogo e rappresenta il centro del relax e del divertimento.Ideale per una giornata di mare insieme alla propria famiglia o ai propri amici, la Spiaggia dei Sassolini e le bellissime acque che la bagnano vi accoglieranno a braccia aperte. Lo stabilimento presente sulla Spiaggia dei Sassolini offre diversi servizi come ombrelloni, lettini, bar, bagno, docce.",
+		"visitInfo": "Indirizzo sito: Via Nino Manfredi, 04028 Minturno LT, sempre aperto.",
 		"events": []
 	},
 	{
-		"name": "Lido La Siesta Sas",
+		"name": "Torre di Scauri",
 		"images": [
 			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 1"
+				"url": "poi_torre_di_scauri_01.jpg",
+				"alt": "Torre di Scauri 1"
 			},
 			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 2"
+				"url": "poi_torre_di_scauri_02.jpg",
+				"alt": "Torre di Scauri 2"
 			},
 			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 3"
-			},
-			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 4"
-			},
-			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 5"
+				"url": "poi_torre_di_scauri_03.jpg",
+				"alt": "Torre di Scauri 3"
 			}
 		],
-		"description": "dsa",
-		"visitInfo": "08:30-01",
-		"events": []
-	},
-	{
-		"name": "Grotta Azzurra",
-		"images": [
-			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 1"
-			},
-			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 2"
-			},
-			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 3"
-			},
-			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 4"
-			},
-			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 5"
-			}
-		],
-		"description": "dsa",
-		"visitInfo": "08:30-01",
+		"description": "Situata sulla collina denominata Monte d’Oro, la torre di Scauri nasceva con l’obiettivo di fornire controllo e difesa alla città dalla pirateria che infestava il mar Mediterraneo. La costruzione della torre risale circa al XVI secolo.\nRaggiungere la Torre di Scauri è una vera e propria esperienza nella natura: si può infatti raggiungere a piedi tramite un sentiero che collega la cima del Monte d’Oro, dove è situata la torre, al centro abitato.\nIl percorso è molto semplice e adatto alle famiglie: infatti il minimo dislivello di 50 metri e la lunghezza del sentiero di soli 600 metri permette a bambini e adulti di raggiungere la Torre di Scauri e godere di una vista pazzesca.\nConosciuta anche come Torre Saracena, la Torre di scauri fa parte di un più complesso sistema di sicurezza che comprendeva anche la Torre di Gianola, la Torre del Fico e la Torre Foce. Le prime due torri sono andate distrutte nel corso del tempo",
+		"visitInfo": "Via della Cartiera, 04028 Minturno LT. Sempre aperto.",
 		"events": []
 	},
 	{
