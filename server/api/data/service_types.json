@@ -1,131 +1,146 @@
 [
 	{
 		"name": "Pharmacies",
+		"description": "Minturno offers several pharmacies. Find here the most supplied ones.",
+		"generic_image": "st-farmacia.jpg",
+		"generic_alt": "Entrance of a pharmacy.",
 		"services": [
 			{
 				"name": "Farmacia Durante della Dott.ssa Franco Marcella",
 				"address": "Via Appia, 1092, 04026 Minturno LT",
 				"openingHours": "8:30-20",
 				"image": "st1-farmaciaDurante.jpg",
-				"imageAlt": "Ingresso della farmacia Durante."
+				"imageAlt": "Entrance of farmacia Durante."
 			},
 			{
 				"name": "Farmacia Schiavone",
 				"address": "Via Cadorna, 52, 04026 Minturno LT",
 				"openingHours": "8:30-20",
 				"image": "st2-farmaciaSchiavone.jpg",
-				"imageAlt": "Ingresso della farmacia Schiavone."
+				"imageAlt": "Entrance of farmacia Schiavone."
 			},
 			{
 				"name": "Farmacia del Golfo",
 				"address": "Via Appia, 6, 04028 Minturno LT",
 				"openingHours": "08:30-13,16:30-20",
 				"image": "st3-farmaciaDelGolfo.jpg",
-				"imageAlt": "Ingresso della farmacia del Golfo."
+				"imageAlt": "Entrance of farmacia del Golfo."
 			}
 		]
 	},
 	{
 		"name": "Banks",
+		"description": "Find here the main banks of Minturno.",
+		"generic_image": "st-banca.jpg",
+		"generic_alt": "Sign of a bank.",
 		"services": [
 			{
 				"name": "Unicredit",
 				"address": "Via Appia, 344, 04028 Minturno LT",
 				"openingHours": "08:20-12:45,14:35-16:35",
 				"image": "st4-bancaUnicredit.jpg",
-				"imageAlt": "Ingresso della banca Unicredit."
+				"imageAlt": "Entrance of banca Unicredit."
 			},
 			{
 				"name": "Banca dei Monti dei Paschi di Siena",
 				"address": "Via Appia, 1074/1076, 04028 Minturno LT",
 				"openingHours": "08:20-12:45,14:35-16:35",
 				"image": "st5-bancaMonteDeiPaschi.jpg",
-				"imageAlt": "Ingresso della banca Monte dei Paschi."
+				"imageAlt": "Entrance of banca Monte dei Paschi."
 			},
 			{
 				"name": "Banca Intesa San Paolo",
 				"address": "Via Appia, 1687 C/O Centro Commerciale, 04020 Minturno LT",
 				"openingHours": "08:30-13:30,14:45-16:55",
 				"image": "st6-bancaIntesaSanPaolo.jpg",
-				"imageAlt": "Ingresso della banca IntesaSanPaolo."
+				"imageAlt": "Entrance of banca IntesaSanPaolo."
 			}
 		]
 	},
 	{
 		"name": "Gas stations",
+		"description": "Here you can find the main gas stations of Minturno.",
+		"generic_image": "st-benzinaio.jpg",
+		"generic_alt": "Pumps of a gas station.",
 		"services": [
 			{
 				"name": "TotalErg",
 				"address": "Via Cavallerizza, 5, 04026 Minturno LT",
 				"openingHours": "Orario continuato",
 				"image": "st7-benzinaioTotalErg.jpg",
-				"imageAlt": "pompe di benzina Total Erg."
+				"imageAlt": "pumps of Total Erg."
 			},
 			{
 				"name": "Redi Service",
 				"address": "Km. 152.800 Via Appia, Minturno, LT 04026, 04026 Minturno LT",
 				"openingHours": "Orario continuato",
 				"image": "st8-benzinaioRediService.jpg",
-				"imageAlt": "pompe di benzina Redi Service."
+				"imageAlt": "pumps of Redi Service."
 			},
 			{
 				"name": "Eni Station",
 				"address": "Via Appia Nuova N. 320 - Loc.scauri, 04028 Minturno LT",
 				"openingHours": "Orario continuato",
 				"image": "st9-benzinaioEniStation.jpg",
-				"imageAlt": "pompe di benzina Eni Station."
+				"imageAlt": "Pumps of Eni Station."
 			}
 		]
 	},
 	{
 		"name": "Grocery stores",
+		"description": "Are you hungry? Here there are some grocery stores for you.",
+		"generic_image": "st-alimentari.jpg",
+		"generic_alt": "Entrance of a grocery store.",
 		"services": [
 			{
 				"name": "Il pizzicagnolo",
 				"address": "Via Appia, 04026 Minturno LT",
 				"openingHours": "07:15-20:30",
 				"image": "st10-alimentariIlPizzicagnolo.jpg",
-				"imageAlt": "scaffali del negozio Il pizzicagnolo."
+				"imageAlt": "shelves of Il pizzicagnolo."
 			},
 			{
 				"name": "Alimentari Alicandro",
 				"address": "Via Miano, 04026 Minturno LT",
 				"openingHours": "07:15-20:30",
 				"image": "st11-alimentariAlimentariAlicandro.jpg",
-				"imageAlt": "esterno del negozio Alimentari Alicandro."
+				"imageAlt": "outside of Alimentari Alicandro."
 			},
 			{
 				"name": "Despar",
 				"address": "Via Filippo Signore, 7, 04026 Minturno LT",
 				"openingHours": "08:30-13:30,16-20",
 				"image": "st12-alimentariDespar.jpg",
-				"imageAlt": "insegna del negozio Despar."
+				"imageAlt": "sign of negozio Despar."
 			}
 		]
 	},
 	{
 		"name": "Veterinary clinics",
+		"description": "Minturno is a pet-friendly city. Discover here the best clinics for your furry friend.",
+		"generic_image": "st-clinica-veterinaria.jpg",
+		"generic_alt": "dog that is being treated by vets",
 		"services": [
 			{
 				"name": "Ambulatorio Eva Fonti",
 				"address": "Lungomare Nazario Sauro, 04028 Minturno LT",
 				"openingHours": "10-12:30,16-19",
 				"image": "st13-veterinarioAmbulatorioEvaFonti.png",
-				"imageAlt": "insegna del laboratorio Eva Fonti."
+				"imageAlt": "sign of ambulatorio Eva Fonti."
 			},
 			{
 				"name": "Clinica veterinaria San Sebastiano",
 				"address": "Via Boari, 22, 04026 Minturno LT",
 				"openingHours": "09:30-13,17-20",
 				"image": "st14-veterinarioClinicaSanSebastiano.png",
-				"imageAlt": "ingresso della clinica San Sebastiano."
+				"imageAlt": "entrance of clinica San Sebastiano."
 			},
 			{
 				"name": "Centro Medico Capolino",
 				"address": "Via Appia, 374, 04028 Minturno LT",
 				"openingHours": "09-19:30",
 				"image": "st15-veterinarioCentroMedicoCapolino.png",
-				"imageAlt": "sala d'attesa del Centro Medico Capolino."
+				"imageAlt": "waiting room of Centro Medico Capolino."
 			}
 		]
 	}

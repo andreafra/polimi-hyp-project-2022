@@ -26,7 +26,6 @@ export default {
 	name: "ServicePage",
 	async asyncData({ $axios, params }) {
 		const res = await $axios.$get(`/api/services/${params.id}`)
-		console.log(res)
 		return { service_type: res }
 	},
 	data() {
