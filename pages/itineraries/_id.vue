@@ -65,6 +65,7 @@ export default {
 </script>
 
 <style scoped>
+<<<<<<< HEAD
 .banner-image {
 	display: block;
 	margin: var(--space-1) 0;
@@ -84,6 +85,14 @@ export default {
 	width: 100%;
 	overflow: hidden;
 	border-radius: var(--border-radius);
+=======
+.map-container {
+	--top-margin-offset: -4em;
+	margin-bottom: var(--top-margin-offset);
+	width: 100%;
+	height: 28em;
+	overflow: hidden;
+>>>>>>> main
 }
 
 .map {
@@ -92,6 +101,9 @@ export default {
 	border: none;
 	width: 100%;
 	height: 100%;
+<<<<<<< HEAD
 	border-radius: var(--border-radius);
+=======
+>>>>>>> main
 }
 </style>

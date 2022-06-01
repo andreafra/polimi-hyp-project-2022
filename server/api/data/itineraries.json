@@ -15,7 +15,11 @@
 		]
 	},
 	{
+<<<<<<< HEAD
 		"name": "Scauri: Blue and Green in Minturno",
+=======
+		"name": "Blue and Green in Minturno",
+>>>>>>> main
 		"images": [
 			{ "url": "poi_spiaggia_dei_sassolini_01.jpg", "alt": "something" }
 		],

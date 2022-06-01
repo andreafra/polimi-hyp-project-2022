@@ -36,7 +36,7 @@ export default {
 			return this.services.map((service) => ({
 				id: service.id,
 				title: service.name,
-				img: require(`~/assets/images/${service.generic_image}`),
+				img: service.generic_image,
 				alt: service.generic_alt,
 				description: service.description,
 				url: `/services/${service.id}`,
