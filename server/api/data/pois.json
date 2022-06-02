@@ -204,5 +204,140 @@
 		"description": "dsa",
 		"visitInfo": "08:30-01",
 		"events": []
+	},
+	{
+		"name": "Teatro romano di Minturnae",
+		"images": [
+			{
+				"url": "poi_teatro_romano_01.jpg",
+				"alt": "Palco del teatro romano"
+			},
+			{
+				"url": "poi_teatro_romano_02.jpg",
+				"alt": "Vista dall'alto del teatro romano"
+			},
+			{
+				"url": "poi_teatro_romano_03.jpg",
+				"alt": "Vista dal basso del teatro romano"
+			},
+			{
+				"url": "poi_teatro_romano_04.jpg",
+				"alt": "Resti archeologici del teatro romano"
+			}
+		],
+		"description": "The Roman theatre, built in the late Republican era or at the beginning of the Empire. It incorporated a section of the ancient walls of the town which perhaps had lost their purpose. Its strong masonry structure has resisted the ravages of time and the vaults which supported the seating section today house a small museum.",
+		"visitInfo": "Opening hours: 9 AM - 4 PM\n Closed on 01 January, 01 May, 25 December\nVisit time: 90 minutes \nFree entrance",
+		"events": [
+			{
+				"name": "End of Year High School Show",
+				"images": [
+					{
+						"url": "poi_teatro_minturno_event.jpg",
+						"alt": "something"
+					}
+				],
+				"description": "The high school of Minturno will hold a show on ancient Rome. Afterwards there will be a buffet. Do not miss it!",
+				"date": "2022-07-23",
+				"admission": "The cost of the ticket is 5€ . Free entrance for students."
+			}
+		]
+	},
+	{
+		"name": "Minturno War Cemetery",
+		"images": [
+			{
+				"url": "poi_war_cemetery_01.jpg",
+				"alt": "lapide di un soldato caduto in guerra"
+			},
+			{
+				"url": "poi_war_cemetery_02.jpg",
+				"alt": "lapidi di soldati caduti in guerra"
+			}
+		],
+		"description": "On 3 September 1943 the Allies invaded the Italian mainland, the invasion coinciding with an armistice made with the Italians who then re-entered the war on the Allied side. Allied objectives were to draw German troops from the Russian front and more particularly from France, where an offensive was planned for the following year. Progress through southern Italy was rapid despite stiff resistance, but by the end of October, the Allies were facing the German winter defensive position known as the Gustav Line, which stretched from the river Garigliano in the west to the Sangro in the east. Initial attempts to breach the western end of the line were unsuccessful and it was not until 17 January 1944 that the Garigliano was crossed, and Minturno taken two days later. The site for the cemetery was chosen in January 1944, but the Allies then lost some ground and the site came under German small-arms fire. The cemetery could not be used again until May 1944 when the Allies launched their final advance on Rome and the US 85th and 88th Divisions were in this sector. The burials are mainly those of the heavy casualties incurred in crossing the Garigliano in January. Minturno War Cemetery contains 2,049 Commonwealth burials of the Second World War. The cemetery was designed by Louis de Soissons.",
+		"visitInfo": "The cemetery is permanently open and may be visited anytime.\n Wheelchair access to the site is possible via an alternative entrance.",
+		"events": [
+			{
+				"name": "Commemoration of fallen soldiers",
+				"images": [
+					{
+						"url": "poi_war_cemetery_event.jpg",
+						"alt": "something"
+					}
+				],
+				"description": "At 2 PM we will all leave from the town hall and arrive at the cemetery, where the mayor will hand the crown to the fallen in respect.",
+				"date": "2022-08-23",
+				"admission": "All citizens are invited to participate."
+			}
+		]
+	},
+	{
+		"name": "Castello Baronale di Minturno",
+		"images": [
+			{
+				"url": "poi_castello_baronale_01.jpg",
+				"alt": "Spiaggia dei Sassolini 1"
+			},
+			{
+				"url": "poi_castello_baronale_02.jpg",
+				"alt": "Spiaggia dei Sassolini 2"
+			},
+			{
+				"url": "poi_castello_baronale_03.jpg",
+				"alt": "Spiaggia dei Sassolini 3"
+			},
+			{
+				"url": "poi_castello_baronale_04.jpg",
+				"alt": "Spiaggia dei Sassolini 4"
+			}
+		],
+		"description": "The Castle, west of the current center, has a trapezoidal plant and is divided into several levels, following the development of the natural conformation of the ground. It has two entrances; the first, the main one, southeast and outside the walls, near the main door of the city. The second opened internally to the walls and in the upper part of the facade are still visible traces of the loopholes for the operation of the drawbridge. From the first entrance there is access to a large hall that overlooks a porch turned to cruise. The ground floor housed the service rooms such as cellars, kitchens, stables and armoury; all these rooms overlooked a large trapezoidal courtyard.",
+		"visitInfo": "Opening hours: 8 AM - 6 PM\n Closed on 25 December",
+		"events": [
+			{
+				"name": "Classical music concert",
+				"images": [
+					{
+						"url": "poi_castello_baronale_event.jpg",
+						"alt": "something"
+					}
+				],
+				"description": "The concert will begin at 6 PM. Why participate? Well, hearing classical music in a concert can leave you feeling refreshed and energized. It can be fun. It can be romantic. It can be spiritual. ",
+				"date": "2022-08-13",
+				"admission": "The cost of the ticket is 20€ . No pets allowed"
+			}
+		]
+	},
+	{
+		"name": "Monumento ai Caduti",
+		"images": [
+			{
+				"url": "poi_monumento_caduti_01.jpg",
+				"alt": "vista frontale del monumento"
+			},
+			{
+				"url": "poi_monumento_caduti_02.jpg",
+				"alt": "vista da lontano del monumento"
+			}
+		],
+		"description": "During the last World War, the city and its countryside, located near the Gustav Line, were the scene of hard battles and violent bombing that caused many victims and extensive damage. Citizens, defenceless and exhausted by privations, were passed through the arms of the retaliation of the retreating German army, countless were the examples of love for the homeland and of noble spirit of sacrifice.",
+		"visitInfo": "The monument is in the central square of Minturno and can always be visited.",
+		"events": []
+	},
+	{
+		"name": "Castrum argenti",
+		"images": [
+			{
+				"url": "poi_castrum_argenti_01.jpg",
+				"alt": "mura antiche con vista mare"
+			},
+			{
+				"url": "poi_castrum_argenti_02.jpg",
+				"alt": "torre antica con vista mare"
+			}
+		],
+		"description": "Castrum Argenti is a site of historical and naturalistic value, on the promontory of Monte d'Argento, in Marina di Minturno. According to the sources, it hosted the meeting that led to the drafting of the Placitum of Castrum Argenti, with which the disputes concerning the definition of the boundaries between the Duchy of Traetto (now Minturno) and the Terra Sancti Benedicti, governed by the Abbey of Montecassino, were resolved. It is one of the few protohistoric sites of Lazio, in which there are also Roman materials. The findings would testify to the existence on the site of an important coastal settlement of the early Iron Age.",
+		"visitInfo": "Castrum argenti can always be visited.",
+		"events": []
 	}
 ]
