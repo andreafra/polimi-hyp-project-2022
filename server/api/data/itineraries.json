@@ -30,5 +30,25 @@
 			{ "name": "Parco Regionale Riviera di Ulisse" },
 			{ "name": "Lido La Siesta Sas" }
 		]
+	},
+	{
+		"name": "History of Minturno",
+		"images": [
+			{
+				"url": "historical_main_page.jpg",
+				"alt": "The Imperial forum"
+			}
+		],
+		"description": "Let's dive inside the history of Minturno!",
+		"duration": 172800,
+		"distance": 3000,
+		"map": "https://www.google.com/maps/d/embed?mid=1iaZeNDc2Pherz6QHdp4U-ABAI6VBtcE&ehbc=2E312F",
+		"pointOfInterests": [
+			{ "name": "Teatro romano di Minturnae" },
+			{ "name": "Minturno War Cemetery" },
+			{ "name": "Castello Baronale di Minturno" },
+			{ "name": "Monumento ai Caduti" },
+			{ "name": "Castrum argenti" }
+		]
 	}
 ]
