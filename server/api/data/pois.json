@@ -140,43 +140,6 @@
 		"events": []
 	},
 	{
-		"name": "Teatro romano di Minturnae",
-		"images": [
-			{
-				"url": "poi_teatro_romano_01.jpg",
-				"alt": "Palco del teatro romano"
-			},
-			{
-				"url": "poi_teatro_romano_02.jpg",
-				"alt": "Vista dall'alto del teatro romano"
-			},
-			{
-				"url": "poi_teatro_romano_03.jpg",
-				"alt": "Vista dal basso del teatro romano"
-			},
-			{
-				"url": "poi_teatro_romano_04.jpg",
-				"alt": "Resti archeologici del teatro romano"
-			}
-		],
-		"description": "The Roman theatre, built in the late Republican era or at the beginning of the Empire. It incorporated a section of the ancient walls of the town which perhaps had lost their purpose. Its strong masonry structure has resisted the ravages of time and the vaults which supported the seating section today house a small museum.",
-		"visitInfo": "Opening hours: 9 AM - 4 PM\n Closed on 01 January, 01 May, 25 December\nVisit time: 90 minutes \nFree entrance",
-		"events": [
-			{
-				"name": "End of Year High School Show",
-				"images": [
-					{
-						"url": "poi_teatro_minturno_event.jpg",
-						"alt": "something"
-					}
-				],
-				"description": "The high school of Minturno will hold a show on ancient Rome. Afterwards there will be a buffet. Do not miss it!",
-				"date": "2022-07-23",
-				"admission": "The cost of the ticket is 5€ . Free entrance for students."
-			}
-		]
-	},
-	{
 		"name": "Panificio d'Alise",
 		"images": [
 			{
@@ -243,6 +206,43 @@
 				"description": "At 2 PM we will all leave from the town hall and arrive at the cemetery, where the mayor will hand the crown to the fallen in respect.",
 				"date": "2022-08-23",
 				"admission": "All citizens are invited to participate."
+			}
+		]
+	},
+	{
+		"name": "Teatro romano di Minturnae",
+		"images": [
+			{
+				"url": "poi_teatro_romano_01.jpg",
+				"alt": "Palco del teatro romano"
+			},
+			{
+				"url": "poi_teatro_romano_02.jpg",
+				"alt": "Vista dall'alto del teatro romano"
+			},
+			{
+				"url": "poi_teatro_romano_03.jpg",
+				"alt": "Vista dal basso del teatro romano"
+			},
+			{
+				"url": "poi_teatro_romano_04.jpg",
+				"alt": "Resti archeologici del teatro romano"
+			}
+		],
+		"description": "The Roman theatre, built in the late Republican era or at the beginning of the Empire. It incorporated a section of the ancient walls of the town which perhaps had lost their purpose. Its strong masonry structure has resisted the ravages of time and the vaults which supported the seating section today house a small museum.",
+		"visitInfo": "Opening hours: 9 AM - 4 PM\n Closed on 01 January, 01 May, 25 December\nVisit time: 90 minutes \nFree entrance",
+		"events": [
+			{
+				"name": "End of Year High School Show",
+				"images": [
+					{
+						"url": "poi_teatro_minturno_event.jpg",
+						"alt": "something"
+					}
+				],
+				"description": "The high school of Minturno will hold a show on ancient Rome. Afterwards there will be a buffet. Do not miss it!",
+				"date": "2022-07-23",
+				"admission": "The cost of the ticket is 5€ . Free entrance for students."
 			}
 		]
 	},
