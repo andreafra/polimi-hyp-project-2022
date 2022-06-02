@@ -1,71 +1,5 @@
 [
 	{
-		"name": "PoI X",
-		"images": [
-			{ "url": "poi_spiaggia_dei_sassolini_01.jpg", "alt": "something" }
-		],
-		"description": "Lorem ipsum dolor sit amen",
-		"visitInfo": "Lorem ipsum dolor sit amen",
-		"events": [
-			{
-				"name": "Event X",
-				"images": [
-					{
-						"url": "poi_spiaggia_dei_sassolini_01.jpg",
-						"alt": "something"
-					}
-				],
-				"description": "Lorem ipsum dolor sit amen",
-				"date": "2022-07-23",
-				"admission": "Lorem ipsum dolor sit amen"
-			}
-		]
-	},
-	{
-		"name": "PoI Y",
-		"images": [
-			{ "url": "poi_spiaggia_dei_sassolini_01.jpg", "alt": "something" }
-		],
-		"description": "Lorem ipsum dolor sit amen",
-		"visitInfo": "Lorem ipsum dolor sit amen",
-		"events": [
-			{
-				"name": "Event Y",
-				"images": [
-					{
-						"url": "poi_spiaggia_dei_sassolini_01.jpg",
-						"alt": "something"
-					}
-				],
-				"description": "Lorem ipsum dolor sit amen",
-				"date": "2022-07-23",
-				"admission": "Lorem ipsum dolor sit amen"
-			}
-		]
-	},
-	{
-		"name": "PoI Z",
-		"images": [
-			{ "url": "poi_spiaggia_dei_sassolini_01.jpg", "alt": "something" }
-		],
-		"description": "Lorem ipsum dolor sit amen",
-		"visitInfo": "Lorem ipsum dolor sit amen",
-		"events": [
-			{
-				"name": "Event Z",
-				"images": [
-					{
-						"url": "poi_spiaggia_dei_sassolini_01.jpg",
-						"alt": "something"
-					}
-				],
-				"description": "Lorem ipsum dolor sit amen",
-				"date": "2022-07-23",
-				"admission": "Lorem ipsum dolor sit amen"
-			}
-		]
-	},
-	{
 		"name": "Spiaggia dei Sassolini",
 		"images": [
 			{
@@ -243,6 +177,47 @@
 		]
 	},
 	{
+		"name": "Panificio d'Alise",
+		"images": [
+			{
+				"url": "poi_panificio_dAlise_01.jpg",
+				"alt": "gastronomic service"
+			},
+			{
+				"url": "poi_panificio_dAlise_02.png",
+				"alt": "entrance of panificio d'Alise"
+			},
+			{
+				"url": "poi_panificio_dAlise_03.jpg.png",
+				"alt": "croissant served inside the bakery"
+			},
+			{
+				"url": "poi_panificio_dAlise_04.jpg.png",
+				"alt": "Wines and hams offerts"
+			}
+		],
+		"description": "A traditional bakery of Minturno.",
+		"visitInfo": "08:30-20",
+		"events": [
+			{
+				"name": "Aperitivo di fine stagione",
+				"images": [
+					{
+						"url": "event_aperitivo_di_fine_stagione_01.png",
+						"alt": "glasses of aperol spritz and finger food"
+					},
+					{
+						"url": "event_aperitivo_di_fine_stagione_02.png",
+						"alt": "delicatessen and finger food"
+					}
+				],
+				"description": "The last aperitivo of the summer is a must for late tourists that wants to enjoy their stay in Minturno!",
+				"date": "2022-09-20",
+				"admission": "This event allow free entrance for all. Dogs are also welcomed as long as they are on a leash!"
+			}
+		]
+	},
+	{
 		"name": "Minturno War Cemetery",
 		"images": [
 			{
@@ -268,6 +243,47 @@
 				"description": "At 2 PM we will all leave from the town hall and arrive at the cemetery, where the mayor will hand the crown to the fallen in respect.",
 				"date": "2022-08-23",
 				"admission": "All citizens are invited to participate."
+			}
+		]
+	},
+	{
+		"name": "Osteria Anna",
+		"images": [
+			{
+				"url": "poi_osteria_anna_01.png",
+				"alt": "laid table of the restaurant"
+			},
+			{
+				"url": "poi_osteria_anna_02.png",
+				"alt": "main room of the restaurant"
+			},
+			{
+				"url": "poi_osteria_anna_03.png",
+				"alt": "blackboard of the restaurant"
+			},
+			{
+				"url": "poi_osteria_anna_04.png",
+				"alt": "basket of herbs with the name of the restaurant"
+			}
+		],
+		"description": "A tipical restaurant of Minturno.",
+		"visitInfo": "11-15, 18-23",
+		"events": [
+			{
+				"name": "Degustazione vini",
+				"images": [
+					{
+						"url": "event_degustazione_vini_01.png",
+						"alt": "glasses of different types of wine"
+					},
+					{
+						"url": "event_degustazione_vini_02.png",
+						"alt": "glasses of different types of wine"
+					}
+				],
+				"description": "Join the fine wine's degustation of Osteria Anna!",
+				"date": "2022-07-15",
+				"admission": "It is necessary to book a table in order to participate to this event."
 			}
 		]
 	},
@@ -339,5 +355,74 @@
 		"description": "Castrum Argenti is a site of historical and naturalistic value, on the promontory of Monte d'Argento, in Marina di Minturno. According to the sources, it hosted the meeting that led to the drafting of the Placitum of Castrum Argenti, with which the disputes concerning the definition of the boundaries between the Duchy of Traetto (now Minturno) and the Terra Sancti Benedicti, governed by the Abbey of Montecassino, were resolved. It is one of the few protohistoric sites of Lazio, in which there are also Roman materials. The findings would testify to the existence on the site of an important coastal settlement of the early Iron Age.",
 		"visitInfo": "Castrum argenti can always be visited.",
 		"events": []
+	},
+	{
+		"name": "Pesce, Amore e Fantasia",
+		"images": [
+			{
+				"url": "poi_pesce_amore_e_fantasia_01.png",
+				"alt": "laid table of the restaurant"
+			},
+			{
+				"url": "poi_pesce_amore_e_fantasia_02.png",
+				"alt": "main room of the restaurant"
+			}
+		],
+		"description": "Delicious plates from the Minturno's sea!",
+		"visitInfo": "11-15, 18-23",
+		"events": []
+	},
+	{
+		"name": "Silvia Bistrot",
+		"images": [
+			{
+				"url": "poi_silvia_bistrot_01.png",
+				"alt": "bottle and finger food"
+			},
+			{
+				"url": "poi_silvia_bistrot_02.png",
+				"alt": "plate of chicken wings"
+			}
+		],
+		"description": "Little heart-warming bistrot in the center of Minturno.",
+		"visitInfo": "11-15, 18-23",
+		"events": []
+	},
+	{
+		"name": "Agriturismo a casa di Don Peppe",
+		"images": [
+			{
+				"url": "poi_agriturismo_a_casa_di_don_peppe_01.png",
+				"alt": "laid table of the restaurant"
+			},
+			{
+				"url": "poi_agriturismo_a_casa_di_don_peppe_02.png",
+				"alt": "yard outside the restaurant"
+			},
+			{
+				"url": "poi_agriturismo_a_casa_di_don_peppe_03.png",
+				"alt": "main room of the restaurant"
+			}
+		],
+		"description": "Neapolitan cousine in the countryside.",
+		"visitInfo": "11-15, 18-23",
+		"events": [
+			{
+				"name": "Pranzo degli animali",
+				"images": [
+					{
+						"url": "event_pranzo_degli_animali_01.png",
+						"alt": "donkeys of the farm"
+					},
+					{
+						"url": "event_pranzo_degli_animali_02.png",
+						"alt": "young oxen of the farm"
+					}
+				],
+				"description": "Join a tour of the farm and meet all the animals. The food to feed them will be provided to visitors!",
+				"date": "2022-07-10",
+				"admission": "In order to be admitted to this event it is mandatory to purchase an insurance against donkeys' bites. Find more about it at the reception."
+			}
+		]
 	}
 ]
