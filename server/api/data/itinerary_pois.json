@@ -1,20 +1,5 @@
 [
 	{
-		"itineraryId": "Itinerary X",
-		"pointOfInterestId": "PoI X",
-		"pointOfInterestIndex": 1
-	},
-	{
-		"itineraryId": "Itinerary X",
-		"pointOfInterestId": "PoI Y",
-		"pointOfInterestIndex": 2
-	},
-	{
-		"itineraryId": "Itinerary X",
-		"pointOfInterestId": "PoI Z",
-		"pointOfInterestIndex": 3
-	},
-	{
 		"itineraryId": "Blue and Green in Minturno",
 		"pointOfInterestId": "Spiaggia dei Sassolini",
 		"pointOfInterestIndex": 1
@@ -62,6 +47,31 @@
 	{
 		"itineraryId": "History of Minturno",
 		"pointOfInterestId": "Castrum argenti",
+		"pointOfInterestIndex": 5
+	},
+	{
+		"itineraryId": "Gastronomy in Minturno",
+		"pointOfInterestId": "Panificio d'Alise",
+		"pointOfInterestIndex": 1
+	},
+	{
+		"itineraryId": "Gastronomy in Minturno",
+		"pointOfInterestId": "Osteria Anna",
+		"pointOfInterestIndex": 2
+	},
+	{
+		"itineraryId": "Gastronomy in Minturno",
+		"pointOfInterestId": "Pesce, Amore e Fantasia",
+		"pointOfInterestIndex": 3
+	},
+	{
+		"itineraryId": "Gastronomy in Minturno",
+		"pointOfInterestId": "Silvia Bistrot",
+		"pointOfInterestIndex": 4
+	},
+	{
+		"itineraryId": "Gastronomy in Minturno",
+		"pointOfInterestId": "Agriturismo a casa di Don Peppe",
 		"pointOfInterestIndex": 5
 	}
 ]
