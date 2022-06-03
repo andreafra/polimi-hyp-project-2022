@@ -11,8 +11,10 @@
 			role="img"
 			class="banner-image"
 		/>
-		<p><b>Duration: </b>{{ itinerary.duration }}</p>
-		<p><b>Distance: </b>{{ itinerary.distance }}</p>
+		<p class="itinerary-info">
+			<b>Duration: </b>{{ itinerary.duration }} <b>Distance: </b
+			>{{ itinerary.distance }}
+		</p>
 		<p>{{ itinerary.description }}</p>
 		<div class="map-container">
 			<iframe class="map" :src="`${itinerary.map}`"></iframe>
@@ -105,9 +107,16 @@ export default {
 	height: var(--image-highlight-height);
 }
 
+.itinerary-info {
+	display: inline-block;
+	border: 2px solid var(--color-neutral);
+	border-radius: var(--border-radius);
+	padding: var(--space-0);
+	margin: var(--space-0) 0 0 0 !important;
+	font-size: var(--font-size-category);
+}
+
 .map-container {
-	--top-margin-offset: -5em;
-	margin-bottom: var(--top-margin-offset);
 	aspect-ratio: 16 / 9;
 	width: 100%;
 	height: var(--image-highlight-height);
@@ -117,7 +126,6 @@ export default {
 
 .map {
 	position: relative;
-	top: var(--top-margin-offset);
 	border: none;
 	width: 100%;
 	height: 100%;

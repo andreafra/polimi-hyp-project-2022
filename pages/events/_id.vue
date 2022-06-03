@@ -76,6 +76,10 @@ h2 {
 	padding-bottom: var(--space-1);
 }
 
+p {
+	white-space: pre-wrap;
+}
+
 @media only screen and (min-width: 840px) {
 	.row {
 		grid-template-columns: 1fr 1fr;

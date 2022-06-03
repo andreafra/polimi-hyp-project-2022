@@ -195,6 +195,7 @@ export default {
 	height: var(--image-highlight-height);
 	border-radius: var(--border-radius);
 	background-color: var(--color-neutral);
+	object-fit: cover;
 }
 
 .opacity-bar-right,

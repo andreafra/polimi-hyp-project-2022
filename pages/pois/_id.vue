@@ -45,7 +45,7 @@
 			/>
 		</h-scroll-view>
 		<steps-navigator
-			v-if="nexStep && prevStep"
+			v-if="nextStep || prevStep"
 			:next-step="getNavigatorStep(nextStep)"
 			:prev-step="getNavigatorStep(prevStep)"
 		/>
@@ -106,7 +106,6 @@ export default {
 	},
 	methods: {
 		getEvents() {
-			console.log(this.poi.events.length)
 			return this.poi.events.map((event) => ({
 				title: event.name,
 				subtitle: `${new Date(event.date).toLocaleDateString("en-GB", {
