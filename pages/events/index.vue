@@ -91,7 +91,7 @@ export default {
 		const title =
 			currentSeason !== "All" ? `${currentSeason} Events` : "All Events"
 
-		this.events = res.sort((a, b) => (a.date > b.date ? 1 : -1))
+		this.events = res.sort((a, b) => new Date(a.date) - new Date(b.date))
 		this.currentSeason = currentSeason
 		this.title = title
 	},
@@ -105,7 +105,9 @@ export default {
 			return this.events.map((event) => ({
 				id: event.id,
 				title: event.name,
-				subtitle: `${event.date}`,
+				subtitle: `${new Date(event.date).toLocaleDateString("en-GB", {
+					dateStyle: "short",
+				})}`,
 				img: event.images[0].url,
 				alt: event.images[0].alt,
 				description: event.description,

@@ -22,8 +22,8 @@
 		/>
 		<p class="card-description">
 			{{
-				object.description.length > 120
-					? object.description.slice(0, 120) + "..."
+				object.description.length > 60
+					? object.description.slice(0, 60) + "..."
 					: object.description
 			}}
 		</p>

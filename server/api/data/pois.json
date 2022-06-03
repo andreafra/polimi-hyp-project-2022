@@ -1,71 +1,5 @@
 [
 	{
-		"name": "PoI X",
-		"images": [
-			{ "url": "poi_spiaggia_dei_sassolini_01.jpg", "alt": "something" }
-		],
-		"description": "Lorem ipsum dolor sit amen",
-		"visitInfo": "Lorem ipsum dolor sit amen",
-		"events": [
-			{
-				"name": "Event X",
-				"images": [
-					{
-						"url": "poi_spiaggia_dei_sassolini_01.jpg",
-						"alt": "something"
-					}
-				],
-				"description": "Lorem ipsum dolor sit amen",
-				"date": "2022-07-23",
-				"admission": "Lorem ipsum dolor sit amen"
-			}
-		]
-	},
-	{
-		"name": "PoI Y",
-		"images": [
-			{ "url": "poi_spiaggia_dei_sassolini_01.jpg", "alt": "something" }
-		],
-		"description": "Lorem ipsum dolor sit amen",
-		"visitInfo": "Lorem ipsum dolor sit amen",
-		"events": [
-			{
-				"name": "Event Y",
-				"images": [
-					{
-						"url": "poi_spiaggia_dei_sassolini_01.jpg",
-						"alt": "something"
-					}
-				],
-				"description": "Lorem ipsum dolor sit amen",
-				"date": "2022-07-23",
-				"admission": "Lorem ipsum dolor sit amen"
-			}
-		]
-	},
-	{
-		"name": "PoI Z",
-		"images": [
-			{ "url": "poi_spiaggia_dei_sassolini_01.jpg", "alt": "something" }
-		],
-		"description": "Lorem ipsum dolor sit amen",
-		"visitInfo": "Lorem ipsum dolor sit amen",
-		"events": [
-			{
-				"name": "Event Z",
-				"images": [
-					{
-						"url": "poi_spiaggia_dei_sassolini_01.jpg",
-						"alt": "something"
-					}
-				],
-				"description": "Lorem ipsum dolor sit amen",
-				"date": "2022-07-23",
-				"admission": "Lorem ipsum dolor sit amen"
-			}
-		]
-	},
-	{
 		"name": "Lido Aurora",
 		"images": [
 			{
@@ -140,7 +74,24 @@
 		],
 		"description": "Un piccolo angolo di paradiso. Così molti turisti che sono in visita a Minturno Scauri definiscono la Spiaggia dei Sassolini. Resa famosa dai suggestivi sassolini che la compongono, la Spiaggia dei Sassolini di Minturno Scauri è visitata da numerosi turisti e cittadini del luogo e rappresenta il centro del relax e del divertimento.Ideale per una giornata di mare insieme alla propria famiglia o ai propri amici, la Spiaggia dei Sassolini e le bellissime acque che la bagnano vi accoglieranno a braccia aperte. Lo stabilimento presente sulla Spiaggia dei Sassolini offre diversi servizi come ombrelloni, lettini, bar, bagno, docce.",
 		"visitInfo": "Indirizzo sito: Via Nino Manfredi, 04028 Minturno LT, 08:30–01.",
-		"events": []
+		"events": [
+			{
+				"name": "Mare in Cantina",
+				"images": [
+					{
+						"url": "event_mare_in_cantina_01.jpg",
+						"alt": "Mare in Cantina 01"
+					},
+					{
+						"url": "event_mare_in_cantina_02.jpg",
+						"alt": "Mare in Cantina 02"
+					}
+				],
+				"description": "Giovedì 18 luglio\nLa rassegna enogastronomica Mare In Cantina è stata ideata e curata da Andrea Polidoro, responsabile per l’Italia di Tasted Magazine e Tasted Journal, riviste di enologia diffuse in tutto il mondo in lingua cinese e in lingua inglese.\napertura degli stand fissata alle 19:00; Oltre 350 persone hanno potuto assaggiare i vini ed i piatti in degustazione.\nÈ stato uno spettacolo vedere tante persone che, anche se poco esperte e non tenevano il calice in modo ortodosso, oppure donne con i tacchi alti affondati nei sassolini, giravano per i banchi d’assaggio e si informavano sulla provenienza del vino, sui vitigni utilizzati o come venissero vinificati!\nla storia che c’è dietro alla bottiglia di vino ed è un vero peccato se al banco non c’è il produttore diretto a raccontargliela!\nIl luogo di mare ed il periodo estivo spingevano, com’era naturale, per una selezione di vini orientata a bianchi e rosati; ma i rossi presenti erano molto importanti. Ricordandone alcuni, ne approfitto per avanzare qualche considerazione.",
+				"date": "2022-07-18",
+				"admission": "The event will be held the 18th of July 19:00 a 22:00.\nFree entrance."
+			}
+		]
 	},
 	{
 		"name": "Torre di Scauri",
@@ -217,8 +168,8 @@
 						"alt": "Luci and Stelle 1"
 					}
 				],
-				"date": "2022-08-10",
-				"description": "Performance di chitarra acustica aspettando le stelle cadenti. La sera del 10 Agosto il Parco Riviera di Ulisse attende cittadini e turisti per una visita notturna di quattro tra i suoi più significativi siti: la Torre Quadratadi Scauri a Minturno, l’area Archeologica di Gianola a Formia, Monte Orlandoa Gaeta e Torre Truglia  a Sperlonga. Gli ospiti saranno guidati alla scoperta della volta celeste nell’incantevole cornice di sentieri e bellezze storico-paesaggistiche con proiezione di documentari e musica acustica dal vivo.\nL’iniziativa Tra Luci&Stelle è gratuita e realizzata in collaborazione con il Comune di Sperlonga, la LNI Sperlonga, associazioni locali e gruppi astrofili. Rientra nell’evento tematico “L’Estate delle Meraviglie” della Regione Lazio.",
+				"date": "2022-11-05",
+				"description": "Performance di chitarra acustica aspettando le stelle cadenti. La sera del 5 Novembre il Parco Riviera di Ulisse attende cittadini e turisti per una visita notturna di quattro tra i suoi più significativi siti: la Torre Quadratadi Scauri a Minturno, l’area Archeologica di Gianola a Formia, Monte Orlandoa Gaeta e Torre Truglia  a Sperlonga. Gli ospiti saranno guidati alla scoperta della volta celeste nell’incantevole cornice di sentieri e bellezze storico-paesaggistiche con proiezione di documentari e musica acustica dal vivo.\nL’iniziativa Tra Luci&Stelle è gratuita e realizzata in collaborazione con il Comune di Sperlonga, la LNI Sperlonga, associazioni locali e gruppi astrofili. Rientra nell’evento tematico “L’Estate delle Meraviglie” della Regione Lazio.",
 				"admission": "The event will be held the 10th of August 21:00-23:00 in Info-point Gianola (Via Porticciolo Romano).\nFree entry for everyone."
 			}
 		]
@@ -400,19 +351,19 @@
 		"images": [
 			{
 				"url": "poi_castello_baronale_01.jpg",
-				"alt": "Spiaggia dei Sassolini 1"
+				"alt": "Castello Baronale di Minturno 1"
 			},
 			{
 				"url": "poi_castello_baronale_02.jpg",
-				"alt": "Spiaggia dei Sassolini 2"
+				"alt": "Castello Baronale di Minturno 2"
 			},
 			{
 				"url": "poi_castello_baronale_03.jpg",
-				"alt": "Spiaggia dei Sassolini 3"
+				"alt": "Castello Baronale di Minturno 3"
 			},
 			{
 				"url": "poi_castello_baronale_04.jpg",
-				"alt": "Spiaggia dei Sassolini 4"
+				"alt": "Castello Baronale di Minturno 4"
 			}
 		],
 		"description": "The Castle, west of the current center, has a trapezoidal plant and is divided into several levels, following the development of the natural conformation of the ground. It has two entrances; the first, the main one, southeast and outside the walls, near the main door of the city. The second opened internally to the walls and in the upper part of the facade are still visible traces of the loopholes for the operation of the drawbridge. From the first entrance there is access to a large hall that overlooks a porch turned to cruise. The ground floor housed the service rooms such as cellars, kitchens, stables and armoury; all these rooms overlooked a large trapezoidal courtyard.",

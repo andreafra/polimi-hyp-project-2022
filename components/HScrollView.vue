@@ -186,9 +186,6 @@ export default {
 	scroll-snap-type: x mandatory;
 
 	padding: 0;
-
-	/* Stretch elements when not overflow */
-	width: 100%;
 }
 
 ::-webkit-scrollbar-thumb {
