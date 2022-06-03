@@ -88,3 +88,6 @@ sw.*
 
 # Vim swap files
 *.swp
+
+# Uncropped/original size images (only on Alessio's local folder)
+/assets/images_original

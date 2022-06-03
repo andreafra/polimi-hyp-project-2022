@@ -11,7 +11,7 @@
 		</div>
 		<span class="category">Point of Interest</span>
 		<h1>{{ poi.name }}</h1>
-		<div class="flex-container">
+		<div>
 			<h-scroll-view>
 				<img
 					v-for="(image, index) of poi.images"
@@ -24,16 +24,18 @@
 		<p>{{ poi.description }}</p>
 		<h2>Visit Information</h2>
 		<p>{{ poi.visitInfo }}</p>
-		<h2>Events hosted here</h2>
-		<h-scroll-view>
+		<h2 v-if="poi.events.length > 0">Events hosted here</h2>
+		<h-scroll-view v-if="poi.events.length > 0">
 			<card
 				v-for="(event, index) of getEvents()"
 				:key="`poi-event-index-${index}`"
 				:object="event"
 			/>
 		</h-scroll-view>
-		<h2>Itineraries passing through here</h2>
-		<h-scroll-view>
+		<h2 v-if="poi.itineraries.length > 0">
+			Itineraries passing through here
+		</h2>
+		<h-scroll-view v-if="poi.itineraries.length > 0">
 			<card
 				v-for="(itinerary, index) of getItineraries()"
 				:key="`poi-event-index-${index}`"

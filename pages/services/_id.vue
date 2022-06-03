@@ -36,9 +36,9 @@ export default {
 
 <style scoped>
 .column-image {
-	flex-basis: 7em;
+	flex-basis: 17em;
 	flex-grow: 0;
-	min-width: 7em;
+	min-width: 17em;
 	vertical-align: top;
 }
 

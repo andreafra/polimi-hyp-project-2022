@@ -224,31 +224,27 @@
 		]
 	},
 	{
-		"name": "Parco Regionale Riviera di Ulisse",
+		"name": "Sughereta del Monte di Scauri",
 		"images": [
 			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 1"
+				"url": "poi_sughereta_del_monte_di_scauri_01.jpg",
+				"alt": "Sughereta del Monte di Scauri 1"
 			},
 			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 2"
+				"url": "poi_sughereta_del_monte_di_scauri_02.jpg",
+				"alt": "Sughereta del Monte di Scauri 2"
 			},
 			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 3"
+				"url": "poi_sughereta_del_monte_di_scauri_03.jpg",
+				"alt": "Sughereta del Monte di Scauri 3"
 			},
 			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 4"
-			},
-			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 5"
+				"url": "poi_sughereta_del_monte_di_scauri_04.jpg",
+				"alt": "Sughereta del Monte di Scauri 4"
 			}
 		],
-		"description": "dsa",
-		"visitInfo": "08:30-01",
+		"description": "A magnificent example of a typical Habitat present in the Mediterranean basin (very representative of Sardegna) now almost rare in peninsular Italy!\nIt is a very beautiful place, huge corks that are spectacular, the only drawback, we discovered it later, this area is off limits to any activity due to the presence of numerous wild boars, which could be dangerous for humans",
+		"visitInfo": "04023 Formia LT, always accessible.\nFree entrance.",
 		"events": []
 	},
 	{

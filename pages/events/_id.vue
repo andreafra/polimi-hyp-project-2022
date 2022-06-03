@@ -2,6 +2,7 @@
 	<article>
 		<span class="category">Event</span>
 		<h1>{{ event.name }}</h1>
+		<span>{{ event.date }}</span>
 		<h-scroll-view>
 			<img
 				v-for="(img, index) of event.images"

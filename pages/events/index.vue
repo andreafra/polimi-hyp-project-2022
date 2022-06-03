@@ -91,7 +91,7 @@ export default {
 		const title =
 			currentSeason !== "All" ? `${currentSeason} Events` : "All Events"
 
-		this.events = res
+		this.events = res.sort((a, b) => (a.date > b.date ? 1 : -1))
 		this.currentSeason = currentSeason
 		this.title = title
 	},
