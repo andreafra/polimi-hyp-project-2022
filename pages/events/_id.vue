@@ -13,7 +13,7 @@
 			<img
 				v-for="(img, index) of event.images"
 				:key="index"
-				:src="require(`~/assets/images/${img.url}`)"
+				:src="require(`~/assets/images/${img.url}?webp`)"
 				:alt="img.alt"
 			/>
 		</h-scroll-view>

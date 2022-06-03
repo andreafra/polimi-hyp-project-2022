@@ -5,7 +5,7 @@
 		<div
 			:style="{
 				backgroundImage: `url(${require('~/assets/images/' +
-					itinerary.images[0].url)})`,
+					itinerary.images[0].url)}?webp)`,
 			}"
 			:aria-label="itinerary.images[0].alt"
 			role="img"
