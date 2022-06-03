@@ -98,4 +98,22 @@ export async function SeedDatabase() {
 			"If the error is about violation of the foreing key constraint, you probably spelled wrong the IDs of itinerary and PoI."
 		)
 	}
+
+	// Check how many entries we have:
+	const eventsNum = await Models.Event.count()
+	const itinerariesNum = await Models.Itinerary.count()
+	const poisNum = await Models.PointOfInterest.count()
+	const servicesNum = await Models.ServiceType.count()
+
+	console.warn("Are specs respected?")
+	console.log(`EVENTS: \t${eventsNum} \t ${eventsNum >= 10 ? "OK" : "FAIL"}`)
+	console.log(
+		`ITINERARIES: \t${itinerariesNum} \t ${
+			itinerariesNum >= 3 ? "OK" : "FAIL"
+		}`
+	)
+	console.log(`POIS: \t\t${poisNum} \t ${poisNum >= 15 ? "OK" : "FAIL"}`)
+	console.log(
+		`SERVICE TYPES: \t${servicesNum} \t ${servicesNum >= 5 ? "OK" : "FAIL"}`
+	)
 }

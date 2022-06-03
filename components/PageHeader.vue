@@ -151,11 +151,7 @@ export default {
 
 .nav-link .nuxt-link-active {
 	color: var(--color-accent-dark);
-}
-
-.nav-link .nuxt-link-active::after {
-	content: "←";
-	margin-left: var(--space-0);
+	text-decoration: underline;
 }
 
 .nav-collapse {
@@ -217,9 +213,8 @@ export default {
 		color: var(--color-accent-dark);
 	}
 
-	.nav-link .nuxt-link-active::after {
-		content: "";
-		display: none;
+	.nav-link .nuxt-link-active {
+		text-decoration: none;
 	}
 }
 </style>
