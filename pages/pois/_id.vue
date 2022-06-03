@@ -5,8 +5,10 @@
 				:to="`/itineraries/${fromItinerary.id}`"
 				class="back-link"
 			>
-				<arrow-left /> &nbsp; Back to
-				{{ fromItinerary.name }}
+				<arrow-left class="back-link-arrow" />
+				<span class="back-link-text">
+					Back to {{ fromItinerary.name }}
+				</span>
 			</nuxt-link>
 		</div>
 		<span class="category">Point of Interest</span>
@@ -145,17 +147,26 @@ export default {
 }
 
 .back-link {
-	font-size: var(--font-size-header-title);
+	font-size: var(--font-size-category);
 	color: var(--color-accent);
 	font-weight: bolder;
 	text-decoration: none;
 
-	display: flex;
+	display: inline-flex;
 	align-items: center;
+	border-radius: var(--border-radius);
+	border: 2px solid var(--color-accent);
+	padding: var(--space-0) 0;
 }
 
 .back-link:hover {
 	color: var(--color-accent-dark);
+	border-color: var(--color-accent-dark);
+}
+
+.back-link-arrow {
+	font-size: 1.3em;
+	margin: 0 var(--space-1);
 }
 
 p {

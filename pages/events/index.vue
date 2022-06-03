@@ -56,22 +56,22 @@ export default {
 			{
 				label: "Winter",
 				query: "winter",
-				desc: "Winter events at Minturno, brr...",
+				desc: "Winter events in Minturno ❄️",
 			},
 			{
 				label: "Spring",
 				query: "spring",
-				desc: "Spring events at Minturno, 🌼",
+				desc: "Spring events in Minturno 🌼",
 			},
 			{
 				label: "Summer",
 				query: "summer",
-				desc: "Summer events at Minturno, ⛱️",
+				desc: "Summer events in Minturno ⛱️",
 			},
 			{
 				label: "Autumn",
 				query: "autumn",
-				desc: "Autumn events at minturno, 🍂",
+				desc: "Autumn events in minturno 🍂",
 			},
 		],
 	}),
