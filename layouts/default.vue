@@ -33,6 +33,7 @@ body {
 
 .content {
 	background-color: var(--color-light);
+	min-height: 75vh;
 }
 
 .container {

@@ -1,19 +1,67 @@
 <template>
-    <article>
-        <h1>About Us</h1>
-        <h3>History</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quaerat numquam recusandae, assumenda vero sunt at eaque facilis beatae commodi. Quos reiciendis asperiores voluptatibus suscipit facilis tenetur quia recusandae iure.</p>
-        <img src="https://media-cdn.tripadvisor.com/media/photo-s/04/9c/b9/b0/ponte-real-ferdinando.jpg" alt="Ponte Ferdinando"/>
-        <h3>Nature</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quaerat numquam recusandae, assumenda vero sunt at eaque facilis beatae commodi. Quos reiciendis asperiores voluptatibus suscipit facilis tenetur quia recusandae iure.</p>
-        <img src="https://t3.ftcdn.net/jpg/04/22/54/96/360_F_422549672_YBblFRWVwazeHgI8MYtgFlFNKfAHFiTe.jpg" alt="Spiaggia con mare"/>
-        
-    </article>
+	<article>
+		<h1>About Us</h1>
+		<p>
+			Minturno is a city and comune in the southern Lazio, Italy, situated
+			on the north west bank of the Garigliano (known in antiquity as the
+			Liris), with a suburb on the opposite bank about 18 kilometres (11
+			mi) from its mouth, at the point where the Via Appia crossed it by
+			the bridge called Pons Tiretius. main railway line.
+		</p>
+		<p>It has a station on the Rome-Naples</p>
+		<h2>History</h2>
+		<p>
+			The ancient Minturnae was one of the three towns of the Ausones
+			which made war against Rome in 314 BC, the other two being called
+			Ausona (modern Sessa Aurunca) and Vescia. It became a colony in 296
+			BC.
+		</p>
+		<p>
+			The city was probably destroyed in 883 by the Saracens, who in the
+			following years held the surrounding plain. Its low site was
+			increasingly abandoned by the population in favour of that of the
+			modern town of Minturno (known as Traetto or Traietto, from Latin
+			Traiectum, until the 19th century), 140 metres (460 ft) above
+			sea-level.
+		</p>
+		<p>
+			The Saracens were ousted by the Catholic league after the Battle of
+			Garigliano (915), and Minturnae passed to Gaeta. Two years later,
+			however, it was again ravaged, this time by the Magyars. In 1058 it
+			was partly acquired by the Abbey of Montecassino, but soon after was
+			conquered by the Normans.
+		</p>
+		<p>
+			In the 13th century it went to Richard V dell'Aquila, duke of Gaeta.
+			Subsequently, it was a Caetani possession, and later assigned by
+			Charles VIII of France to his general Prospero Colonna. It was a
+			Carafa fief until 1806, and was integrated in the newly formed
+			Kingdom of Italy on 30 October 1861.
+		</p>
+		<img
+			src="https://media-cdn.tripadvisor.com/media/photo-s/04/9c/b9/b0/ponte-real-ferdinando.jpg"
+			alt="Ponte Ferdinando"
+		/>
+		<h2>Roman Remains</h2>
+		<p>
+			The Roman ruins consist of an amphitheatre (now almost entirely
+			demolished, but better preserved in the 18th century), a theatre in
+			opus reticulatum, and an aqueduct in opus reticulatum, the quoins of
+			which are of various colours arranged in patterns to produce a
+			decorative effect. There are also a statue commonly called of
+			Sepeone (Scipio), from the Late Empire, and the remains of a
+			Capitolium, built in Italic style after 191 BC, near the Appian Way.
+		</p>
+		<img
+			src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/The_Roman_theatre%2C_view_on_the_temples_and_Republican_%26_Imperial_forums%2C_Minturnae%2C_Minturno%2C_Italy_%2814864589720%29.jpg/1920px-The_Roman_theatre%2C_view_on_the_temples_and_Republican_%26_Imperial_forums%2C_Minturnae%2C_Minturno%2C_Italy_%2814864589720%29.jpg"
+			alt="Spiaggia con mare"
+		/>
+	</article>
 </template>
 
 <script>
 export default {
-  name: 'AboutPage',
-  components: {},
+	name: "AboutPage",
+	components: {},
 }
-</script> 
+</script>

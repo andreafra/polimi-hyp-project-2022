@@ -30,7 +30,7 @@
 			<div class="footer-column">
 				<h2>Legal</h2>
 				<ul class="footer-list">
-					<li class="footer-link">(c) Town of XXX</li>
+					<li class="footer-link">(c) City of Minturno</li>
 					<li class="footer-link">
 						<nuxt-link to="/"> Cookies </nuxt-link>
 					</li>
@@ -45,10 +45,17 @@
 			<div class="footer-column">
 				<h2>Contacts</h2>
 				<ul class="footer-list">
-					<li class="footer-link">Town Office</li>
-					<li class="footer-link">Corso Roma, 1</li>
-					<li class="footer-link">Phone Number</li>
-					<li class="footer-link">+39 555-5555555</li>
+					<li class="footer-link">
+						<p><i> City Office: </i></p>
+						<p>
+							Via Principe di Piemonte, 9<br />04026 Minturno (LT)
+						</p>
+					</li>
+
+					<li class="footer-link">
+						<p><i> Email: </i></p>
+						<p>minturno@legalmail.it</p>
+					</li>
 				</ul>
 			</div>
 		</div>
