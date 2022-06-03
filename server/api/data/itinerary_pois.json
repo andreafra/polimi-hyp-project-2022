@@ -38,5 +38,30 @@
 		"itineraryId": "Scauri: Blue and Green in Minturno",
 		"pointOfInterestId": "Parco Regionale Riviera di Ulisse",
 		"pointOfInterestIndex": 5
+	},
+	{
+		"itineraryId": "History of Minturno",
+		"pointOfInterestId": "Teatro romano di Minturnae",
+		"pointOfInterestIndex": 1
+	},
+	{
+		"itineraryId": "History of Minturno",
+		"pointOfInterestId": "Minturno War Cemetery",
+		"pointOfInterestIndex": 2
+	},
+	{
+		"itineraryId": "History of Minturno",
+		"pointOfInterestId": "Castello Baronale di Minturno",
+		"pointOfInterestIndex": 3
+	},
+	{
+		"itineraryId": "History of Minturno",
+		"pointOfInterestId": "Monumento ai Caduti",
+		"pointOfInterestIndex": 4
+	},
+	{
+		"itineraryId": "History of Minturno",
+		"pointOfInterestId": "Castrum argenti",
+		"pointOfInterestIndex": 5
 	}
 ]
