@@ -56,6 +56,7 @@ export default {
 			{ uri: "/pois", name: "Points of Interest" },
 			{ uri: "/events", name: "Events" },
 			{ uri: "/services", name: "Service Types" },
+			{ uri: "/about", name: "About Us" },
 			{ uri: "/contacts", name: "Contact Us" },
 		],
 	}),
@@ -87,12 +88,12 @@ export default {
 }
 
 .header-title {
-	font-size: var(--font-size-header-title);
 	align-self: center;
 	grid-area: title;
 }
 
 .header-title h1 {
+	font-size: var(--font-size-header-title);
 	color: var(--color-accent-dark);
 	margin: 0;
 }
@@ -148,7 +149,7 @@ export default {
 	color: var(--color-dark);
 }
 
-.nav-link .nuxt-link-exact-active {
+.nav-link .nuxt-link-active {
 	color: var(--color-accent-dark);
 }
 

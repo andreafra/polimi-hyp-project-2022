@@ -52,20 +52,19 @@ export default {
 	position: relative;
 	display: grid;
 	grid-template-columns: var(--navigator-template-columns);
-
+	column-gap: var(--space-0);
 	background-color: var(--color-neutral);
 	border-top-left-radius: var(--border-radius);
 	border-top-right-radius: var(--border-radius);
+	padding: 0 var(--space-0) var(--space-0);
 }
 
 .step {
 	flex-grow: 1;
 	flex-basis: 0;
-	margin: 0 var(--space-0);
 	display: inline-flex;
 	flex-direction: column;
 	text-decoration: none;
-	padding: 0 0 var(--space-1);
 }
 
 .step .step-label {
@@ -105,13 +104,13 @@ export default {
 	flex-shrink: 0;
 }
 
-.prev-step {
+/* .prev-step {
 	margin-left: var(--space-1);
 }
 
 .next-step {
 	margin-right: var(--space-1);
-}
+} */
 
 .prev-step .step-box {
 	flex-direction: row-reverse;

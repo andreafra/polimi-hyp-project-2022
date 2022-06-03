@@ -13,7 +13,7 @@
 
 	--font-size-body: 1rem;
 	--font-size-header-links: 2rem;
-	--font-size-header-title: 1.3rem;
+	--font-size-header-title: 1.7rem;
 	--font-size-header-menu: 1.2rem;
 	--font-size-button: 1.1rem;
 	--font-size-season-button: 1.3rem;
@@ -35,7 +35,7 @@
 	--grid-template-columns: 1fr;
 
 	--navigator-step-height: 9em;
-	--navigator-template-columns: 1fr 1fr;
+	--navigator-template-columns: 1fr;
 }
 
 @media screen and (min-width: 580px) {
@@ -49,7 +49,6 @@
 	:root {
 		--grid-template-columns: 1fr 1fr 1fr;
 		--font-size-header-links: 1.1rem;
-		--font-size-header-title: 1.3rem;
 	}
 }
 
