@@ -7,7 +7,7 @@
 				<div class="column-image">
 					<img
 						class="service-image"
-						:src="require(`~/assets/images/${el.image}`)"
+						:src="require(`~/assets/images/${el.image}?webp`)"
 						:alt="el.imageAlt"
 					/>
 				</div>

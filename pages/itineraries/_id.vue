@@ -2,7 +2,10 @@
 	<article>
 		<span class="category">Itinerary</span>
 		<h1>{{ itinerary.name }}</h1>
-		<img :src="itinerary.images[0].url" :alt="itinerary.images[0].alt" />
+		<img
+			:src="require(`~/assets/images/${itinerary.images[0].url}?webp`)"
+			:alt="itinerary.images[0].alt"
+		/>
 		<p><b>Duration: </b>{{ itinerary.duration }}</p>
 		<p><b>Distance: </b>{{ itinerary.distance }}</p>
 		<p>{{ itinerary.description }}</p>
