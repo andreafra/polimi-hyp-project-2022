@@ -160,7 +160,7 @@ export default {
 	align-items: center;
 	border-radius: var(--border-radius);
 	border: 2px solid var(--color-accent);
-	padding: var(--space-0) 0;
+	padding: var(--space-0);
 }
 
 .back-link:hover {
@@ -170,7 +170,7 @@ export default {
 
 .back-link-arrow {
 	font-size: 1.3em;
-	margin: 0 var(--space-1);
+	margin-right: var(--space-0);
 }
 
 p {

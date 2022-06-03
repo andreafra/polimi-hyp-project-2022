@@ -125,15 +125,15 @@ h1 span {
 
 .seasons {
 	display: flex;
-	overflow-x: scroll;
+	overflow-x: auto;
 	scroll-behavior: smooth;
-	padding-bottom: var(--space-1);
+	padding-bottom: var(--space-0);
 }
 
 .season-button {
 	color: var(--color-light);
 	background-color: var(--color-neutral);
-	padding: var(--space-1) 0;
+	padding: var(--space-1);
 	border: 0px;
 	border-radius: var(--border-radius);
 	margin-right: var(--space-0);

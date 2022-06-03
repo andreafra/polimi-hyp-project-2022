@@ -8,14 +8,14 @@
 			></div>
 		</transition>
 		<transition name="fade">
-			<button
+			<div
 				v-if="isPrevVisible"
 				class="prev"
 				aria-hidden="true"
 				@click="clickToScroll('prev')"
 			>
 				<ArrowLeft />
-			</button>
+			</div>
 		</transition>
 		<div
 			ref="container"
@@ -33,14 +33,14 @@
 			></div>
 		</transition>
 		<transition name="fade">
-			<button
+			<div
 				v-if="isNextVisible"
 				class="next"
 				aria-hidden="true"
 				@click="clickToScroll('next')"
 			>
 				<ArrowRight />
-			</button>
+			</div>
 		</transition>
 	</div>
 </template>
@@ -62,12 +62,12 @@ export default {
 
 	mounted() {
 		this.handleScroll()
-		window.addEventListener("resize", this.handleScroll)
+		window.addEventListener("resize", this.handleScroll, false)
 	},
 
 	// See Vue Issue: https://github.com/vuejs/vue/issues/1915
 	beforeUnmount() {
-		window.addEventListener("resize", this.handleScroll)
+		window.removeEventListener("resize", this.handleScroll, false)
 	},
 
 	methods: {
@@ -100,6 +100,8 @@ export default {
 		handleScroll() {
 			const container = this.$refs.container
 
+			if (container === undefined) return
+
 			this.isPrevVisible = container.scrollLeft > 0
 			// The sum amounts to zero when the container is scrolled to the right end
 			// scrollWidth = full scrollable length
@@ -124,7 +126,6 @@ export default {
 
 	/* Local variables  */
 	--scroll-button-size: 3rem;
-	--scroll-button-offset-multiplier: 0;
 }
 
 /* Prev/Next Buttons */
@@ -158,24 +159,14 @@ export default {
 	color: var(--color-accent);
 	height: calc(var(--scroll-button-size) * 0.5);
 	width: calc(var(--scroll-button-size) * 0.5);
+	align-self: center;
 }
 
 .prev {
-	left: calc(
-		var(--scroll-button-size) * var(--scroll-button-offset-multiplier)
-	);
+	left: calc(-1 * var(--space-0));
 }
 .next {
-	right: calc(
-		var(--scroll-button-size) * var(--scroll-button-offset-multiplier)
-	);
-}
-
-.prev:active {
-	margin-left: -0.5em;
-}
-.next:active {
-	margin-right: -0.5em;
+	right: calc(-1 * var(--space-0));
 }
 
 /*Container and scrollbar styles */
@@ -186,14 +177,6 @@ export default {
 	scroll-snap-type: x mandatory;
 
 	padding: 0;
-}
-
-::-webkit-scrollbar-thumb {
-	background: var(--color-neutral);
-}
-
-::-webkit-scrollbar-thumb:hover {
-	background: var(--color-dark);
 }
 
 /* Elements and opacity bars styles */
@@ -249,6 +232,13 @@ export default {
 		scroll-snap-align: start;
 		/* Offset from the align ('start' in this case) */
 		scroll-margin-left: var(--scroll-button-size);
+	}
+
+	.prev {
+		left: calc(-0.25 * var(--scroll-button-size));
+	}
+	.next {
+		right: calc(-0.25 * var(--scroll-button-size));
 	}
 }
 </style>

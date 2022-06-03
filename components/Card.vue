@@ -7,7 +7,7 @@
 	so we don't expect SEO issues.
 	-->
 	<div class="card" @click="$router.push(object.url)">
-		<h3 class="card-title">{{ object.title }}</h3>
+		<h2 class="card-title">{{ object.title }}</h2>
 		<p v-if="object.subtitle" class="card-subtitle">
 			{{ object.subtitle }}
 		</p>
