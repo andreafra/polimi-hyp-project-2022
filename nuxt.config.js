@@ -41,6 +41,8 @@ export default {
 		"@nuxtjs/axios",
 		// https://google-fonts.nuxtjs.org
 		"@nuxtjs/google-fonts",
+		// https://github.com/juliomrqz/nuxt-optimized-images
+		"@aceforth/nuxt-optimized-images",
 	],
 
 	// Build Configuration: https://go.nuxtjs.dev/config-build
@@ -90,4 +92,7 @@ export default {
 	},
 	// Disable loading bar between pages
 	loading: false,
+	optimizedImages: {
+		optimizeImagesInDev: true,
+	},
 }

@@ -34,7 +34,7 @@ export default {
 	<div>
 		<img
 			class="welcome-image"
-			src="~/assets/images/home2.jpg"
+			src="~/assets/images/home2.jpg?webp"
 			alt="sito archeoleogico"
 		/>
 		<h1>Welcome to Minturno!</h1>
