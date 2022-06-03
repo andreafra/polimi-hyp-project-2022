@@ -46,7 +46,6 @@ export default {
 				:object="event"
 			/>
 		</h-scroll-view>
-<<<<<<< HEAD
 		<grid-view>
 			<div
 				v-for="x of [1, 2, 3, 4, 5, 6, 7]"
@@ -82,8 +81,6 @@ export default {
 			}"
 		>
 		</steps-navigator>
-=======
->>>>>>> main
 	</div>
 </template>
 

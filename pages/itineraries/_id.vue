@@ -14,7 +14,6 @@
 		<p><b>Duration: </b>{{ itinerary.duration }}</p>
 		<p><b>Distance: </b>{{ itinerary.distance }}</p>
 		<p>{{ itinerary.description }}</p>
-		<!-- TODO: ADD IFRAME MAP-->
 		<div class="map-container">
 			<iframe class="map" :src="`${itinerary.map}`"></iframe>
 		</div>
@@ -23,6 +22,10 @@
 			<card v-for="obj of getPoIs()" :key="obj.id" :object="obj" />
 		</h-scroll-view>
 		<!-- TODO: ADD BOTTOM GROUP LINKS-->
+		<steps-navigator
+			:next-step="getNavigatorStep(nextStep)"
+			:prev-step="getNavigatorStep(prevStep)"
+		/>
 	</article>
 </template>
 
@@ -42,10 +45,22 @@ export default {
 				a.itinerary_poi.pointOfInterestIndex -
 				b.itinerary_poi.pointOfInterestIndex
 		)
-		return { itinerary: res }
+		const itineraries = await $axios.$get(`/api/itineraries`)
+		const curIndex = itineraries.map((_) => _.id).indexOf(res.id)
+		const prevStep = curIndex > 0 ? itineraries[curIndex - 1] : undefined
+		const nextStep =
+			curIndex < itineraries.length - 1
+				? itineraries[curIndex + 1]
+				: undefined
+		return { itinerary: res, prevStep, nextStep }
 	},
 	data() {
-		return { itinerary: {}, pois: [] }
+		return {
+			itinerary: {},
+			pois: [],
+			prevStep: undefined,
+			nextStep: undefined,
+		}
 	},
 	head() {
 		return { title: this.itinerary.name }
@@ -60,12 +75,24 @@ export default {
 				url: `/pois/${el.id}?itinerary=${this.itinerary.id}`,
 			}))
 		},
+		getNavigatorStep(step) {
+			if (!step) return undefined
+
+			return {
+				url: `/itineraries/${step.id}`,
+				title: step.name,
+				img: step.images[0].url,
+				label:
+					step === this.nextStep
+						? "Next Itinerary"
+						: "Previous Itinerary",
+			}
+		},
 	},
 }
 </script>
 
 <style scoped>
-<<<<<<< HEAD
 .banner-image {
 	display: block;
 	margin: var(--space-1) 0;
@@ -79,20 +106,13 @@ export default {
 }
 
 .map-container {
-	--top-margin-offset: -4em;
+	--top-margin-offset: -5em;
 	margin-bottom: var(--top-margin-offset);
 	aspect-ratio: 16 / 9;
 	width: 100%;
+	height: var(--image-highlight-height);
 	overflow: hidden;
 	border-radius: var(--border-radius);
-=======
-.map-container {
-	--top-margin-offset: -4em;
-	margin-bottom: var(--top-margin-offset);
-	width: 100%;
-	height: 28em;
-	overflow: hidden;
->>>>>>> main
 }
 
 .map {
@@ -101,9 +121,6 @@ export default {
 	border: none;
 	width: 100%;
 	height: 100%;
-<<<<<<< HEAD
 	border-radius: var(--border-radius);
-=======
->>>>>>> main
 }
 </style>

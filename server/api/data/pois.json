@@ -69,7 +69,6 @@
 		"name": "Lido Aurora",
 		"images": [
 			{
-<<<<<<< HEAD
 				"url": "poi_lido_aurora_01.jpg",
 				"alt": "Lido Aurora 1"
 			},
@@ -88,30 +87,10 @@
 			{
 				"url": "poi_lido_aurora_05.jpg",
 				"alt": "Lido Aurora 5"
-=======
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 1"
-			},
-			{
-				"url": "poi_spiaggia_dei_sassolini_02.jpg",
-				"alt": "Spiaggia dei Sassolini 2"
-			},
-			{
-				"url": "poi_spiaggia_dei_sassolini_03.jpg",
-				"alt": "Spiaggia dei Sassolini 3"
-			},
-			{
-				"url": "poi_spiaggia_dei_sassolini_04.jpg",
-				"alt": "Spiaggia dei Sassolini 4"
-			},
-			{
-				"url": "poi_spiaggia_dei_sassolini_05.jpg",
-				"alt": "Spiaggia dei Sassolini 5"
->>>>>>> main
 			}
 		],
 		"description": "Situato nel cuore della baia di Scauri, centro nevralgico della vita diurna e serale circondato dal verde della villa comunale.\nSorto intorno gli anni ’20 è stato il primo stabilimento del paese.\nGestito dalla famiglia Di Russo, che oltre ad operare con professionalità ed esperienza quasi centenaria nel settore turistico, garantisce un ambiente famigliare ed una particolare disponibilità nel cercare di soddisfare al meglio le esigenze dei suoi Clienti, soprattutto quelle dei bambini, che possono trovare un ambiente divertente e sicuro allo stesso tempo, grazie all’accorto servizio di sorveglianza.Il lido aurora con la sua spiaggia di sabbia finissima, e curata 12 mesi all’anno, mette a disposizione della propria Clientela tutti i servizi per una vacanza da ricordare.\nE’ tutto un susseguirsi di colori e sorrisi che sanno d’estate.\nAcque cristalline, grotte marine, resti archeologici, riserve naturali, miti e leggende fanno della Riviera di Ulisse un luogo incantevole assolutamente da non perdere.\nScauri, parte integrante della riviera, è un angolo allegro accoccolato tra il mare e la macchia, un punto in comune tra natura e divertimento. Un luogo dove rilassarsi e, allo stesso tempo, base di partenza ideale per i numerosi itinerari turistici suggestivi che da esso dipartono.\nLa spiaggia, prospicente ad un fondale che degrada in maniera dolce e graduale, è l’ideale per lunghe passeggiate in riva al mare e si presta perfettamente al gioco dei bambini.\nLo stabilimento balneare Lido Aurora fa parte di tutto questo…",
-		"visitInfo": "Lungomare Nazario Sauro, 04028 Minturno LT.\nLido: Lun – Dom 7:00 – 02:00 Ristorante: Lun–Dom 12:30 – 15:00 / 20:00–23:00 \nChiuso dal 1 ottobre al 24 aprile",
+		"visitInfo": "Lungomare Nazario Sauro, 04028 Minturno LT.\nLido: Lun – Dom 7:00 – 02:00 Ristorante: Lun–Dom 12:30 – 15:00 / 20:00–23:00 \nChiuso dal 1 ottobre al 24 aprile\nFree entrance",
 		"events": [
 			{
 				"name": "Broncorotto Live Reggae",
@@ -143,7 +122,6 @@
 				"alt": "Spiaggia dei Sassolini 1"
 			},
 			{
-<<<<<<< HEAD
 				"url": "poi_spiaggia_dei_sassolini_02.jpg",
 				"alt": "Spiaggia dei Sassolini 2"
 			},
@@ -157,33 +135,17 @@
 			},
 			{
 				"url": "poi_spiaggia_dei_sassolini_05.jpg",
-=======
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 2"
-			},
-			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 3"
-			},
-			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 4"
-			},
-			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
->>>>>>> main
 				"alt": "Spiaggia dei Sassolini 5"
 			}
 		],
 		"description": "Un piccolo angolo di paradiso. Così molti turisti che sono in visita a Minturno Scauri definiscono la Spiaggia dei Sassolini. Resa famosa dai suggestivi sassolini che la compongono, la Spiaggia dei Sassolini di Minturno Scauri è visitata da numerosi turisti e cittadini del luogo e rappresenta il centro del relax e del divertimento.Ideale per una giornata di mare insieme alla propria famiglia o ai propri amici, la Spiaggia dei Sassolini e le bellissime acque che la bagnano vi accoglieranno a braccia aperte. Lo stabilimento presente sulla Spiaggia dei Sassolini offre diversi servizi come ombrelloni, lettini, bar, bagno, docce.",
-		"visitInfo": "Indirizzo sito: Via Nino Manfredi, 04028 Minturno LT, sempre aperto.",
+		"visitInfo": "Indirizzo sito: Via Nino Manfredi, 04028 Minturno LT, 08:30–01.",
 		"events": []
 	},
 	{
 		"name": "Torre di Scauri",
 		"images": [
 			{
-<<<<<<< HEAD
 				"url": "poi_torre_di_scauri_01.jpg",
 				"alt": "Torre di Scauri 1"
 			},
@@ -194,62 +156,75 @@
 			{
 				"url": "poi_torre_di_scauri_03.jpg",
 				"alt": "Torre di Scauri 3"
-=======
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 1"
-			},
-			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 2"
-			},
-			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 3"
-			},
-			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 4"
-			},
-			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 5"
->>>>>>> main
 			}
 		],
 		"description": "Situata sulla collina denominata Monte d’Oro, la torre di Scauri nasceva con l’obiettivo di fornire controllo e difesa alla città dalla pirateria che infestava il mar Mediterraneo. La costruzione della torre risale circa al XVI secolo.\nRaggiungere la Torre di Scauri è una vera e propria esperienza nella natura: si può infatti raggiungere a piedi tramite un sentiero che collega la cima del Monte d’Oro, dove è situata la torre, al centro abitato.\nIl percorso è molto semplice e adatto alle famiglie: infatti il minimo dislivello di 50 metri e la lunghezza del sentiero di soli 600 metri permette a bambini e adulti di raggiungere la Torre di Scauri e godere di una vista pazzesca.\nConosciuta anche come Torre Saracena, la Torre di scauri fa parte di un più complesso sistema di sicurezza che comprendeva anche la Torre di Gianola, la Torre del Fico e la Torre Foce. Le prime due torri sono andate distrutte nel corso del tempo",
-		"visitInfo": "Via della Cartiera, 04028 Minturno LT. Sempre aperto.",
-		"events": []
-	},
-	{
-		"name": "Parco Regionale Riviera di Ulisse",
-		"images": [
-			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 1"
-			},
-			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 2"
-			},
-			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 3"
-			},
-			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 4"
-			},
-			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 5"
-			}
-		],
-		"description": "dsa",
-		"visitInfo": "08:30-01",
+		"visitInfo": "Via della Cartiera, 04028 Minturno LT. Sempre aperto. Free entrance",
 		"events": []
 	},
 	{
 		"name": "Parco regionale di Gianola e Monte di Scauri",
+		"images": [
+			{
+				"url": "poi_parco_regionale_di_gianola_e_monte_di_scauri_01.jpg",
+				"alt": "Parco regionale di Gianola e Monte di Scauri 1"
+			},
+			{
+				"url": "poi_parco_regionale_di_gianola_e_monte_di_scauri_02.jpg",
+				"alt": "Parco regionale di Gianola e Monte di Scauri 2"
+			},
+			{
+				"url": "poi_parco_regionale_di_gianola_e_monte_di_scauri_03.jpg",
+				"alt": "Parco regionale di Gianola e Monte di Scauri 3"
+			},
+			{
+				"url": "poi_parco_regionale_di_gianola_e_monte_di_scauri_04.jpg",
+				"alt": "Parco regionale di Gianola e Monte di Scauri 4"
+			},
+			{
+				"url": "poi_parco_regionale_di_gianola_e_monte_di_scauri_05.jpg",
+				"alt": "Parco regionale di Gianola e Monte di Scauri 5"
+			}
+		],
+		"description": "All'estremo sud del Lazio, il Parco Regionale Suburbano di Gianola e Monte di Scauri è collocato sulla lingua costiera che separa i Monti Aurunci dal mare del Golfo di Gaeta e rappresenta uno dei pochi lembi verdi di un territorio fortemente antropizzato. L'area protetta è costituita da rilievi collinari prossimi al mare dai quali emerge, con i suoi 123 metri, il Monte di Scauri. Il clima, particolarmente mite e di tipo decisamente mediterraneo, consente piacevoli visite e passeggiate durante tutte le stagioni dell'anno. Di particolare fascino è il periodo primaverile, quando ginestre, cisti, eriche, gladioli e altre piante della folta macchia mediterranea, colorano gli ambienti che circondano scogliere. Di notevole importanza è la sughereta, dove, tra alberi secolari e dirupi, il visitatore dimenticherà, per alcuni istanti, di essere soltanto a pochi metri dal mare.\nOltre al fascino degli ambienti naturali con sentieri immersi nella folta vegetazione l'area è impreziosita da numerosi resti di epoca romana segno di un intensa attività umana che incessantemente si protrae da 2000 anni, fino ai giorni nostri. Non è certo un caso se già in quelle epoche l'uomo avesse compreso l'unicità di questi paesaggi.\nDa ricordare, infine, l'area marina protetta che corre per una parte del tratto costiero abbracciato dall'area naturale. In questo braccio di mare vigono il divieto di pesca e di navigazione con imbarcazioni a motore.\nIl parco è stato istituito con L.R. 13 febbraio 1987, n. 15 (B.U.R. 20 marzo 1987, n. 8).\nEnte Parco Riviera di Ulisse",
+		"visitInfo": "Via del Porticciolo Romano, Formia, LT. Always open. Free entrance",
+		"events": [
+			{
+				"name": "GianoTrail",
+				"images": [
+					{
+						"url": "event_gianola_trail_01.jpg",
+						"alt": "Gianola Trail 01"
+					},
+					{
+						"url": "event_gianola_trail_02.jpg",
+						"alt": "Gianola Trail 02"
+					},
+					{
+						"url": "event_gianola_trail_03.jpg",
+						"alt": "Gianola Trail 03"
+					}
+				],
+				"description": "Il 20 febbraio l'Atletica Olimpic Marina in collaborazione con la Uisp, il Comitato Provinciale di Latina e con il patrocinio dei Comuni di Formia e Minturno organizza la 12 edizione del GIANOLATRAIL, la gara podistica su sentieri sulla distanza dei 10 km, inserita come seconda tappa del 33° Grande Slam Uips Latina.\nIl ritrovo è fissato alle ore 08:00 all'Eco Point al Parco di Gianola.\nore 10:00: Partenza della gara\nore 11:00: Partenza Camminata Sportiva\nore 12:00 Premiazion",
+				"date": "2023-02-20",
+				"admission": "The event will be held the 20th of February 10:00 a 14:00 in Info-point Gianola (Via Porticciolo Romano).\nA fee of 12 euros is required for partecipating. Last day for applying is the 18th of February, visit the official site for more information."
+			},
+			{
+				"name": "Luci and Stelle",
+				"images": [
+					{
+						"url": "event_luci_and_stelle_01.jpg",
+						"alt": "Luci and Stelle 1"
+					}
+				],
+				"date": "2022-08-10",
+				"description": "Performance di chitarra acustica aspettando le stelle cadenti. La sera del 10 Agosto il Parco Riviera di Ulisse attende cittadini e turisti per una visita notturna di quattro tra i suoi più significativi siti: la Torre Quadratadi Scauri a Minturno, l’area Archeologica di Gianola a Formia, Monte Orlandoa Gaeta e Torre Truglia  a Sperlonga. Gli ospiti saranno guidati alla scoperta della volta celeste nell’incantevole cornice di sentieri e bellezze storico-paesaggistiche con proiezione di documentari e musica acustica dal vivo.\nL’iniziativa Tra Luci&Stelle è gratuita e realizzata in collaborazione con il Comune di Sperlonga, la LNI Sperlonga, associazioni locali e gruppi astrofili. Rientra nell’evento tematico “L’Estate delle Meraviglie” della Regione Lazio.",
+				"admission": "The event will be held the 10th of August 21:00-23:00 in Info-point Gianola (Via Porticciolo Romano).\nFree entry for everyone."
+			}
+		]
+	},
+	{
+		"name": "Parco Regionale Riviera di Ulisse",
 		"images": [
 			{
 				"url": "poi_spiaggia_dei_sassolini_01.jpg",

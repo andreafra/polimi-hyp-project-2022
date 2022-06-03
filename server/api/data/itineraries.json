@@ -7,7 +7,7 @@
 		"description": "A tour of the museums of the town.",
 		"duration": 5400,
 		"distance": 1500,
-		"map": "https://www.google.com/maps/d/u/0/edit?mid=1xhCLcjrdJaxFJT8Z8SbBfeM0h9zQCXI&usp=sharing",
+		"map": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9943.10367747914!2d13.64011637050633!3d41.263160054185256!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd31e513fe51559eb!2sPesce%20Amore%20E%20Fantasia!5e0!3m2!1sit!2sit!4v1654180372607!5m2!1sit!2sit",
 		"pointOfInterests": [
 			{ "name": "PoI X" },
 			{ "name": "PoI Y" },
@@ -15,11 +15,7 @@
 		]
 	},
 	{
-<<<<<<< HEAD
 		"name": "Scauri: Blue and Green in Minturno",
-=======
-		"name": "Blue and Green in Minturno",
->>>>>>> main
 		"images": [
 			{ "url": "poi_spiaggia_dei_sassolini_01.jpg", "alt": "something" }
 		],

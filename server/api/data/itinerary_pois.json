@@ -15,7 +15,6 @@
 		"pointOfInterestIndex": 3
 	},
 	{
-<<<<<<< HEAD
 		"itineraryId": "Scauri: Blue and Green in Minturno",
 		"pointOfInterestId": "Lido Aurora",
 		"pointOfInterestIndex": 1
@@ -38,30 +37,6 @@
 	{
 		"itineraryId": "Scauri: Blue and Green in Minturno",
 		"pointOfInterestId": "Parco Regionale Riviera di Ulisse",
-=======
-		"itineraryId": "Blue and Green in Minturno",
-		"pointOfInterestId": "Spiaggia dei Sassolini",
-		"pointOfInterestIndex": 1
-	},
-	{
-		"itineraryId": "Blue and Green in Minturno",
-		"pointOfInterestId": "Grotta Azzurra",
-		"pointOfInterestIndex": 2
-	},
-	{
-		"itineraryId": "Blue and Green in Minturno",
-		"pointOfInterestId": "Parco regionale di Gianola e Monte di Scauri",
-		"pointOfInterestIndex": 3
-	},
-	{
-		"itineraryId": "Blue and Green in Minturno",
-		"pointOfInterestId": "Parco Regionale Riviera di Ulisse",
-		"pointOfInterestIndex": 4
-	},
-	{
-		"itineraryId": "Blue and Green in Minturno",
-		"pointOfInterestId": "Lido La Siesta Sas",
->>>>>>> main
 		"pointOfInterestIndex": 5
 	}
 ]
