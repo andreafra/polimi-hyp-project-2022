@@ -46,6 +46,7 @@ export default {
 			img: event.pointOfInterest.images[0].url,
 			alt: event.pointOfInterest.images[0].alt,
 			url: "/pois/" + event.pointOfInterest.id,
+			buttonDesc: "About this Point of Interest",
 		}
 		return { event, poi }
 	},
@@ -53,7 +54,16 @@ export default {
 		return { event: {}, poi: null }
 	},
 	head() {
-		return { title: this.event.name }
+		return {
+			title: this.event.name,
+			meta: [
+				{
+					hid: "description",
+					name: "description",
+					content: `${this.event.name} page`,
+				},
+			],
+		}
 	},
 }
 </script>

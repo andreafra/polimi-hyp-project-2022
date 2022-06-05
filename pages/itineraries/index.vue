@@ -30,9 +30,18 @@ export default {
 	data: () => ({
 		itineraries: [],
 	}),
-	head: () => ({
-		title: "Itineraries",
-	}),
+	head() {
+		return {
+			title: "Itineraries",
+			meta: [
+				{
+					hid: "description",
+					name: "description",
+					content: `All itineraries page`,
+				},
+			],
+		}
+	},
 	methods: {
 		getItineraries() {
 			return this.itineraries.map((itinerary) => {
@@ -53,6 +62,7 @@ export default {
 					alt: itinerary.images[0].alt,
 					description: itinerary.description,
 					url: `/itineraries/${itinerary.id}`,
+					buttonDesc: "About this Itinerary",
 				}
 			})
 		},

@@ -63,5 +63,17 @@
 export default {
 	name: "AboutPage",
 	components: {},
+	head() {
+		return {
+			title: "About Us",
+			meta: [
+				{
+					hid: "description",
+					name: "description",
+					content: `About us page`,
+				},
+			],
+		}
+	},
 }
 </script>

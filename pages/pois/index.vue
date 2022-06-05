@@ -30,6 +30,13 @@ export default {
 	head() {
 		return {
 			title: "Points of Interest",
+			meta: [
+				{
+					hid: "description",
+					name: "description",
+					content: `All points of interest page`,
+				},
+			],
 		}
 	},
 	methods: {
@@ -42,6 +49,7 @@ export default {
 					alt: poi.images[0].alt,
 					description: poi.description,
 					url: `/pois/${poi.id}`,
+					buttonDesc: "About this Place",
 				}
 			})
 		},
