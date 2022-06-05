@@ -11,6 +11,18 @@ export default {
 	data: () => ({
 		events: [],
 	}),
+	head() {
+		return {
+			title: "Home",
+			meta: [
+				{
+					hid: "description",
+					name: "description",
+					content: `Home page`,
+				},
+			],
+		}
+	},
 	methods: {
 		getEvents() {
 			return this.events
@@ -27,6 +39,7 @@ export default {
 					alt: event.images[0].alt,
 					description: event.description,
 					url: `/events/${event.id}`,
+					buttonDesc: "About this Event",
 				}))
 				.slice(0, 3)
 		},

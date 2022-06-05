@@ -98,7 +98,16 @@ export default {
 	fetchOnServer: true,
 	fetchKey: "events",
 	head() {
-		return { title: this.title }
+		return {
+			title: this.title,
+			meta: [
+				{
+					hid: "description",
+					name: "description",
+					content: `${this.title} page`,
+				},
+			],
+		}
 	},
 	methods: {
 		getEvents() {
@@ -112,6 +121,7 @@ export default {
 				alt: event.images[0].alt,
 				description: event.description,
 				url: `/events/${event.id}`,
+				buttonDesc: "About this Event",
 			}))
 		},
 	},

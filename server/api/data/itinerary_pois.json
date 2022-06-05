@@ -1,27 +1,27 @@
 [
 	{
-		"itineraryId": "Blue and Green in Minturno",
-		"pointOfInterestId": "Spiaggia dei Sassolini",
+		"itineraryId": "Scauri: Blue and Green in Minturno",
+		"pointOfInterestId": "Lido Aurora",
 		"pointOfInterestIndex": 1
 	},
 	{
-		"itineraryId": "Blue and Green in Minturno",
-		"pointOfInterestId": "Grotta Azzurra",
+		"itineraryId": "Scauri: Blue and Green in Minturno",
+		"pointOfInterestId": "Spiaggia dei Sassolini",
 		"pointOfInterestIndex": 2
 	},
 	{
-		"itineraryId": "Blue and Green in Minturno",
-		"pointOfInterestId": "Parco regionale di Gianola e Monte di Scauri",
+		"itineraryId": "Scauri: Blue and Green in Minturno",
+		"pointOfInterestId": "Torre di Scauri",
 		"pointOfInterestIndex": 3
 	},
 	{
-		"itineraryId": "Blue and Green in Minturno",
-		"pointOfInterestId": "Parco Regionale Riviera di Ulisse",
+		"itineraryId": "Scauri: Blue and Green in Minturno",
+		"pointOfInterestId": "Parco regionale di Gianola e Monte di Scauri",
 		"pointOfInterestIndex": 4
 	},
 	{
-		"itineraryId": "Blue and Green in Minturno",
-		"pointOfInterestId": "Lido La Siesta Sas",
+		"itineraryId": "Scauri: Blue and Green in Minturno",
+		"pointOfInterestId": "Sughereta del Monte di Scauri",
 		"pointOfInterestIndex": 5
 	},
 	{
@@ -73,5 +73,20 @@
 		"itineraryId": "Gastronomy in Minturno",
 		"pointOfInterestId": "Agriturismo a casa di Don Peppe",
 		"pointOfInterestIndex": 5
+	},
+	{
+		"itineraryId": "Marina di Minturno",
+		"pointOfInterestId": "Lido Aurora",
+		"pointOfInterestIndex": 1
+	},
+	{
+		"itineraryId": "Marina di Minturno",
+		"pointOfInterestId": "Castrum argenti",
+		"pointOfInterestIndex": 2
+	},
+	{
+		"itineraryId": "Marina di Minturno",
+		"pointOfInterestId": "Silvia Bistrot",
+		"pointOfInterestIndex": 3
 	}
 ]

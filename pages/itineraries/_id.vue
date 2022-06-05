@@ -65,7 +65,16 @@ export default {
 		}
 	},
 	head() {
-		return { title: this.itinerary.name }
+		return {
+			title: this.itinerary.name,
+			meta: [
+				{
+					hid: "description",
+					name: "description",
+					content: `${this.itinerary.name} page`,
+				},
+			],
+		}
 	},
 	methods: {
 		getPoIs() {
@@ -75,6 +84,7 @@ export default {
 				alt: el.images[0].alt,
 				description: el.description,
 				url: `/pois/${el.id}?itinerary=${this.itinerary.id}`,
+				buttonDesc: "About this Place",
 			}))
 		},
 		getNavigatorStep(step) {
@@ -104,7 +114,7 @@ export default {
 	background-size: cover;
 	aspect-ratio: 16 / 9;
 	width: 100%;
-	height: var(--image-highlight-height);
+	height: 24em;
 }
 
 .itinerary-info {
@@ -119,7 +129,7 @@ export default {
 .map-container {
 	aspect-ratio: 16 / 9;
 	width: 100%;
-	height: var(--image-highlight-height);
+	height: 24em;
 	overflow: hidden;
 	border-radius: var(--border-radius);
 }

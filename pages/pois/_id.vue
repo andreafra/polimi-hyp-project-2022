@@ -102,6 +102,13 @@ export default {
 	head() {
 		return {
 			title: this.poi.name,
+			meta: [
+				{
+					hid: "description",
+					name: "description",
+					content: `${this.poi.name} page`,
+				},
+			],
 		}
 	},
 	methods: {
@@ -115,6 +122,7 @@ export default {
 				alt: event.images[0].alt,
 				description: event.description,
 				url: `/events/${event.id}`,
+				buttonDesc: "About this Event",
 			}))
 		},
 		getItineraries() {
@@ -125,6 +133,7 @@ export default {
 				alt: itinerary.images[0].alt,
 				description: itinerary.description,
 				url: `/itineraries/${itinerary.id}`,
+				buttonDesc: "About this Itinerary",
 			}))
 		},
 		getNavigatorStep(step) {

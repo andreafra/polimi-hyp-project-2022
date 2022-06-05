@@ -30,7 +30,7 @@
 		<!-- SEO: The link is contained inside the button -->
 		<button-primary
 			class="card-button"
-			title="Read More"
+			:title="object.buttonDesc"
 			:link="object.url"
 		/>
 	</div>
