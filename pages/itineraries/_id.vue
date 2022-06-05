@@ -12,8 +12,8 @@
 			class="banner-image"
 		/>
 		<p class="itinerary-info">
-			<b>Duration: </b>{{ itinerary.duration }} <b>Distance: </b
-			>{{ itinerary.distance }}
+			<b>Duration: </b>{{ formatDuration(itinerary.duration) }}
+			<b>Distance: </b>{{ formatDistance(itinerary.distance) }}
 		</p>
 		<p>{{ itinerary.description }}</p>
 		<map-container :map="itinerary.map" />
@@ -33,6 +33,7 @@
 import HScrollView from "~/components/HScrollView.vue"
 import Card from "~/components/Card.vue"
 import MapContainer from "~/components/MapContainer.vue"
+import CommonMixin from "~/mixins/common"
 export default {
 	name: "ItineraryPage",
 	components: {
@@ -40,6 +41,7 @@ export default {
 		Card,
 		MapContainer,
 	},
+	mixins: [CommonMixin],
 	async asyncData({ $axios, params }) {
 		const res = await $axios.$get(`/api/itineraries/${params.id}`)
 		res.pointsOfInterest.sort(

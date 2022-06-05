@@ -59,9 +59,11 @@ import HScrollView from "~/components/HScrollView.vue"
 import ArrowLeft from "~/components/icons/ArrowLeft.vue"
 import MapContainer from "~/components/MapContainer.vue"
 import StepsNavigator from "~/components/StepsNavigator.vue"
+import CommonMixin from "~/mixins/common"
 export default {
 	name: "EventsPage",
 	components: { Card, HScrollView, ArrowLeft, StepsNavigator, MapContainer },
+	mixins: [CommonMixin],
 	async asyncData({ $axios, params, query }) {
 		const poi = await $axios.$get(`/api/pois/${params.id}`)
 		const fromItinerary = poi.itineraries.find(
@@ -130,7 +132,9 @@ export default {
 		getItineraries() {
 			return this.poi.itineraries.map((itinerary) => ({
 				title: itinerary.name,
-				subtitle: `Duration ${itinerary.duration} | Length ${itinerary.distance}`,
+				subtitle: `Duration ${this.formatDuration(
+					itinerary.duration
+				)} | Length ${this.formatDistance(itinerary.distance)}`,
 				img: itinerary.images[0].url,
 				alt: itinerary.images[0].alt,
 				description: itinerary.description,
