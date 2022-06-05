@@ -1,6 +1,14 @@
 <template>
 	<article>
 		<h1>{{ service_type.name }}</h1>
+		<div
+			class="banner-image"
+			:style="getBackground()"
+			:alt="service_type.generic_alt"
+		></div>
+		<p>
+			{{ service_type.description }}
+		</p>
 
 		<ul class="services">
 			<li v-for="el of service_type.services" :key="el.id" class="row">
@@ -31,14 +39,37 @@ export default {
 	data() {
 		return { service_type: {} }
 	},
+	methods: {
+		getBackground() {
+			return {
+				backgroundImage: `linear-gradient(0deg, var(--color-light), rgba(214, 214, 177, 0)), url(${require("~/assets/images/" +
+					this.service_type.generic_image)})`,
+			}
+		},
+	},
 }
 </script>
 
 <style scoped>
+.banner-image {
+	margin-top: var(--space-1);
+	width: 100%;
+	height: var(--image-highlight-height);
+	border-radius: var(--border-radius);
+
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
 .column-image {
-	flex-basis: 7em;
+	flex-basis: 17em;
 	flex-grow: 0;
-	min-width: 7em;
+	min-width: 17em;
 	vertical-align: top;
 }
 

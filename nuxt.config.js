@@ -93,6 +93,6 @@ export default {
 	// Disable loading bar between pages
 	loading: false,
 	optimizedImages: {
-		optimizeImagesInDev: true,
+		optimizeImagesInDev: false,
 	},
 }

@@ -14,7 +14,7 @@
 						<nuxt-link to="/pois">All Points of Interest</nuxt-link>
 					</li>
 					<li class="footer-link">
-						<nuxt-link to="/all_events">All Events</nuxt-link>
+						<nuxt-link to="/events">All Events</nuxt-link>
 					</li>
 					<li class="footer-link">
 						<nuxt-link to="/services">All Service Types</nuxt-link>
