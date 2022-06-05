@@ -6,31 +6,41 @@ export default {
 	components: { HScrollView, Card },
 	async asyncData({ $axios }) {
 		const res = await $axios.$get("/api/events")
-		return { events: res }
+		return {
+			events: res
+				.sort((a, b) => new Date(a.date) - new Date(b.date))
+				.slice(0, 3),
+		}
 	},
 	data: () => ({
 		events: [],
 	}),
-
+	head() {
+		return {
+			title: "Home",
+			meta: [
+				{
+					hid: "description",
+					name: "description",
+					content: `Home page`,
+				},
+			],
+		}
+	},
 	methods: {
 		getEvents() {
-			return this.events
-				.sort((a, b) => new Date(a.date) - new Date(b.date))
-				.map((event) => ({
-					title: event.name,
-					subtitle: `${new Date(event.date).toLocaleDateString(
-						"en-GB",
-						{
-							dateStyle: "short",
-						}
-					)}`,
-					img: event.images[0].url,
-					alt: event.images[0].alt,
-					description: event.description,
-					url: `/events/${event.id}`,
-					buttonDesc: "About this Event",
-				}))
-				.slice(0, 3)
+			return this.events.map((event) => ({
+				id: event.id,
+				title: event.name,
+				subtitle: `${new Date(event.date).toLocaleDateString("en-GB", {
+					dateStyle: "short",
+				})}`,
+				img: event.images[0].url,
+				alt: event.images[0].alt,
+				description: event.description,
+				url: `/events/${event.id}`,
+				buttonDesc: "About this Event",
+			}))
 		},
 	},
 }
@@ -48,8 +58,8 @@ export default {
 		<h3>Take a look at our upcoming events:</h3>
 		<h-scroll-view>
 			<card
-				v-for="(event, index) of getEvents()"
-				:key="'event-index-' + index"
+				v-for="event of getEvents()"
+				:key="'event-index-' + event.id"
 				:object="event"
 			/>
 		</h-scroll-view>
