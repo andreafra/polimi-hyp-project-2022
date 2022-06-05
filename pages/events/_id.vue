@@ -2,6 +2,13 @@
 	<article>
 		<span class="category">Event</span>
 		<h1>{{ event.name }}</h1>
+		<h2>
+			{{
+				new Date(event.date).toLocaleString("en-GB", {
+					dateStyle: "long",
+				})
+			}}
+		</h2>
 		<h-scroll-view>
 			<img
 				v-for="(img, index) of event.images"
@@ -54,10 +61,23 @@ export default {
 </script>
 
 <style scoped>
+h1 {
+	margin: 0 0 !important;
+}
+
+h2 {
+	margin: 0 0 !important;
+	color: var(--color-accent-dark);
+}
+
 .row {
 	display: grid;
 	grid-template-columns: 1fr;
 	padding-bottom: var(--space-1);
+}
+
+p {
+	white-space: pre-wrap;
 }
 
 @media only screen and (min-width: 840px) {

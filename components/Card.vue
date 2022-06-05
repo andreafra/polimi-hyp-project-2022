@@ -20,7 +20,13 @@
 			role="img"
 			class="card-image"
 		/>
-		<p class="card-description">{{ object.description }}</p>
+		<p class="card-description">
+			{{
+				object.description.length > 60
+					? object.description.slice(0, 60) + "..."
+					: object.description
+			}}
+		</p>
 		<!-- SEO: The link is contained inside the button -->
 		<button-primary
 			class="card-button"
