@@ -71,7 +71,7 @@ const PointOfInterest = db.define(
 		},
 		map: {
 			type: DT.STRING(1024),
-			allowNull: true,
+			allowNull: false,
 		},
 	},
 	{
