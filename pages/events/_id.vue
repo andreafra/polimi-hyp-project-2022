@@ -2,13 +2,13 @@
 	<article>
 		<span class="category">Event</span>
 		<h1>{{ event.name }}</h1>
-		<h2>
+		<span class="date-label">
 			{{
 				new Date(event.date).toLocaleString("en-GB", {
 					dateStyle: "long",
 				})
 			}}
-		</h2>
+		</span>
 		<h-scroll-view>
 			<img
 				v-for="(img, index) of event.images"
@@ -18,15 +18,13 @@
 			/>
 		</h-scroll-view>
 		<p>{{ event.description }}</p>
-		<div class="row">
-			<div class="column">
-				<h2>Admission</h2>
-				<p>{{ event.admission }}</p>
-			</div>
-			<div v-if="poi" class="column">
-				<h2>Hosted at</h2>
-				<card :object="poi" />
-			</div>
+		<div>
+			<h2>Admission</h2>
+			<p>{{ event.admission }}</p>
+		</div>
+		<div>
+			<h2>Hosted at</h2>
+			<card :object="poi" />
 		</div>
 	</article>
 </template>
@@ -62,12 +60,13 @@ export default {
 
 <style scoped>
 h1 {
-	margin: 0 0 !important;
+	margin: 0 0;
 }
 
-h2 {
-	margin: 0 0 !important;
+.date-label {
+	margin: 0 0;
 	color: var(--color-accent-dark);
+	font-size: var(--font-size-heading);
 }
 
 .row {
