@@ -16,9 +16,7 @@
 			>{{ itinerary.distance }}
 		</p>
 		<p>{{ itinerary.description }}</p>
-		<div class="map-container">
-			<iframe class="map" :src="`${itinerary.map}`"></iframe>
-		</div>
+		<map-container :map="itinerary.map" />
 		<h2>Points of Interest in this Itinerary</h2>
 		<h-scroll-view>
 			<card v-for="obj of getPoIs()" :key="obj.id" :object="obj" />
@@ -34,11 +32,13 @@
 <script>
 import HScrollView from "~/components/HScrollView.vue"
 import Card from "~/components/Card.vue"
+import MapContainer from "~/components/MapContainer.vue"
 export default {
 	name: "ItineraryPage",
 	components: {
 		HScrollView,
 		Card,
+		MapContainer,
 	},
 	async asyncData({ $axios, params }) {
 		const res = await $axios.$get(`/api/itineraries/${params.id}`)
