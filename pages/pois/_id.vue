@@ -26,6 +26,7 @@
 		<p>{{ poi.description }}</p>
 		<h2>Visit Information</h2>
 		<p>{{ poi.visitInfo }}</p>
+		<map-container :map="poi.map" />
 		<h2 v-if="poi.events.length > 0">Events hosted here</h2>
 		<h-scroll-view v-if="poi.events.length > 0">
 			<card
@@ -56,10 +57,11 @@
 import Card from "~/components/Card.vue"
 import HScrollView from "~/components/HScrollView.vue"
 import ArrowLeft from "~/components/icons/ArrowLeft.vue"
+import MapContainer from "~/components/MapContainer.vue"
 import StepsNavigator from "~/components/StepsNavigator.vue"
 export default {
 	name: "EventsPage",
-	components: { Card, HScrollView, ArrowLeft, StepsNavigator },
+	components: { Card, HScrollView, ArrowLeft, StepsNavigator, MapContainer },
 	async asyncData({ $axios, params, query }) {
 		const poi = await $axios.$get(`/api/pois/${params.id}`)
 		const fromItinerary = poi.itineraries.find(
