@@ -71,7 +71,7 @@ export default {
 			var(--color-light),
 			rgba(214, 214, 177, 0)
 		),
-		url("~/assets/images/home2.jpg");
+		url("~/assets/images/home2.jpg?webp");
 
 	background-size: cover;
 	background-position: center center;

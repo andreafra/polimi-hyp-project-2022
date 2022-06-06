@@ -39,7 +39,8 @@ export default {
 			if (step)
 				return {
 					backgroundImage: `linear-gradient(0deg, var(--color-light), rgba(214, 214, 177, 0)), url(${require("~/assets/images/" +
-						step.img)})`,
+						step.img +
+						"?webp")})`,
 				}
 			else return {}
 		},
