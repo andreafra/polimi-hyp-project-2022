@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<article>
 		<div v-if="fromItinerary" class="back-link-container">
 			<nuxt-link
 				:to="`/itineraries/${fromItinerary.id}`"
@@ -50,7 +50,7 @@
 			:next-step="getNavigatorStep(nextStep)"
 			:prev-step="getNavigatorStep(prevStep)"
 		/>
-	</div>
+	</article>
 </template>
 
 <script>
