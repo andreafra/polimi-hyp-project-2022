@@ -10,11 +10,13 @@
 			:aria-label="itinerary.images[0].alt"
 			role="img"
 			class="banner-image"
-		/>
-		<p class="itinerary-info">
-			<b>Duration: </b>{{ formatDuration(itinerary.duration) }}
-			<b>Distance: </b>{{ formatDistance(itinerary.distance) }}
-		</p>
+		>
+			<div class="itinerary-info">
+				<b>Duration: </b>{{ formatDuration(itinerary.duration) }}
+				<br />
+				<b>Distance: </b>{{ formatDistance(itinerary.distance) }}
+			</div>
+		</div>
 		<p>{{ itinerary.description }}</p>
 		<map-container :map="itinerary.map" />
 		<h2>Points of Interest in this Itinerary</h2>
@@ -116,11 +118,16 @@ export default {
 
 .itinerary-info {
 	display: inline-block;
+	background-color: var(--color-dark);
 	border: 2px solid var(--color-neutral);
+	color: var(--color-light);
 	border-radius: var(--border-radius);
-	padding: var(--space-0);
-	margin: var(--space-0) 0 0 0 !important;
-	font-size: var(--font-size-category);
+	padding: var(--space-1);
+	margin: var(--space-0);
+	font-size: var(--font-size-body);
+}
+.itinerary-info {
+	line-height: 1.5;
 }
 
 .map-container {

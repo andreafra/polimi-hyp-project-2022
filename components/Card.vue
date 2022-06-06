@@ -1,5 +1,5 @@
 <template>
-	<!-- To prevent the bug:
+	<!-- To prevent the error:
 	"The client-side rendered virtual DOM tree is not matching server-rendered content."
 	that happens when we wrap the card in a nuxt-link,
 	we perform routing when user clicks on the card programmatically.
@@ -58,6 +58,7 @@ export default {
 	border: 2px solid var(--color-neutral);
 	border-radius: var(--border-radius);
 	width: 100%;
+	max-width: var(--card-max-width);
 
 	color: var(--color-dark);
 	cursor: pointer;

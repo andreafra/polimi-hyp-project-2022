@@ -12,13 +12,13 @@
 	--font-family-body: "Work Sans", sans-serif;
 
 	--font-size-body: 1rem;
-	--font-size-heading: 2.5rem;
+	--font-size-heading: 2rem;
 	--font-size-header-links: 2rem;
 	--font-size-header-title: 1.7rem;
 	--font-size-header-menu: 1.2rem;
 	--font-size-button: 1.1rem;
 	--font-size-season-button: 1.3rem;
-	--font-size-category: 1.2rem;
+	--font-size-category: 1.3rem;
 
 	--space-0: 0.5rem;
 	--space-1: 1rem;
@@ -27,6 +27,8 @@
 
 	--image-height: 7em;
 	--image-highlight-height: 18em;
+
+	--card-max-width: 20rem;
 
 	--max-width: 920px;
 
@@ -50,6 +52,15 @@
 	:root {
 		--grid-template-columns: 1fr 1fr 1fr;
 		--font-size-header-links: 1.1rem;
+
+		--font-size-body: 1rem;
+		--font-size-heading: 2.5rem;
+		--font-size-header-links: 1.17rem;
+		--font-size-header-title: 1.7rem;
+		--font-size-header-menu: 1.2rem;
+		--font-size-button: 1.1rem;
+		--font-size-season-button: 1.3rem;
+		--font-size-category: 1.5rem;
 	}
 }
 
