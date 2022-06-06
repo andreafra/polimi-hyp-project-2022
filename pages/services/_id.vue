@@ -94,6 +94,7 @@ export default {
 .row {
 	display: flex;
 	margin-bottom: var(--space-1);
+	flex-wrap: wrap;
 }
 
 @media only screen and (min-width: 840px) {
