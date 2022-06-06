@@ -44,7 +44,8 @@ export default {
 		getBackground() {
 			return {
 				backgroundImage: `linear-gradient(0deg, var(--color-light), rgba(214, 214, 177, 0)), url(${require("~/assets/images/" +
-					this.service_type.generic_image)})`,
+					this.service_type.generic_image +
+					"?webp")})`,
 			}
 		},
 	},

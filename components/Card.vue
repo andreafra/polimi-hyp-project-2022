@@ -14,7 +14,8 @@
 		<div
 			:style="{
 				backgroundImage: `url(${require('~/assets/images/' +
-					object.img)})`,
+					object.img +
+					'?webp')})`,
 			}"
 			:aria-label="object.alt"
 			role="img"
