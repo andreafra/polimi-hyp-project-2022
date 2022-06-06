@@ -29,18 +29,7 @@ export default {
 	},
 	methods: {
 		getEvents() {
-			return this.events.map((event) => ({
-				id: event.id,
-				title: event.name,
-				subtitle: `${new Date(event.date).toLocaleDateString("en-GB", {
-					dateStyle: "short",
-				})}`,
-				img: event.images[0].url,
-				alt: event.images[0].alt,
-				description: event.description,
-				url: `/events/${event.id}`,
-				buttonDesc: "About this Event",
-			}))
+			return this.events.map(this.getCardEvent)
 		},
 	},
 }
