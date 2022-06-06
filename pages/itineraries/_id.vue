@@ -33,7 +33,7 @@
 import HScrollView from "~/components/HScrollView.vue"
 import Card from "~/components/Card.vue"
 import MapContainer from "~/components/MapContainer.vue"
-import CommonMixin from "~/mixins/common"
+import Utils from "~/mixins/utils"
 export default {
 	name: "ItineraryPage",
 	components: {
@@ -41,7 +41,7 @@ export default {
 		Card,
 		MapContainer,
 	},
-	mixins: [CommonMixin],
+	mixins: [Utils],
 	async asyncData({ $axios, params }) {
 		const res = await $axios.$get(`/api/itineraries/${params.id}`)
 		res.pointsOfInterest.sort(
@@ -80,14 +80,9 @@ export default {
 	},
 	methods: {
 		getPoIs() {
-			return this.itinerary.pointsOfInterest.map((el) => ({
-				title: el.name,
-				img: el.images[0].url,
-				alt: el.images[0].alt,
-				description: el.description,
-				url: `/pois/${el.id}?itinerary=${this.itinerary.id}`,
-				buttonDesc: "About this Place",
-			}))
+			return this.itinerary.pointsOfInterest.map((el) =>
+				this.getCardPointOfInterest(el, this.itinerary.id)
+			)
 		},
 		getNavigatorStep(step) {
 			if (!step) return undefined

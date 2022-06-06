@@ -59,11 +59,11 @@ import HScrollView from "~/components/HScrollView.vue"
 import ArrowLeft from "~/components/icons/ArrowLeft.vue"
 import MapContainer from "~/components/MapContainer.vue"
 import StepsNavigator from "~/components/StepsNavigator.vue"
-import CommonMixin from "~/mixins/common"
+import Utils from "~/mixins/utils"
 export default {
 	name: "EventsPage",
 	components: { Card, HScrollView, ArrowLeft, StepsNavigator, MapContainer },
-	mixins: [CommonMixin],
+	mixins: [Utils],
 	async asyncData({ $axios, params, query }) {
 		const poi = await $axios.$get(`/api/pois/${params.id}`)
 		const fromItinerary = poi.itineraries.find(
@@ -117,30 +117,10 @@ export default {
 	},
 	methods: {
 		getEvents() {
-			return this.poi.events.map((event) => ({
-				title: event.name,
-				subtitle: `${new Date(event.date).toLocaleDateString("en-GB", {
-					dateStyle: "short",
-				})}`,
-				img: event.images[0].url,
-				alt: event.images[0].alt,
-				description: event.description,
-				url: `/events/${event.id}`,
-				buttonDesc: "About this Event",
-			}))
+			return this.poi.events.map(this.getCardEvent)
 		},
 		getItineraries() {
-			return this.poi.itineraries.map((itinerary) => ({
-				title: itinerary.name,
-				subtitle: `Duration ${this.formatDuration(
-					itinerary.duration
-				)} | Length ${this.formatDistance(itinerary.distance)}`,
-				img: itinerary.images[0].url,
-				alt: itinerary.images[0].alt,
-				description: itinerary.description,
-				url: `/itineraries/${itinerary.id}`,
-				buttonDesc: "About this Itinerary",
-			}))
+			return this.poi.itineraries.map(this.getCardItinerary)
 		},
 		getNavigatorStep(step) {
 			if (!step) return undefined
