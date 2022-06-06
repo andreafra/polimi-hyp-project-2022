@@ -13,9 +13,9 @@
 		<ul class="services">
 			<li v-for="el of service_type.services" :key="el.id" class="row">
 				<div class="column-image">
-					<img
+					<image-loader
 						class="service-image"
-						:src="require(`~/assets/images/${el.image}?webp`)"
+						:src="el.image"
 						:alt="el.imageAlt"
 					/>
 				</div>

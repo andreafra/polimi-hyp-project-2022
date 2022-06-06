@@ -1,11 +1,11 @@
 :root {
 	/* https://coolors.co/494331-878472-d6d6b1-b44418-e46a3a */
-	--color-accent: #e46a3a;
-	--color-accent-dark: #b44418;
+	--color-accent: #f25b1f;
+	--color-accent-dark: #b13d0f;
 	--color-light-transparent: rgba(255, 255, 255, 0.33);
-	--color-light: #d6d6b1;
+	--color-light: #f3f3ce;
 	--color-neutral: #878472;
-	--color-dark: #494331;
+	--color-dark: #403b2a;
 	--color-darker: #222222;
 
 	--font-family-heading: "Playfair Display", serif;

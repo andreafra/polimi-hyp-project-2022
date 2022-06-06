@@ -10,10 +10,10 @@
 			}}
 		</span>
 		<h-scroll-view>
-			<img
+			<image-loader
 				v-for="(img, index) of event.images"
 				:key="index"
-				:src="require(`~/assets/images/${img.url}?webp`)"
+				:src="img.url"
 				:alt="img.alt"
 			/>
 		</h-scroll-view>
