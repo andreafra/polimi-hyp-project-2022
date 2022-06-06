@@ -15,10 +15,10 @@
 		<h1>{{ poi.name }}</h1>
 		<div>
 			<h-scroll-view>
-				<img
+				<image-loader
 					v-for="(image, index) of poi.images"
 					:key="`poi-image-index-${index}`"
-					:src="require(`~/assets/images/${image.url}?webp`)"
+					:src="image.url"
 					:alt="image.alt"
 				/>
 			</h-scroll-view>
