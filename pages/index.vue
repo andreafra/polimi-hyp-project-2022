@@ -1,9 +1,12 @@
 <script>
 import HScrollView from "~/components/HScrollView.vue"
 import Card from "~/components/Card.vue"
+import Utils from "~/mixins/utils"
+
 export default {
 	name: "IndexPage",
 	components: { HScrollView, Card },
+	mixins: [Utils],
 	async asyncData({ $axios }) {
 		const res = await $axios.$get("/api/events")
 		return {
@@ -40,8 +43,8 @@ export default {
 		<div class="welcome-image">
 			<h1>Welcome to Minturno!</h1>
 			<h2>
-				A place with fascinating monuments,<br />beautiful natural
-				sceneries, delicious cuisine and more!
+				A place with fascinating monuments, beautiful natural sceneries,
+				delicious cuisine and more!
 			</h2>
 		</div>
 		<h3>Take a look at our upcoming events:</h3>
@@ -58,6 +61,7 @@ export default {
 <style scoped>
 .welcome-image {
 	margin-top: var(--space-1);
+	padding: var(--space-0);
 	width: 100%;
 	height: 30em;
 	border-radius: var(--border-radius);

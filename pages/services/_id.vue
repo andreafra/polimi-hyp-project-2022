@@ -4,7 +4,8 @@
 		<div
 			class="banner-image"
 			:style="getBackground()"
-			:alt="service_type.generic_alt"
+			:role="img"
+			:aria-label="service_type.generic_alt"
 		></div>
 		<p>
 			{{ service_type.description }}
@@ -21,8 +22,8 @@
 				</div>
 				<div class="column-text">
 					<h2>{{ el.name }}</h2>
-					<p>{{ el.address }}</p>
-					<p>{{ el.openingHours }}</p>
+					<p><b>Address:</b> {{ el.address }}</p>
+					<p><b>Opening Hours:</b> {{ el.openingHours }}</p>
 				</div>
 			</li>
 		</ul>

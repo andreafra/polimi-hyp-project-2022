@@ -75,6 +75,7 @@ export default {
 <style>
 .page-header {
 	background-color: var(--color-light);
+	z-index: 1000;
 }
 
 .header-grid {
