@@ -49,5 +49,17 @@ export default {
 			},
 		],
 	}),
+	head() {
+		return {
+			title: "Contact Us",
+			meta: [
+				{
+					hid: "description",
+					name: "description",
+					content: `Contact us page`,
+				},
+			],
+		}
+	},
 }
 </script>

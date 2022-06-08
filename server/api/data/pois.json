@@ -1,5 +1,55 @@
 [
 	{
+		"name": "Lido Aurora",
+		"images": [
+			{
+				"url": "poi_lido_aurora_01.jpg",
+				"alt": "Lido Aurora 1"
+			},
+			{
+				"url": "poi_lido_aurora_02.jpg",
+				"alt": "Lido Aurora 2"
+			},
+			{
+				"url": "poi_lido_aurora_03.jpg",
+				"alt": "Lido Aurora 3"
+			},
+			{
+				"url": "poi_lido_aurora_04.jpg",
+				"alt": "Lido Aurora 4"
+			},
+			{
+				"url": "poi_lido_aurora_05.jpg",
+				"alt": "Lido Aurora 5"
+			}
+		],
+		"description": "Located in the heart of Scauri bay, this was the very first bathing establishment of this area borned in the 20s. Crystal clear waters, beautiful and relaxing atmosphere, a familiar and welcoming environment awaits all the customers!",
+		"visitInfo": "Location's address: Lungomare Nazario Sauro, 04028 Minturno LT.\nAlways opened from 7:00 to 02:00 every day of the week, restaurant opened every day of the week: \n● From 12:30 to 15:00\n● From 20:00 to 23:00\nClosed from October 1rst to April 24th\nFree entrance",
+		"events": [
+			{
+				"name": "Broncorotto Live Reggae",
+				"images": [
+					{
+						"url": "event_broncotto_live_reggae_01.jpg",
+						"alt": "Broncotto Live Reggae 1"
+					},
+					{
+						"url": "event_broncotto_live_reggae_02.jpg",
+						"alt": "Broncotto Live Reggae 2"
+					},
+					{
+						"url": "event_broncotto_live_reggae_03.jpg",
+						"alt": "Broncotto Live Reggae 3"
+					}
+				],
+				"description": "A beach concert featuring the group of raggae musicians Broncotto and the DJ Mario Tomao.\nFoods and drinks will be available throughout the vent, let's party all night!",
+				"date": "2022-08-26",
+				"admission": "The event will start the 26th of August at 21:00 (9 pm).\nFree entry for everyone."
+			}
+		],
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2999.566414113055!2d13.7099686!3d41.253001700000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x269281832fdd7561!2sLido%20Aurora!5e0!3m2!1sit!2sit!4v1654430401431!5m2!1sit!2sit"
+	},
+	{
 		"name": "Spiaggia dei Sassolini",
 		"images": [
 			{
@@ -23,121 +73,135 @@
 				"alt": "Spiaggia dei Sassolini 5"
 			}
 		],
-		"description": "dsadsasd",
-		"visitInfo": "08:30-01",
-		"events": []
-	},
-	{
-		"name": "Lido La Siesta Sas",
-		"images": [
+		"description": "Described as a small paradisiac corner, many tourists are attracted every year to this beach. Famous thanks to the small pebbles that compose it, this is the ideal place for leaxing with your own family and friends!",
+		"visitInfo": "Location's address: Via Nino Manfredi, 04028 Minturno LT\nOpened every day of the week from 08:30 to 01:00",
+		"events": [
 			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 1"
-			},
-			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 2"
-			},
-			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 3"
-			},
-			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 4"
-			},
-			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 5"
+				"name": "Mare in Cantina",
+				"images": [
+					{
+						"url": "event_mare_in_cantina_01.jpg",
+						"alt": "Mare in Cantina 01"
+					},
+					{
+						"url": "event_mare_in_cantina_02.jpg",
+						"alt": "Mare in Cantina 02"
+					}
+				],
+				"description": "A wine tasting event organized by Andrea Polidore, author of Italy's Tasted Magazine and Tasted Journal, world popular oenology magazines.\nStands will be organized in order to allow wine tasting for everyone. A careful selection of high quality wines await everyone!",
+				"date": "2022-07-18",
+				"admission": "The event will be held the 18th of July 19:00 a 22:00.\nFree entrance, price for wine tasting may vary depending on the type of the wine."
 			}
 		],
-		"description": "dsa",
-		"visitInfo": "08:30-01",
-		"events": []
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11998.74700594244!2d13.6955289!3d41.25038085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1c064cba1e2ba450!2sSpiaggia%20dei%20Sassolini!5e0!3m2!1sit!2sit!4v1654430438755!5m2!1sit!2sit"
 	},
 	{
-		"name": "Grotta Azzurra",
+		"name": "Torre di Scauri",
 		"images": [
 			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 1"
+				"url": "poi_torre_di_scauri_01.jpg",
+				"alt": "Torre di Scauri 1"
 			},
 			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 2"
+				"url": "poi_torre_di_scauri_02.jpg",
+				"alt": "Torre di Scauri 2"
 			},
 			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 3"
-			},
-			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 4"
-			},
-			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 5"
+				"url": "poi_torre_di_scauri_03.jpg",
+				"alt": "Torre di Scauri 3"
 			}
 		],
-		"description": "dsa",
-		"visitInfo": "08:30-01",
-		"events": []
-	},
-	{
-		"name": "Parco Regionale Riviera di Ulisse",
-		"images": [
-			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 1"
-			},
-			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 2"
-			},
-			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 3"
-			},
-			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 4"
-			},
-			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 5"
-			}
-		],
-		"description": "dsa",
-		"visitInfo": "08:30-01",
-		"events": []
+		"description": "Located on the Monte d'Oro, this historical tower was born in the XVI century with the aim of providing control and defense to the city from the pirates that infested the Mediterranean Sea.La costruzione della torre risale circa al XVI secolo.\nReaching the Tower of Scauri is a real experience immersed in the nature: it can in fact be reached on foot via a path that connects the top of Monte d'Oro, where the tower is located, to the inhabited center.\nThe route is very simple and suitable for families: in fact the minimum difference in height of 50 meters and the length of the path of only 600 meters allows children and adults to reach the Scauri Tower and enjoy a crazy views!",
+		"visitInfo": "Location's address: Via della Cartiera, 04028 Minturno LT.\nAlways accessible, free entrance",
+		"events": [],
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2999.739453499555!2d13.697936799999999!3d41.249233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xeb01dadefa24c1c!2sTorre%20di%20Scauri!5e0!3m2!1sit!2sit!4v1654430482237!5m2!1sit!2sit"
 	},
 	{
 		"name": "Parco regionale di Gianola e Monte di Scauri",
 		"images": [
 			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 1"
+				"url": "poi_parco_regionale_di_gianola_e_monte_di_scauri_01.jpg",
+				"alt": "Parco regionale di Gianola e Monte di Scauri 1"
 			},
 			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 2"
+				"url": "poi_parco_regionale_di_gianola_e_monte_di_scauri_02.jpg",
+				"alt": "Parco regionale di Gianola e Monte di Scauri 2"
 			},
 			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 3"
+				"url": "poi_parco_regionale_di_gianola_e_monte_di_scauri_03.jpg",
+				"alt": "Parco regionale di Gianola e Monte di Scauri 3"
 			},
 			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 4"
+				"url": "poi_parco_regionale_di_gianola_e_monte_di_scauri_04.jpg",
+				"alt": "Parco regionale di Gianola e Monte di Scauri 4"
 			},
 			{
-				"url": "poi_spiaggia_dei_sassolini_01.jpg",
-				"alt": "Spiaggia dei Sassolini 5"
+				"url": "poi_parco_regionale_di_gianola_e_monte_di_scauri_05.jpg",
+				"alt": "Parco regionale di Gianola e Monte di Scauri 5"
 			}
 		],
-		"description": "dsa",
-		"visitInfo": "08:30-01",
-		"events": []
+		"description": "A must view site for all the natural enthusiasts. The protected area consists of hills near the sea from which the Monte di Scauri emerges with its 123 meters. The climate, particularly mild and of a decidedly Mediterranean type, allows pleasant visits and walks during all seasons of the year. Of particular charm is the spring period, when brooms, rock roses, heather, gladioli and other plants of the thick Mediterranean scrub, color the environments surrounding the cliffs.\nOf considerable importance is the cork oak forest, where, among ancient trees and cliffs, the visitor will forget, for a few moments, that he is only a few meters from the sea.\nIn addition to the charm of the natural environments with paths immersed in thick vegetation, the area is embellished from numerous remains of the Roman era, a sign of intense human activity that has continued incessantly for 2000 years, up to the present day. It is certainly no coincidence that in those times man had already understood the uniqueness of these landscapes.",
+		"visitInfo": "Location's address: Via del Porticciolo Romano, Formia, LT.\nAlways open. Free entrance",
+		"events": [
+			{
+				"name": "GianoTrail",
+				"images": [
+					{
+						"url": "event_gianola_trail_01.jpg",
+						"alt": "Gianola Trail 01"
+					},
+					{
+						"url": "event_gianola_trail_02.jpg",
+						"alt": "Gianola Trail 02"
+					},
+					{
+						"url": "event_gianola_trail_03.jpg",
+						"alt": "Gianola Trail 03"
+					}
+				],
+				"description": "A foot race on trails over a distance of 10 km. Organized by the Atletica Olimpic Marina in collaboration Uisp, the event represents the 33rd stop of the Slam Uips Latina competition. People can partecipate either the running or walking competition.\nThe event will be organized as following:\n● 8:00 - meeting place at Gianola's park Eco Point\n● 10:00 - Start of the running competition\n● 11:00 - Start of the walking competition\n● 12:00 - awards\nPartecipate for personal satisfaction or cheer the competitors with your voice!",
+				"date": "2023-02-20",
+				"admission": "The event will be held the 20th of February 8:00 a 12:00 in Info-point Gianola (Via Porticciolo Romano).\nA fee of 12 euros is required for partecipating. Last day for applying is the 18th of February, visit the official site for more information."
+			},
+			{
+				"name": "Luci and Stelle",
+				"images": [
+					{
+						"url": "event_luci_and_stelle_01.jpg",
+						"alt": "Luci and Stelle 1"
+					}
+				],
+				"date": "2022-11-05",
+				"description": "Acoustic guitar performance while waiting for the shooting stars! On the evening of November 5th, the Riviera di Ulisse Park awaits citizens and tourists for a night visit to four of its most significant sites: the Quadrat Tower of Scauri in Minturno, the Archaeological area of Gianola in Formia, Monte Orlandoa Gaeta and Torre Truglia in Sperlonga. Guests will be guided to discover the celestial vault in the enchanting setting of paths and historical-landscape beauties with the projection of documentaries and live acoustic music.\nInitiative is free and carried out in collaboration with the Municipality of Sperlonga, the LNI Sperlonga, local associations and amateur astronomy groups.",
+				"admission": "The event will be held the 10th of August 21:00-23:00 in Info-point Gianola (Via Porticciolo Romano).\nFree entry for everyone."
+			}
+		],
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2999.62598553573!2d13.677010600000001!3d41.2517043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3d910323b2d754be!2sParco%20di%20Gianola%20e%20Monte%20di%20Scauri%20-%20Info%20Point!5e0!3m2!1sit!2sit!4v1654430527830!5m2!1sit!2sit"
+	},
+	{
+		"name": "Sughereta del Monte di Scauri",
+		"images": [
+			{
+				"url": "poi_sughereta_del_monte_di_scauri_01.jpg",
+				"alt": "Sughereta del Monte di Scauri 1"
+			},
+			{
+				"url": "poi_sughereta_del_monte_di_scauri_02.jpg",
+				"alt": "Sughereta del Monte di Scauri 2"
+			},
+			{
+				"url": "poi_sughereta_del_monte_di_scauri_03.jpg",
+				"alt": "Sughereta del Monte di Scauri 3"
+			},
+			{
+				"url": "poi_sughereta_del_monte_di_scauri_04.jpg",
+				"alt": "Sughereta del Monte di Scauri 4"
+			}
+		],
+		"description": "A magnificent example of a typical Habitat present in the Mediterranean basin (very representative of Sardegna) now almost rare in peninsular Italy!\nIt is a very beautiful place, huge corks that are spectacular, the only drawback, we discovered it later, this area is off limits to any activity due to the presence of numerous wild boars, which could be dangerous for humans",
+		"visitInfo": "04023 Formia LT, always accessible.\nFree entrance.",
+		"events": [],
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2999.585216882518!2d13.6854586!3d41.252592199999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x53571b79da4a7fbe!2sSughereta%20del%20Monte%20di%20Scauri!5e0!3m2!1sit!2sit!4v1654430565411!5m2!1sit!2sit"
 	},
 	{
 		"name": "Panificio d'Alise",
@@ -178,7 +242,8 @@
 				"date": "2022-09-20",
 				"admission": "This event allow free entrance for all. Dogs are also welcomed as long as they are on a leash!"
 			}
-		]
+		],
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000.467378876321!2d13.8390195!3d41.23337610000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdfa78556c10ee1a4!2sPanificio%20D%E2%80%99Alise!5e0!3m2!1sit!2sit!4v1654430694967!5m2!1sit!2sit"
 	},
 	{
 		"name": "Minturno War Cemetery",
@@ -207,7 +272,8 @@
 				"date": "2022-08-23",
 				"admission": "All citizens are invited to participate."
 			}
-		]
+		],
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000.112293258078!2d13.765849699999999!3d41.2411118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc733218a68adcc62!2sMinturno%20War%20Cemetery!5e0!3m2!1sit!2sit!4v1654430762820!5m2!1sit!2sit"
 	},
 	{
 		"name": "Teatro romano di Minturnae",
@@ -244,7 +310,8 @@
 				"date": "2022-07-23",
 				"admission": "The cost of the ticket is 5€ . Free entrance for students."
 			}
-		]
+		],
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000.0505492232683!2d13.768467499999998!3d41.2424568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5613f49e2f75c6da!2sTeatro%20romano%20di%20Minturnae!5e0!3m2!1sit!2sit!4v1654430807156!5m2!1sit!2sit"
 	},
 	{
 		"name": "Osteria Anna",
@@ -285,26 +352,27 @@
 				"date": "2022-07-15",
 				"admission": "It is necessary to book a table in order to participate to this event."
 			}
-		]
+		],
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.8368981298736!2d13.7376235!3d41.3776282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe6526eab26eb3be1!2sOsteria%20Anna!5e0!3m2!1sit!2sit!4v1654430891014!5m2!1sit!2sit"
 	},
 	{
 		"name": "Castello Baronale di Minturno",
 		"images": [
 			{
 				"url": "poi_castello_baronale_01.jpg",
-				"alt": "Spiaggia dei Sassolini 1"
+				"alt": "Castello Baronale di Minturno 1"
 			},
 			{
 				"url": "poi_castello_baronale_02.jpg",
-				"alt": "Spiaggia dei Sassolini 2"
+				"alt": "Castello Baronale di Minturno 2"
 			},
 			{
 				"url": "poi_castello_baronale_03.jpg",
-				"alt": "Spiaggia dei Sassolini 3"
+				"alt": "Castello Baronale di Minturno 3"
 			},
 			{
 				"url": "poi_castello_baronale_04.jpg",
-				"alt": "Spiaggia dei Sassolini 4"
+				"alt": "Castello Baronale di Minturno 4"
 			}
 		],
 		"description": "The Castle, west of the current center, has a trapezoidal plant and is divided into several levels, following the development of the natural conformation of the ground. It has two entrances; the first, the main one, southeast and outside the walls, near the main door of the city. The second opened internally to the walls and in the upper part of the facade are still visible traces of the loopholes for the operation of the drawbridge. From the first entrance there is access to a large hall that overlooks a porch turned to cruise. The ground floor housed the service rooms such as cellars, kitchens, stables and armoury; all these rooms overlooked a large trapezoidal courtyard.",
@@ -322,7 +390,8 @@
 				"date": "2022-08-13",
 				"admission": "The cost of the ticket is 20€ . No pets allowed"
 			}
-		]
+		],
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2999.1100544553165!2d13.746409700000001!3d41.262939599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe3cd766080fd8fb3!2sCastello%20Baronale%20Di%20Minturno!5e0!3m2!1sit!2sit!4v1654430933551!5m2!1sit!2sit"
 	},
 	{
 		"name": "Monumento ai Caduti",
@@ -338,7 +407,8 @@
 		],
 		"description": "During the last World War, the city and its countryside, located near the Gustav Line, were the scene of hard battles and violent bombing that caused many victims and extensive damage. Citizens, defenceless and exhausted by privations, were passed through the arms of the retaliation of the retreating German army, countless were the examples of love for the homeland and of noble spirit of sacrifice.",
 		"visitInfo": "The monument is in the central square of Minturno and can always be visited.",
-		"events": []
+		"events": [],
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2999.107634170933!2d13.7245059!3d41.2629923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe77adb9468346f0e!2sMonumento%20ai%20Caduti!5e0!3m2!1sit!2sit!4v1654430980962!5m2!1sit!2sit"
 	},
 	{
 		"name": "Castrum argenti",
@@ -354,7 +424,8 @@
 		],
 		"description": "Castrum Argenti is a site of historical and naturalistic value, on the promontory of Monte d'Argento, in Marina di Minturno. According to the sources, it hosted the meeting that led to the drafting of the Placitum of Castrum Argenti, with which the disputes concerning the definition of the boundaries between the Duchy of Traetto (now Minturno) and the Terra Sancti Benedicti, governed by the Abbey of Montecassino, were resolved. It is one of the few protohistoric sites of Lazio, in which there are also Roman materials. The findings would testify to the existence on the site of an important coastal settlement of the early Iron Age.",
 		"visitInfo": "Castrum argenti can always be visited.",
-		"events": []
+		"events": [],
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000.1588641518833!2d13.738430099999999!3d41.24009729999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf9efe369a4893edb!2sCastrum%20argenti!5e0!3m2!1sit!2sit!4v1654431013755!5m2!1sit!2sit"
 	},
 	{
 		"name": "Pesce, Amore e Fantasia",
@@ -370,7 +441,8 @@
 		],
 		"description": "Delicious plates from the Minturno's sea!",
 		"visitInfo": "11-15, 18-23",
-		"events": []
+		"events": [],
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2999.1472172130625!2d13.6418891!3d41.2621304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd31e513fe51559eb!2sPesce%20Amore%20E%20Fantasia!5e0!3m2!1sit!2sit!4v1654431049294!5m2!1sit!2sit"
 	},
 	{
 		"name": "Silvia Bistrot",
@@ -386,7 +458,8 @@
 		],
 		"description": "Little heart-warming bistrot in the center of Minturno.",
 		"visitInfo": "11-15, 18-23",
-		"events": []
+		"events": [],
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2999.819258360622!2d13.746576899999999!3d41.247494800000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133adab40b732d9d%3A0x6a8e74882803cbc6!2sVia%20Appia%2C%201819%2C%2004026%20Minturno%20LT!5e0!3m2!1sit!2sit!4v1654431087754!5m2!1sit!2sit"
 	},
 	{
 		"name": "Agriturismo a casa di Don Peppe",
@@ -423,6 +496,7 @@
 				"date": "2022-07-10",
 				"admission": "In order to be admitted to this event it is mandatory to purchase an insurance against donkeys' bites. Find more about it at the reception."
 			}
-		]
+		],
+		"map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000.0132770611103!2d13.811710099999999!3d41.2432687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc8815387fdb3258f!2sA%20Casa%20di%20Don%20Peppe!5e0!3m2!1sit!2sit!4v1654431128166!5m2!1sit!2sit"
 	}
 ]

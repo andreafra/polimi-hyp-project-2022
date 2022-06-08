@@ -1,5 +1,5 @@
 <template>
-	<!-- To prevent the bug:
+	<!-- To prevent the error:
 	"The client-side rendered virtual DOM tree is not matching server-rendered content."
 	that happens when we wrap the card in a nuxt-link,
 	we perform routing when user clicks on the card programmatically.
@@ -14,17 +14,24 @@
 		<div
 			:style="{
 				backgroundImage: `url(${require('~/assets/images/' +
-					object.img)})`,
+					object.img +
+					'?webp')})`,
 			}"
 			:aria-label="object.alt"
 			role="img"
 			class="card-image"
 		/>
-		<p class="card-description">{{ object.description }}</p>
+		<p class="card-description">
+			{{
+				object.description.length > 60
+					? object.description.slice(0, 60) + "..."
+					: object.description
+			}}
+		</p>
 		<!-- SEO: The link is contained inside the button -->
 		<button-primary
 			class="card-button"
-			title="Read More"
+			:title="object.buttonDesc"
 			:link="object.url"
 		/>
 	</div>
@@ -52,6 +59,7 @@ export default {
 	border: 2px solid var(--color-neutral);
 	border-radius: var(--border-radius);
 	width: 100%;
+	max-width: var(--card-max-width);
 
 	color: var(--color-dark);
 	cursor: pointer;

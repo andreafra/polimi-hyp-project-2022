@@ -30,7 +30,18 @@ export default {
 	data: () => ({
 		services: [],
 	}),
-
+	head() {
+		return {
+			title: "Service Types",
+			meta: [
+				{
+					hid: "description",
+					name: "description",
+					content: `Service types page`,
+				},
+			],
+		}
+	},
 	methods: {
 		getGenericService() {
 			return this.services.map((service) => ({
@@ -40,6 +51,7 @@ export default {
 				alt: service.generic_alt,
 				description: service.description,
 				url: `/services/${service.id}`,
+				buttonDesc: "About this Service",
 			}))
 		},
 	},

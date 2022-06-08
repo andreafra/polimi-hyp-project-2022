@@ -15,10 +15,12 @@
 <script>
 import Card from "~/components/Card.vue"
 import GridView from "~/components/GridView.vue"
+import Utils from "~/mixins/utils"
 
 export default {
 	name: "AllPoisPage",
 	components: { Card, GridView },
+	mixins: [Utils],
 	async asyncData({ $axios }) {
 		const res = await $axios.$get(`/api/pois`)
 
@@ -30,20 +32,18 @@ export default {
 	head() {
 		return {
 			title: "Points of Interest",
+			meta: [
+				{
+					hid: "description",
+					name: "description",
+					content: `All points of interest page`,
+				},
+			],
 		}
 	},
 	methods: {
 		getPoIs() {
-			return this.pois.map((poi) => {
-				return {
-					id: poi.id,
-					title: poi.name,
-					img: poi.images[0].url,
-					alt: poi.images[0].alt,
-					description: poi.description,
-					url: `/pois/${poi.id}`,
-				}
-			})
+			return this.pois.map(this.getCardPointOfInterest)
 		},
 	},
 }

@@ -39,7 +39,8 @@ export default {
 			if (step)
 				return {
 					backgroundImage: `linear-gradient(0deg, var(--color-light), rgba(214, 214, 177, 0)), url(${require("~/assets/images/" +
-						step.img)})`,
+						step.img +
+						"?webp")})`,
 				}
 			else return {}
 		},
@@ -54,8 +55,7 @@ export default {
 	grid-template-columns: var(--navigator-template-columns);
 	column-gap: var(--space-0);
 	background-color: var(--color-neutral);
-	border-top-left-radius: var(--border-radius);
-	border-top-right-radius: var(--border-radius);
+	border-radius: var(--border-radius);
 	padding: 0 var(--space-0) var(--space-0);
 }
 
@@ -134,8 +134,5 @@ export default {
 
 .next-step .arrow {
 	margin-left: 1em;
-}
-
-@media only screen and (min-width: 840px) {
 }
 </style>

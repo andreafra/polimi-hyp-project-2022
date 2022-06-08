@@ -20,6 +20,7 @@ h3 {
 
 h1 {
 	margin: var(--space-1) 0;
+	font-size: var(--font-size-heading);
 }
 
 .category + h1 {
@@ -41,6 +42,9 @@ a {
 
 img {
 	border-radius: var(--border-radius);
-	box-shadow: 0px 2px 5px var(--color-neutral);
 	width: 100%;
+}
+
+article {
+	margin: var(--space-1) 0 var(--space-1) 0;
 }

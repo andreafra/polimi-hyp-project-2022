@@ -86,15 +86,6 @@ export default {
 				container.scrollLeft += elem.offsetWidth
 			}
 		},
-		// BUG: This conflicts with the way the browser handles the horizontal scrolling natively.
-		// TODO: Remove dead code?
-		// wheelScroll(e) {
-		// 	e.preventDefault()
-		// 	const container = this.$refs.container
-		// 	const elem = this.$el.querySelector(".scroll-snap-container > *")
-
-		// 	container.scrollLeft += elem.offsetWidth * Math.sign(e.deltaY)
-		// },
 
 		// Determines visibility of button arrows <- / ->
 		handleScroll() {
@@ -172,6 +163,7 @@ export default {
 /*Container and scrollbar styles */
 .scroll-snap-container {
 	display: flex;
+	width: 100%;
 	overflow-x: auto;
 	scroll-behavior: smooth;
 	scroll-snap-type: x mandatory;
@@ -195,6 +187,7 @@ export default {
 	height: var(--image-highlight-height);
 	border-radius: var(--border-radius);
 	background-color: var(--color-neutral);
+	object-fit: cover;
 }
 
 .opacity-bar-right,

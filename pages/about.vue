@@ -38,10 +38,7 @@
 			Carafa fief until 1806, and was integrated in the newly formed
 			Kingdom of Italy on 30 October 1861.
 		</p>
-		<img
-			src="https://media-cdn.tripadvisor.com/media/photo-s/04/9c/b9/b0/ponte-real-ferdinando.jpg"
-			alt="Ponte Ferdinando"
-		/>
+		<image-loader src="about1.jpg" alt="Ponte Ferdinando" />
 		<h2>Roman Remains</h2>
 		<p>
 			The Roman ruins consist of an amphitheatre (now almost entirely
@@ -52,10 +49,7 @@
 			Sepeone (Scipio), from the Late Empire, and the remains of a
 			Capitolium, built in Italic style after 191 BC, near the Appian Way.
 		</p>
-		<img
-			src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/The_Roman_theatre%2C_view_on_the_temples_and_Republican_%26_Imperial_forums%2C_Minturnae%2C_Minturno%2C_Italy_%2814864589720%29.jpg/1920px-The_Roman_theatre%2C_view_on_the_temples_and_Republican_%26_Imperial_forums%2C_Minturnae%2C_Minturno%2C_Italy_%2814864589720%29.jpg"
-			alt="Spiaggia con mare"
-		/>
+		<image-loader src="about2.jpg" alt="roman amphitheatre" />
 	</article>
 </template>
 
@@ -63,5 +57,17 @@
 export default {
 	name: "AboutPage",
 	components: {},
+	head() {
+		return {
+			title: "About Us",
+			meta: [
+				{
+					hid: "description",
+					name: "description",
+					content: `About us page`,
+				},
+			],
+		}
+	},
 }
 </script>

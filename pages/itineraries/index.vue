@@ -18,10 +18,11 @@
 <script>
 import Card from "~/components/Card.vue"
 import GridView from "~/components/GridView.vue"
-
+import Utils from "~/mixins/utils"
 export default {
 	name: "AllItinerariesPage",
 	components: { Card, GridView },
+	mixins: [Utils],
 	async asyncData({ $axios }) {
 		const res = await $axios.$get(`/api/itineraries`)
 
@@ -30,31 +31,21 @@ export default {
 	data: () => ({
 		itineraries: [],
 	}),
-	head: () => ({
-		title: "Itineraries",
-	}),
+	head() {
+		return {
+			title: "Itineraries",
+			meta: [
+				{
+					hid: "description",
+					name: "description",
+					content: `All itineraries page`,
+				},
+			],
+		}
+	},
 	methods: {
 		getItineraries() {
-			return this.itineraries.map((itinerary) => {
-				const duration = new Date(itinerary.duration)
-				const hours = duration.getHours()
-				const minutes = duration.getMinutes()
-				const durationLabel = hours
-					? hours + "h"
-					: "" + minutes
-					? minutes + "m"
-					: ""
-				const distance = itinerary.distance / 1000
-				return {
-					id: itinerary.id,
-					title: itinerary.name,
-					subtitle: `Duration: ${durationLabel} | Distance: ${distance} Km`,
-					img: itinerary.images[0].url,
-					alt: itinerary.images[0].alt,
-					description: itinerary.description,
-					url: `/itineraries/${itinerary.id}`,
-				}
-			})
+			return this.itineraries.map(this.getCardItinerary)
 		},
 	},
 }

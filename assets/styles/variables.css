@@ -1,23 +1,24 @@
 :root {
 	/* https://coolors.co/494331-878472-d6d6b1-b44418-e46a3a */
-	--color-accent: #e46a3a;
-	--color-accent-dark: #b44418;
+	--color-accent: #f25b1f;
+	--color-accent-dark: #b13d0f;
 	--color-light-transparent: rgba(255, 255, 255, 0.33);
-	--color-light: #d6d6b1;
-	--color-neutral: #878472;
-	--color-dark: #494331;
+	--color-light: #f3f3ce;
+	--color-neutral: #716f60;
+	--color-dark: #403b2a;
 	--color-darker: #222222;
 
 	--font-family-heading: "Playfair Display", serif;
 	--font-family-body: "Work Sans", sans-serif;
 
 	--font-size-body: 1rem;
+	--font-size-heading: 2rem;
 	--font-size-header-links: 2rem;
 	--font-size-header-title: 1.7rem;
 	--font-size-header-menu: 1.2rem;
 	--font-size-button: 1.1rem;
 	--font-size-season-button: 1.3rem;
-	--font-size-category: 1.2rem;
+	--font-size-category: 1.3rem;
 
 	--space-0: 0.5rem;
 	--space-1: 1rem;
@@ -25,7 +26,9 @@
 	--space-3: 3rem;
 
 	--image-height: 7em;
-	--image-highlight-height: 24em;
+	--image-highlight-height: 18em;
+
+	--card-max-width: 20rem;
 
 	--max-width: 920px;
 
@@ -49,6 +52,15 @@
 	:root {
 		--grid-template-columns: 1fr 1fr 1fr;
 		--font-size-header-links: 1.1rem;
+
+		--font-size-body: 1rem;
+		--font-size-heading: 2.5rem;
+		--font-size-header-links: 1.17rem;
+		--font-size-header-title: 1.7rem;
+		--font-size-header-menu: 1.2rem;
+		--font-size-button: 1.1rem;
+		--font-size-season-button: 1.3rem;
+		--font-size-category: 1.5rem;
 	}
 }
 

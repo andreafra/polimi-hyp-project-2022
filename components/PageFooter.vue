@@ -14,7 +14,7 @@
 						<nuxt-link to="/pois">All Points of Interest</nuxt-link>
 					</li>
 					<li class="footer-link">
-						<nuxt-link to="/all_events">All Events</nuxt-link>
+						<nuxt-link to="/events">All Events</nuxt-link>
 					</li>
 					<li class="footer-link">
 						<nuxt-link to="/services">All Service Types</nuxt-link>
@@ -31,15 +31,9 @@
 				<h2>Legal</h2>
 				<ul class="footer-list">
 					<li class="footer-link">(c) City of Minturno</li>
-					<li class="footer-link">
-						<nuxt-link to="/"> Cookies </nuxt-link>
-					</li>
-					<li class="footer-link">
-						<nuxt-link to="/"> Privacy Policy </nuxt-link>
-					</li>
-					<li class="footer-link">
-						<nuxt-link to="/"> Terms of Service </nuxt-link>
-					</li>
+					<li class="footer-link">Cookies</li>
+					<li class="footer-link">Privacy Policy</li>
+					<li class="footer-link">Terms of Service</li>
 				</ul>
 			</div>
 			<div class="footer-column">
@@ -75,7 +69,7 @@
 }
 
 .footer-column h2 {
-	margin: 1em 0 0.5em;
+	margin: 1em 0 var(--space-1);
 	color: var(--color-accent);
 }
 
@@ -86,7 +80,7 @@
 }
 
 .footer-link {
-	margin-bottom: 0.25em;
+	margin-bottom: var(--space-1);
 }
 
 .footer-link a,

@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<article>
 		<div v-if="fromItinerary" class="back-link-container">
 			<nuxt-link
 				:to="`/itineraries/${fromItinerary.id}`"
@@ -13,12 +13,12 @@
 		</div>
 		<span class="category">Point of Interest</span>
 		<h1>{{ poi.name }}</h1>
-		<div class="flex-container">
+		<div>
 			<h-scroll-view>
-				<img
+				<image-loader
 					v-for="(image, index) of poi.images"
 					:key="`poi-image-index-${index}`"
-					:src="require(`~/assets/images/${image.url}?webp`)"
+					:src="image.url"
 					:alt="image.alt"
 				/>
 			</h-scroll-view>
@@ -26,16 +26,19 @@
 		<p>{{ poi.description }}</p>
 		<h2>Visit Information</h2>
 		<p>{{ poi.visitInfo }}</p>
-		<h2>Events hosted here</h2>
-		<h-scroll-view>
+		<map-container :map="poi.map" />
+		<h2 v-if="poi.events.length > 0">Events hosted here</h2>
+		<h-scroll-view v-if="poi.events.length > 0">
 			<card
 				v-for="(event, index) of getEvents()"
 				:key="`poi-event-index-${index}`"
 				:object="event"
 			/>
 		</h-scroll-view>
-		<h2>Itineraries passing through here</h2>
-		<h-scroll-view>
+		<h2 v-if="poi.itineraries.length > 0">
+			Itineraries passing through here
+		</h2>
+		<h-scroll-view v-if="poi.itineraries.length > 0">
 			<card
 				v-for="(itinerary, index) of getItineraries()"
 				:key="`poi-event-index-${index}`"
@@ -47,17 +50,20 @@
 			:next-step="getNavigatorStep(nextStep)"
 			:prev-step="getNavigatorStep(prevStep)"
 		/>
-	</div>
+	</article>
 </template>
 
 <script>
 import Card from "~/components/Card.vue"
 import HScrollView from "~/components/HScrollView.vue"
 import ArrowLeft from "~/components/icons/ArrowLeft.vue"
+import MapContainer from "~/components/MapContainer.vue"
 import StepsNavigator from "~/components/StepsNavigator.vue"
+import Utils from "~/mixins/utils"
 export default {
 	name: "EventsPage",
-	components: { Card, HScrollView, ArrowLeft, StepsNavigator },
+	components: { Card, HScrollView, ArrowLeft, StepsNavigator, MapContainer },
+	mixins: [Utils],
 	async asyncData({ $axios, params, query }) {
 		const poi = await $axios.$get(`/api/pois/${params.id}`)
 		const fromItinerary = poi.itineraries.find(
@@ -100,28 +106,21 @@ export default {
 	head() {
 		return {
 			title: this.poi.name,
+			meta: [
+				{
+					hid: "description",
+					name: "description",
+					content: `${this.poi.name} page`,
+				},
+			],
 		}
 	},
 	methods: {
 		getEvents() {
-			return this.poi.events.map((event) => ({
-				title: event.name,
-				subtitle: `${new Date(event.date).toLocaleDateString()}`,
-				img: event.images[0].url,
-				alt: event.images[0].alt,
-				description: event.description,
-				url: `/events/${event.id}`,
-			}))
+			return this.poi.events.map(this.getCardEvent)
 		},
 		getItineraries() {
-			return this.poi.itineraries.map((itinerary) => ({
-				title: itinerary.name,
-				subtitle: `Duration ${itinerary.duration} | Length ${itinerary.distance}`,
-				img: itinerary.images[0].url,
-				alt: itinerary.images[0].alt,
-				description: itinerary.description,
-				url: `/itineraries/${itinerary.id}`,
-			}))
+			return this.poi.itineraries.map(this.getCardItinerary)
 		},
 		getNavigatorStep(step) {
 			if (!step) return undefined
@@ -166,5 +165,9 @@ export default {
 .back-link-arrow {
 	font-size: 1.3em;
 	margin-right: var(--space-0);
+}
+
+p {
+	white-space: pre-wrap;
 }
 </style>

@@ -39,11 +39,12 @@
 <script>
 import Card from "~/components/Card.vue"
 import GridView from "~/components/GridView.vue"
+import Utils from "~/mixins/utils"
 
 export default {
 	name: "EventsPage",
 	components: { Card, GridView },
-
+	mixins: [Utils],
 	data: () => ({
 		events: [],
 		title: "",
@@ -91,26 +92,27 @@ export default {
 		const title =
 			currentSeason !== "All" ? `${currentSeason} Events` : "All Events"
 
-		this.events = res
+		this.events = res.sort((a, b) => new Date(a.date) - new Date(b.date))
 		this.currentSeason = currentSeason
 		this.title = title
 	},
 	fetchOnServer: true,
 	fetchKey: "events",
 	head() {
-		return { title: this.title }
+		return {
+			title: this.title,
+			meta: [
+				{
+					hid: "description",
+					name: "description",
+					content: `${this.title} page`,
+				},
+			],
+		}
 	},
 	methods: {
 		getEvents() {
-			return this.events.map((event) => ({
-				id: event.id,
-				title: event.name,
-				subtitle: `${event.date}`,
-				img: event.images[0].url,
-				alt: event.images[0].alt,
-				description: event.description,
-				url: `/events/${event.id}`,
-			}))
+			return this.events.map(this.getCardEvent)
 		},
 	},
 }

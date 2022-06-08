@@ -1,6 +1,6 @@
 [
 	{
-		"name": "Blue and Green in Minturno",
+		"name": "Scauri: Blue and Green in Minturno",
 		"images": [
 			{ "url": "poi_spiaggia_dei_sassolini_01.jpg", "alt": "something" }
 		],
@@ -9,11 +9,11 @@
 		"distance": 1500,
 		"map": "https://www.google.com/maps/d/u/0/embed?mid=1xhCLcjrdJaxFJT8Z8SbBfeM0h9zQCXI&ehbc=2E312F",
 		"pointOfInterests": [
+			{ "name": "Lido Aurora" },
 			{ "name": "Spiaggia dei Sassolini" },
-			{ "name": "Grotta Azzurra" },
+			{ "name": "Torre di Scauri" },
 			{ "name": "Parco regionale di Gianola e Monte di Scauri" },
-			{ "name": "Parco Regionale Riviera di Ulisse" },
-			{ "name": "Lido La Siesta Sas" }
+			{ "name": "Sughereta del Monte di Scauri" }
 		]
 	},
 	{
@@ -47,13 +47,31 @@
 		"description": "A guide through the gastronomic specialties of Minturno!",
 		"duration": 172800,
 		"distance": 1500,
-		"map": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9943.10367747914!2d13.64011637050633!3d41.263160054185256!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd31e513fe51559eb!2sPesce%20Amore%20E%20Fantasia!5e0!3m2!1sit!2sit!4v1654180372607!5m2!1sit!2sit",
+		"map": "https://www.google.com/maps/d/u/0/embed?mid=10ZTeRTP7pA8KuJMMP_32VPUTWSPN-uk&ehbc=2E312F",
 		"pointOfInterests": [
 			{ "name": "Panificio d'Alise" },
 			{ "name": "Osteria Anna" },
 			{ "name": "Pesce, Amore e Fantasia" },
 			{ "name": "Silvia Bistrot" },
 			{ "name": "Agriturismo a casa di Don Peppe" }
+		]
+	},
+	{
+		"name": "Marina di Minturno",
+		"images": [
+			{
+				"url": "poi_lido_aurora_05.jpg",
+				"alt": "Marina di Minturno 1"
+			}
+		],
+		"description": "The most popular touristic zone of Minturno!",
+		"duration": 18000,
+		"distance": 1500,
+		"map": "https://www.google.com/maps/d/embed?mid=1ClgdgpJsu7BXz_Wtm5-VAJ6eBzNUGI0&ehbc=2E312F",
+		"pointOfInterests": [
+			{ "name": "Lido Aurora" },
+			{ "name": "Castrum argenti" },
+			{ "name": "Silvia Bistrot" }
 		]
 	}
 ]
