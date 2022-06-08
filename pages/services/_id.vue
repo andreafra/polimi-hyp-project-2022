@@ -1,5 +1,6 @@
 <template>
 	<article>
+		<span class="category">Service Type</span>
 		<h1>{{ service_type.name }}</h1>
 		<div
 			class="banner-image"
