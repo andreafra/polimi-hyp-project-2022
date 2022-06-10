@@ -23,7 +23,6 @@
 		<h-scroll-view>
 			<card v-for="obj of getPoIs()" :key="obj.id" :object="obj" />
 		</h-scroll-view>
-		<!-- TODO: ADD BOTTOM GROUP LINKS-->
 		<steps-navigator
 			:next-step="getNavigatorStep(nextStep)"
 			:prev-step="getNavigatorStep(prevStep)"
