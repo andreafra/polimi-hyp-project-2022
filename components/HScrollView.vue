@@ -183,7 +183,8 @@ export default {
 }
 
 /* Styles for images */
-.scroll-snap-container > img {
+/* Scoped styles conflict, see https://stackoverflow.com/questions/61939898/why-does-the-scoped-styles-are-not-being-loaded-in-nuxt-page */
+>>> .scroll-snap-container > div img.small-image {
 	height: var(--image-highlight-height);
 	border-radius: var(--border-radius);
 	background-color: var(--color-neutral);
