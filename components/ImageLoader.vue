@@ -78,15 +78,19 @@ export default {
 
 	color: var(--color-light);
 	fill: var(--color-light);
-	background-color: var(--color-darker);
+	background-color: var(--color-dark);
 	border: none;
 	border-radius: 5px;
 	padding: var(--space-0);
 	font-size: var(--font-size-button);
 }
 
+.modal-open:hover {
+	background-color: var(--color-darker);
+}
+
 .modal {
-	background: #000;
+	background: var(--color-darker);
 	display: flex;
 	height: 100%;
 	left: 0;
@@ -108,6 +112,10 @@ export default {
 	cursor: pointer;
 	color: var(--color-light);
 	font-size: 3.5rem;
+}
+
+.modal-close:hover {
+	color: var(--color-dark);
 }
 
 .modal-view {
