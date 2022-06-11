@@ -144,6 +144,8 @@ export default {
 
 	/* Prevent double-tap to zoom on touchscreens */
 	touch-action: manipulation;
+
+	z-index: 1;
 }
 .prev svg,
 .next svg {
@@ -183,8 +185,9 @@ export default {
 }
 
 /* Styles for images */
-/* Scoped styles conflict, see https://stackoverflow.com/questions/61939898/why-does-the-scoped-styles-are-not-being-loaded-in-nuxt-page */
->>> .scroll-snap-container > div img.small-image {
+/* Scoped styles conflict, see https://stackoverflow.com/questions/61939898/why-does-the-scoped-styles-are-not-being-loaded-in-nuxt-page 
+	and https://vue-loader.vuejs.org/guide/scoped-css.html#deep-selectors*/
+.scroll-snap-container >>> div img.small-image {
 	height: var(--image-highlight-height);
 	border-radius: var(--border-radius);
 	background-color: var(--color-neutral);
@@ -196,6 +199,8 @@ export default {
 	position: absolute;
 	width: 2em;
 	height: 100%;
+
+	z-index: 1;
 }
 .opacity-bar-right {
 	right: -0.15em;
