@@ -121,14 +121,7 @@ export default {
 	color: var(--color-accent-dark);
 	font-family: var(--font-family-body);
 	font-size: var(--font-size-header-menu);
-
-	cursor: pointer;
 }
-
-.nav-menu:hover {
-	color: var(--color-accent);
-}
-
 .nav-menu svg {
 	margin-top: 2px;
 }

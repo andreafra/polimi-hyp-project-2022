@@ -103,19 +103,19 @@ export default {
 
 .modal-close {
 	position: absolute;
-	right: var(--space-1);
-	top: var(--space-1);
+	right: var(--space-0);
+	top: var(--space-0);
 	z-index: 9999;
 
 	background: none;
 	border: none;
 	cursor: pointer;
-	color: var(--color-light);
+	color: var(--color-light-transparent);
 	font-size: 3.5rem;
 }
 
 .modal-close:hover {
-	color: var(--color-dark);
+	color: var(--color-light);
 }
 
 .modal-view {
