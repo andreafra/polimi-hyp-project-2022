@@ -10,12 +10,20 @@
 			:src="require(`~/assets/images/${src}?webp`)"
 			:alt="alt"
 		/>
-		<button class="modal-open" @click="fullImage = !fullImage">
+		<button
+			class="modal-open"
+			aria-label="fullscreen"
+			@click="fullImage = !fullImage"
+		>
 			<full-screen />
 		</button>
 		<transition name="fade">
 			<div v-show="fullImage" class="modal">
-				<button class="modal-close" @click="fullImage = !fullImage">
+				<button
+					class="modal-close"
+					aria-label="close-modal"
+					@click="fullImage = !fullImage"
+				>
 					<x-icon />
 				</button>
 				<div class="modal-view">

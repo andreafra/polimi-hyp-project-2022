@@ -5,7 +5,7 @@
 		<div
 			class="banner-image"
 			:style="getBackground()"
-			:role="img"
+			:role="'img'"
 			:aria-label="service_type.generic_alt"
 		></div>
 		<p>
@@ -40,6 +40,18 @@ export default {
 	},
 	data() {
 		return { service_type: {} }
+	},
+	head() {
+		return {
+			title: this.service_type.name,
+			meta: [
+				{
+					hid: "description",
+					name: "description",
+					content: `${this.service_type.name} page`,
+				},
+			],
+		}
 	},
 	methods: {
 		getBackground() {
