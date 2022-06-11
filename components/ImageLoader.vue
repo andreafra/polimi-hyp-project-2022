@@ -15,7 +15,7 @@
 			aria-label="fullscreen"
 			@click="fullImage = !fullImage"
 		>
-			<full-screen />
+			<full-screen-icon />
 		</button>
 		<transition name="fade">
 			<div v-show="fullImage" class="modal">
@@ -40,10 +40,10 @@
 
 <script>
 import XIcon from "./icons/XIcon.vue"
-import FullScreen from "./icons/FullScreen.vue"
+import FullScreenIcon from "./icons/FullScreenIcon.vue"
 export default {
 	name: "ImageLoader",
-	components: { XIcon, FullScreen },
+	components: { XIcon, FullScreenIcon },
 	props: {
 		src: {
 			type: String,
