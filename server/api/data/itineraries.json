@@ -55,23 +55,5 @@
 			{ "name": "Silvia Bistrot" },
 			{ "name": "Agriturismo a casa di Don Peppe" }
 		]
-	},
-	{
-		"name": "Marina di Minturno",
-		"images": [
-			{
-				"url": "poi_lido_aurora_05.jpg",
-				"alt": "Marina di Minturno 1"
-			}
-		],
-		"description": "The most popular touristic zone of Minturno!",
-		"duration": 18000,
-		"distance": 1500,
-		"map": "https://www.google.com/maps/d/embed?mid=1ClgdgpJsu7BXz_Wtm5-VAJ6eBzNUGI0&ehbc=2E312F",
-		"pointOfInterests": [
-			{ "name": "Lido Aurora" },
-			{ "name": "Castrum argenti" },
-			{ "name": "Silvia Bistrot" }
-		]
 	}
 ]
