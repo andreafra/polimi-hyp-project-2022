@@ -84,12 +84,12 @@ export default {
 
 h1 {
 	font-size: 3.5em;
-	margin: 0 0 !important;
+	margin: 0 0;
 }
 
 h2 {
 	color: var(--color-accent-dark);
-	margin: 0 0 !important;
-	margin-bottom: var(--space-2) !important;
+	margin-top: 0;
+	margin-bottom: var(--space-2);
 }
 </style>

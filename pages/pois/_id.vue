@@ -64,8 +64,9 @@ export default {
 	name: "EventsPage",
 	components: { Card, HScrollView, ArrowLeft, StepsNavigator, MapContainer },
 	mixins: [Utils],
-	async asyncData({ $axios, params, query }) {
+	async asyncData({ $axios, params, query, redirect }) {
 		const poi = await $axios.$get(`/api/pois/${params.id}`)
+		if (poi === null || poi === undefined) redirect("/error")
 		const fromItinerary = poi.itineraries.find(
 			(itinerary) => itinerary.id === query.itinerary
 		)

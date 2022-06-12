@@ -34,8 +34,9 @@
 <script>
 export default {
 	name: "ServicePage",
-	async asyncData({ $axios, params }) {
+	async asyncData({ $axios, params, redirect }) {
 		const res = await $axios.$get(`/api/services/${params.id}`)
+		if (res === null || res === undefined) redirect("/error")
 		return { service_type: res }
 	},
 	data() {

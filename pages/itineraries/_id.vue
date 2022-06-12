@@ -43,8 +43,9 @@ export default {
 		MapContainer,
 	},
 	mixins: [Utils],
-	async asyncData({ $axios, params }) {
+	async asyncData({ $axios, params, redirect }) {
 		const res = await $axios.$get(`/api/itineraries/${params.id}`)
+		if (res === null || res === undefined) redirect("/error")
 		res.pointsOfInterest.sort(
 			(a, b) =>
 				a.itinerary_poi.pointOfInterestIndex -

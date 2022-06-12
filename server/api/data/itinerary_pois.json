@@ -73,20 +73,5 @@
 		"itineraryId": "Gastronomy in Minturno",
 		"pointOfInterestId": "Agriturismo a casa di Don Peppe",
 		"pointOfInterestIndex": 5
-	},
-	{
-		"itineraryId": "Marina di Minturno",
-		"pointOfInterestId": "Lido Aurora",
-		"pointOfInterestIndex": 1
-	},
-	{
-		"itineraryId": "Marina di Minturno",
-		"pointOfInterestId": "Castrum argenti",
-		"pointOfInterestIndex": 2
-	},
-	{
-		"itineraryId": "Marina di Minturno",
-		"pointOfInterestId": "Silvia Bistrot",
-		"pointOfInterestIndex": 3
 	}
 ]
